@@ -207,10 +207,16 @@ public class FeatureCodeMiner {
                             .collect(Collectors.toList());
             Map<String, PrintWriter> featureFiles = new HashMap<>();
             try {
+                PrintWriter writer = new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/showcases_config.json", "UTF-8");
+                writer.print("{");
                 for (Feature feature : features) {
+                    writer.print("\""+feature.getName()+"\": {\n \"language\":\"JavaScript\",\n \"group\":\"Test\"},");
                     Files.createDirectories(Paths.get("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName()));
                     featureFiles.put(feature.getName(), new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName() + "/" + feature.getName() + ".js", "UTF-8"));
                 }
+                writer.print("}");
+
+                writer.close();
                 for (CodeElement codeElement : spl.getCodeElements()) {
                     for (VariationPoint variationPoint : codeElement.getVariationPoints()) {
                         for (Feature feature : variationPoint.getReferencedFeatures()) {
