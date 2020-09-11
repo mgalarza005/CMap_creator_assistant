@@ -7,44 +7,37 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import domain.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import domain.CodeElement;
-import domain.CodeFile;
-import domain.VariantCode;
-import domain.VariantComponent;
-import domain.VariantFeature;
-import domain.VariantModel;
 import main.MainClass;
 import utils.GenericUtils;
-import domain.Feature;
-import domain.FeatureModel;
 
 public class VariantModelMiner {
 
-	public static void mineAll() {
-		for (VariantModel vm : MainClass.getSPL().getVariantModels()) {
+	public static void mineAll(SPL spl) {
+		for (VariantModel vm : spl.getVariantModels()) {
 			MainClass.getLogger().info("(" + vm.getId() + ") Now mining: " + vm.getFilename());
-			mine(vm);
+			mine(vm, spl);
 		}
 	}
 
-	private static void mine(VariantModel vm) {
+	private static void mine(VariantModel vm, SPL spl) {
 
-		extractAllVariantComponentsFromVariantModel(vm);
+		extractAllVariantComponentsFromVariantModel(vm, spl);
 
 		List<Feature> untreatedFeatures = new ArrayList<>();
-		for (FeatureModel fm : MainClass.getSPL().getFeatureModels()) {
+		for (FeatureModel fm : spl.getFeatureModels()) {
 			for (Feature f : fm.getFeatures()) {
 				untreatedFeatures.add(f);
 			}
 		}
 
 		List<CodeElement> untreatedCodeElements = new ArrayList<>();
-		for (CodeElement ce : MainClass.getSPL().getCodeElements()) {
+		for (CodeElement ce : spl.getCodeElements()) {
 			untreatedCodeElements.add(ce);
 		}
 
@@ -82,11 +75,11 @@ public class VariantModelMiner {
 
 	}
 
-	private static void extractAllVariantComponentsFromVariantModel(VariantModel vm) {
+	private static void extractAllVariantComponentsFromVariantModel(VariantModel vm, SPL spl) {
 		try {
 			
 			List<String> fmIds = new ArrayList<>();
-			for(FeatureModel fm : MainClass.getSPL().getFeatureModels()) {
+			for(FeatureModel fm : spl.getFeatureModels()) {
 				fmIds.add(fm.getId());
 			}
 
@@ -120,13 +113,13 @@ public class VariantModelMiner {
 
 					if (fmIds.contains(ids[0])) {
 						// 4.1.1: It's a VariantFeature, find Feature
-						Feature f = FeatureModelMiner.findFeatureById(ids[1]);
+						Feature f = FeatureModelMiner.findFeatureById(ids[1], spl);
 
 						// 4.1.2: Create new VariantFeature with the info
 						vc = new VariantFeature(variantId, selected, vm, f);
 					} else {
 						// 4.2.1: It's a VariantCode, find CodeElement
-						CodeElement ce = FamilyModelMiner.findCodeElementById(ids[1]);
+						CodeElement ce = FamilyModelMiner.findCodeElementById(ids[1], spl);
 
 						if (ce == null)
 							continue;

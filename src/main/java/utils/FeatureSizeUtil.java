@@ -5,6 +5,7 @@ import java.util.Map;
 
 import domain.Feature;
 import domain.FeatureModel;
+import domain.SPL;
 import main.MainClass;
 
 public class FeatureSizeUtil {
@@ -15,21 +16,21 @@ public class FeatureSizeUtil {
 		return featureSizes;
 	}
 
-	public static void updateFeatureSizePlus(Feature f, int add) {
-		updateFeature(f, add, true);
+	public static void updateFeatureSizePlus(Feature f, int add, SPL spl) {
+		updateFeature(f, add, true,spl);
 	}
 
-	public static void udapteFeatureSizeMinus(Feature f, int sub) {
-		updateFeature(f, sub, false);
+	public static void udapteFeatureSizeMinus(Feature f, int sub, SPL spl) {
+		updateFeature(f, sub, false,spl);
 	}
 
-	private static void updateFeature(Feature f, int n, boolean add) {
+	private static void updateFeature(Feature f, int n, boolean add, SPL spl) {
 
 		if (featureSizes == null) {
 			
 			featureSizes = new HashMap<String, Integer>();
 
-			for (FeatureModel fm : MainClass.getSPL().getFeatureModels()) {
+			for (FeatureModel fm : spl.getFeatureModels()) {
 				for (Feature feat : fm.getFeatures()) {
 					featureSizes.put(feat.getId(), 0);
 				}

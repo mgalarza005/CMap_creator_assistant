@@ -3,10 +3,7 @@ package database;
 import java.util.ArrayList;
 import java.util.Map;
 
-import domain.Attribute;
-import domain.Feature;
-import domain.FeatureModel;
-import domain.Relation;
+import domain.*;
 import main.MainClass;
 import utils.FeatureSizeUtil;
 
@@ -20,11 +17,11 @@ public class FeatureModelDB {
 	
 	private static ArrayList<Relation> deps;
 
-	public static void generateAllInserts() {
+	public static void generateAllInserts(SPL spl) {
 
 		deps = new ArrayList<>();
 
-		for (FeatureModel fm : MainClass.getSPL().getFeatureModels()) {
+		for (FeatureModel fm : spl.getFeatureModels()) {
 			if (fm == null) {
 				MainClass.getLogger().severe("Feature Model doesn't exist, aborting Feature DB...");
 				return;
@@ -33,7 +30,7 @@ public class FeatureModelDB {
 			// 1: Feature Model's insert
 			String fmInsert = INSERT_FEATURE_MODEL.replace(":id", MainSql.str(fm.getId()))
 					.replace(":filename", MainSql.str(fm.getFilename())).replace(":path", MainSql.str(fm.getPath()))
-					.replace(":spl_id", MainSql.str(MainClass.getSPL().getId()));
+					.replace(":spl_id", MainSql.str(spl.getId()));
 
 			MainSql.addInsert(fmInsert);
 

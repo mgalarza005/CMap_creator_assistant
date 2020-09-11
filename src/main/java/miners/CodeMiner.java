@@ -8,17 +8,12 @@ import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import domain.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import domain.CodeElement;
-import domain.CodeFile;
-import domain.Code_VariationPoint;
-import domain.Feature;
-import domain.FeatureModel;
-import domain.VariationPoint;
 import main.MainClass;
 import utils.FeatureSizeUtil;
 import utils.GenericUtils;
@@ -57,7 +52,7 @@ public class CodeMiner {
 		}
 	}
 
-	public static void extractVPsFromFile(CodeFile code, String type) {
+	public static void extractVPsFromFile(CodeFile code, String type, SPL spl) {
 
 		cf = code;
 
@@ -65,10 +60,10 @@ public class CodeMiner {
 
 		if (type.contentEquals("ps:pvsclxml")) {
 			// XML mode
-			extractVPsFromXMLFile(cf);
+			extractVPsFromXMLFile(cf,spl);
 		} else {
 			// Non XML mode
-			extractVPsFromNonXMLFile(cf);
+			extractVPsFromNonXMLFile(cf,spl);
 		}
 
 		for (VariationPoint vp : cf.getVariationPoints()) {
@@ -79,7 +74,7 @@ public class CodeMiner {
 	}
 
 	// Main function for extracting VPs on non XML file
-	private static void extractVPsFromNonXMLFile(CodeElement code) {
+	private static void extractVPsFromNonXMLFile(CodeElement code, SPL spl) {
 
 		readingIndex = 0;
 
@@ -97,12 +92,12 @@ public class CodeMiner {
 					vpString = "";
 				}
 
-				Pair<String, ArrayList<Feature>> r = hasVariationStatement(line);
+				Pair<String, ArrayList<Feature>> r = hasVariationStatement(line,spl);
 				if (r != null) {
 					String expr = r.a;
 					feats = r.b;
 					line = line.substring(line.indexOf(expr));
-					findNestedVPs(feats, readingIndex, expr, line.substring(line.indexOf(expr)) + "\n",0);
+					findNestedVPs(feats, readingIndex, expr, line.substring(line.indexOf(expr)) + "\n",0, spl);
 				}
 			}
 
@@ -114,7 +109,7 @@ public class CodeMiner {
 
 	// Recursive function for extracting VPs and nested VPs
 	private static Code_VariationPoint findNestedVPs(ArrayList<Feature> feats, int startLine, String expresion,
-			String content, int currentLevel) {
+			String content, int currentLevel, SPL spl) {
 
 		String line;
 
@@ -141,9 +136,9 @@ public class CodeMiner {
 				Boolean nestedFirst = isNestedVPFirst(line);
 				if(nestedFirst) {
 					endStatement = hasVariationStatementEnd(line);
-					r = hasVariationStatement(line);
+					r = hasVariationStatement(line,spl);
 				}else {
-					r = hasVariationStatement(line);
+					r = hasVariationStatement(line,spl);
 					endStatement = hasVariationStatementEnd(line);
 				}
 
@@ -161,7 +156,7 @@ public class CodeMiner {
 					// 2.2: It's a nested VP. Add previous features to the list.
 					feats2.addAll(feats);
 
-					Code_VariationPoint nestedVP = findNestedVPs(feats2, readingIndex, expr2, line.substring(line.indexOf(expr2)) + "\n", currentLevel + 1);
+					Code_VariationPoint nestedVP = findNestedVPs(feats2, readingIndex, expr2, line.substring(line.indexOf(expr2)) + "\n", currentLevel + 1,spl);
 					
 					// 2.3: Remove the (partial) content of nested VP
 					content = content.substring(0,content.indexOf(expr2));
@@ -175,7 +170,7 @@ public class CodeMiner {
 					// 2.6: Remove nestedVP size from FeatureSizeUtil on each feature that is in the original set of features (feats),
 					// 	    because it's size will be duplicated instead.
 					for (Feature f : feats) {
-						FeatureSizeUtil.udapteFeatureSizeMinus(f, nestedVP.getVpSize());
+						FeatureSizeUtil.udapteFeatureSizeMinus(f, nestedVP.getVpSize(),  spl);
 					}
 
 				} else if (isEnd) { // 2: Check if variation point has ended
@@ -193,7 +188,7 @@ public class CodeMiner {
 					// 2.3: Update features' sizes
 					for (Feature f : feats) {
 						cs.addReferencedFeature(f);
-						FeatureSizeUtil.updateFeatureSizePlus(f, vpSize);
+						FeatureSizeUtil.updateFeatureSizePlus(f, vpSize,spl);
 					}
 
 					// 2.4: Store
@@ -228,7 +223,7 @@ public class CodeMiner {
 	}
 
 	// Main function for extracting VPs on XML file
-	private static void extractVPsFromXMLFile(CodeElement code) {
+	private static void extractVPsFromXMLFile(CodeElement code, SPL spl) {
 
 		try {
 
@@ -245,7 +240,7 @@ public class CodeMiner {
 			Document doc = PositionalXMLReader.readXML(is);
 			doc.getDocumentElement().normalize();
 
-			findVPsRecursive(doc);
+			findVPsRecursive(doc, spl);
 
 		} catch (Exception e) {
 			// [ERROR]
@@ -254,7 +249,7 @@ public class CodeMiner {
 
 	}
 
-	private static void findVPsRecursive(Node root) {
+	private static void findVPsRecursive(Node root, SPL spl) {
 		NodeList nl = root.getChildNodes();
 		for (int i = 0; i < nl.getLength(); i++) {
 			Node n = nl.item(i);
@@ -264,7 +259,7 @@ public class CodeMiner {
 				// Contains this element any variation point inside?
 				if (hasVPInside((String) n.getUserData("lineTextContent"))) {
 					if (e.hasAttribute("pv:condition")) {
-						ArrayList<Feature> feats = extractVPsFromStatement(e.getAttribute("pv:condition"));
+						ArrayList<Feature> feats = extractVPsFromStatement(e.getAttribute("pv:condition"),spl);
 
 						String content = (String) e.getUserData("lineTextContent");
 						int vpSize = content.split("\n").length;
@@ -276,17 +271,17 @@ public class CodeMiner {
 
 						for (Feature f : feats) {
 							cs.addReferencedFeature(f);
-							FeatureSizeUtil.updateFeatureSizePlus(f, vpSize);
+							FeatureSizeUtil.updateFeatureSizePlus(f, vpSize, spl);
 						}
 
 						cf.addVariationPoint(cs);
 
 						// Nested VP recursion
-						findNestedVPsXML(n, feats,1);
+						findNestedVPsXML(n, feats,1, spl);
 
 					} else {
 						// Normal recursion, no nested VPs
-						findVPsRecursive(n);
+						findVPsRecursive(n,spl);
 					}
 				}
 
@@ -294,7 +289,7 @@ public class CodeMiner {
 		}
 	}
 
-	private static void findNestedVPsXML(Node root, ArrayList<Feature> feats, int currentLevel) {
+	private static void findNestedVPsXML(Node root, ArrayList<Feature> feats, int currentLevel, SPL spl) {
 		NodeList nl = root.getChildNodes();
 		for (int i = 0; i < nl.getLength(); i++) {
 			Node n = nl.item(i);
@@ -304,14 +299,14 @@ public class CodeMiner {
 				// Contains this element any variation point inside?
 				if (hasVPInside((String) n.getUserData("lineTextContent"))) {
 					if (e.hasAttribute("pv:condition")) {
-						ArrayList<Feature> feats2 = extractVPsFromStatement(e.getAttribute("pv:condition"));
+						ArrayList<Feature> feats2 = extractVPsFromStatement(e.getAttribute("pv:condition"),spl);
 
 						String content = (String) e.getUserData("lineTextContent");
 						int vpSize = content.split("\n").length;
 						
 						// Update feature size only of nested features
 						for(Feature f : feats2) {
-							FeatureSizeUtil.updateFeatureSizePlus(f, vpSize);
+							FeatureSizeUtil.updateFeatureSizePlus(f, vpSize,spl);
 						}
 						
 						feats2.addAll(feats);
@@ -328,10 +323,10 @@ public class CodeMiner {
 						cf.addVariationPoint(cs);
 
 						// Nested VPs recursion
-						findNestedVPsXML(n, feats2,currentLevel + 1);
+						findNestedVPsXML(n, feats2,currentLevel + 1,spl);
 					} else {
 						// Normal recursion, no nested VPs
-						findVPsRecursive(n);
+						findVPsRecursive(n,spl);
 					}
 				}
 
@@ -400,7 +395,7 @@ public class CodeMiner {
 		return new Pair<String, String>(r1, r2);
 	}
 
-	private static Pair<String, ArrayList<Feature>> hasVariationStatement(String line) {
+	private static Pair<String, ArrayList<Feature>> hasVariationStatement(String line, SPL spl) {
 		for (String s : MainClass.VARIATION_POINT_NO_XML_STATEMENTS) {
 			if (line.contains(s)) {
 
@@ -422,7 +417,7 @@ public class CodeMiner {
 					checkVPString = true;
 					vpString = rest;
 
-					return new Pair<String, ArrayList<Feature>>(expr, extractVPsFromStatement(r));
+					return new Pair<String, ArrayList<Feature>>(expr, extractVPsFromStatement(r, spl));
 				}
 			}
 		}
@@ -430,11 +425,11 @@ public class CodeMiner {
 		return null;
 	}
 
-	public static ArrayList<Feature> extractVPsFromStatement(String line) {
+	public static ArrayList<Feature> extractVPsFromStatement(String line, SPL spl) {
 		// FEATURE mode
 		ArrayList<Feature> listfeatures = new ArrayList<>();
 
-		for (FeatureModel fm : MainClass.getSPL().getFeatureModels()) {
+		for (FeatureModel fm : spl.getFeatureModels()) {
 			for (Feature f : fm.getFeatures()) {
 				
 				Pattern p = Pattern.compile("\\b("+f.getName()+")\\b");

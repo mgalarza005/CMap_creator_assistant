@@ -34,7 +34,7 @@ public class MainClass {
 	 */
 
 	// Folder where it's located .git/ folder
-	private static final String SPL_LOCAL_GIT_REPO = "/home/user/Mahaigaina/GrAL/eclipse/WacLine";
+	private static final String SPL_LOCAL_GIT_REPO = "/Users/RaulMedeiros/Documents/19CustomDiff/WacLine";
 
 	// Folder where are all the code files, images...
 	private static final String SPL_CODE_FOLDER = SPL_LOCAL_GIT_REPO + "/input";
@@ -171,7 +171,7 @@ public class MainClass {
 			// 1.1: Mine the Feature Model
 			logger.info("1. Starting Feature mining process");
 
-			if (!FeatureModelMiner.mineAll()) {
+			if (!FeatureModelMiner.mineAll(spl)) {
 				logger.severe("Feature mining process encountered problems, stoping...");
 				clean();
 				return;
@@ -198,7 +198,7 @@ public class MainClass {
 			// 1.2: Mine the Family Model
 			logger.info("2. Starting Family Model mining process");
 
-			if (!FamilyModelMiner.mineAll(familyModelPaths)) {
+			if (!FamilyModelMiner.mineAll(familyModelPaths, spl)) {
 				logger.severe("Family Model mining process encountered problems, stoping...");
 				clean();
 				return;
@@ -209,23 +209,23 @@ public class MainClass {
 			// 1.3: Mine the Variant Models
 			logger.info("3. Starting Variant Model mining process");
 
-			VariantModelMiner.mineAll();
+			VariantModelMiner.mineAll(spl);
 
 			logger.info("Ending Variant Model mining process");
 
 			// 2: Generate inserts for filling the DB
 
 			// 2.1: SPL related insert
-			MainSql.generateSPLInsert();
+			MainSql.generateSPLInsert(spl);
 
 			// 2.2: Feature related inserts
-			FeatureModelDB.generateAllInserts();
+			FeatureModelDB.generateAllInserts(spl);
 
 			// 2.3: CodeElement related inserts
-			FamilyModelDB.generateAllInserts();
+			FamilyModelDB.generateAllInserts(spl);
 
 			// 2.4: Variants related inserts
-			VariantModelDB.generateAllInserts();
+			VariantModelDB.generateAllInserts(spl);
 
 			// 3: Save them to a file
 			MainSql.exportToFile(SPL_LOCAL_GIT_REPO + "/" + SPL_NAME + "_INSERTS.sql");

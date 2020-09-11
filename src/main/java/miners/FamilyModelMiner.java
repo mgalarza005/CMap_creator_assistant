@@ -8,17 +8,12 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import domain.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import domain.CodeElement;
-import domain.CodeFile;
-import domain.Directory;
-import domain.Feature;
-import domain.Part;
-import domain.VariationPoint;
 import main.MainClass;
 import utils.GenericUtils;
 import utils.DepResolver;
@@ -35,9 +30,9 @@ public class FamilyModelMiner {
 	private FamilyModelMiner() {
 	}
 	
-	public static boolean mineAll(List<String> familyModelPaths) {
+	public static boolean mineAll(List<String> familyModelPaths, SPL spl) {
 		for(String fmp : familyModelPaths) {
-			if(! mine(fmp)) {
+			if(! mine(fmp, spl)) {
 				MainClass.getLogger().severe("Error mining Family Model. Path: " + fmp);
 				return false;
 			}
@@ -45,7 +40,7 @@ public class FamilyModelMiner {
 		return true;
 	}
 
-	public static boolean mine(String fmp) {
+	public static boolean mine(String fmp, SPL spl) {
 
 		if (fmp == null) {
 			MainClass.getLogger().severe("Family Model doesn't exist at: " + fmp + ". Aborting Family Mining...");
@@ -54,16 +49,16 @@ public class FamilyModelMiner {
 
 		familyModelPath = fmp;
 
-		if (!extractAllCodeElementsFromFamilyModel())
+		if (!extractAllCodeElementsFromFamilyModel(spl))
 			return false;
 
-		resolveDependencies();
+		resolveDependencies(spl);
 
 		return true;
 
 	}
 
-	private static boolean extractAllCodeElementsFromFamilyModel() {
+	private static boolean extractAllCodeElementsFromFamilyModel(SPL spl) {
 		try {
 
 			// 1: Open FamilyModel as XML
@@ -93,13 +88,13 @@ public class FamilyModelMiner {
 			String rootID = rootElem.getAttribute("cm:rootid");
 
 			// 4: Create CodeElement with all root's the info
-			CodeElement ce = new Directory(rootID, "", "ps:mandatory", MainClass.getSPL(), null);
+			CodeElement ce = new Directory(rootID, "", "ps:mandatory", spl, null);
 
 			// 5: Get all child CodeElements tree starting from root
-			ce.setChildren(getCodeElementTreeRecursively(rootID, ce));
+			ce.setChildren(getCodeElementTreeRecursively(rootID, ce, spl));
 
 			// 6: Now, we have completed our CodeElement's info. Save to the SPL.
-			MainClass.getSPL().addCodeElement(ce);
+			spl.addCodeElement(ce);
 
 			return true;
 
@@ -111,7 +106,7 @@ public class FamilyModelMiner {
 
 	}
 
-	private static ArrayList<CodeElement> getCodeElementTreeRecursively(String nowId, CodeElement parentCodeElement) {
+	private static ArrayList<CodeElement> getCodeElementTreeRecursively(String nowId, CodeElement parentCodeElement, SPL spl) {
 
 		ArrayList<CodeElement> resultChildren = new ArrayList<>();
 
@@ -123,7 +118,7 @@ public class FamilyModelMiner {
 			if (nowElement.hasAttribute("cm:constraint") | nowElement.hasAttribute("cm:restriction")) {
 
 				// Save File level VPs for later
-				storeFileLevelVPs(nowElement);
+				storeFileLevelVPs(nowElement, spl);
 
 			}
 
@@ -176,21 +171,21 @@ public class FamilyModelMiner {
 									// 3.1: Element is a CodeFile
 									String name = getCodeElementsFilenameById(id);
 									ce = new CodeFile(id, parentCodeElement.getPath(), rElem.getAttribute("cm:type"),
-											MainClass.getSPL(), parentCodeElement, name);
+											spl, parentCodeElement, name);
 
 									if(isVPFile(name))
-										CodeMiner.extractVPsFromFile((CodeFile) ce, childElem.getAttribute("cm:type"));
+										CodeMiner.extractVPsFromFile((CodeFile) ce, childElem.getAttribute("cm:type"),spl);
 
 								} else if (childElem.getAttribute("cm:class").contentEquals("ps:component")) {
 									// 3.2: Element is a Directory
 									String path = getCodeElementsPathById(id);
-									ce = new Directory(id, path, rElem.getAttribute("cm:type"), MainClass.getSPL(),
+									ce = new Directory(id, path, rElem.getAttribute("cm:type"), spl,
 											parentCodeElement);
 
 								} else if (childElem.getAttribute("cm:class").contentEquals("ps:part")) {
 									// 3.3: Element is a Part
 									ce = new Part(id, parentCodeElement.getPath(), rElem.getAttribute("cm:type"),
-											MainClass.getSPL(), parentCodeElement, childElem.getAttribute("cm:type"));
+											spl, parentCodeElement, childElem.getAttribute("cm:type"));
 								} else {
 									MainClass.getLogger().severe("Unkown type of element at Family Model: " + childElem.getAttribute("cm:class"));
 								}
@@ -199,10 +194,10 @@ public class FamilyModelMiner {
 									ce.setParent(parentCodeElement);
 
 									// 3.2: Get all child CodeElements recursively
-									ce.setChildren(getCodeElementTreeRecursively(id, ce));
+									ce.setChildren(getCodeElementTreeRecursively(id, ce, spl));
 
 									// 3.3: Now, we have completed our CodeElement's info. Save to the FamilyModel.
-									MainClass.getSPL().addCodeElement(ce);
+									spl.addCodeElement(ce);
 
 									// 3.4: Add this Feature to result list
 									resultChildren.add(ce);
@@ -228,7 +223,7 @@ public class FamilyModelMiner {
 		return true;
 	}
 
-	private static void storeFileLevelVPs(Element nowElement) {
+	private static void storeFileLevelVPs(Element nowElement, SPL spl) {
 
 		if (doc != null) {
 			// 1: Get restriction ids
@@ -250,7 +245,7 @@ public class FamilyModelMiner {
 							if (scr.getNodeType() == Node.ELEMENT_NODE) {
 								Element scrElem = (Element) scr;
 								// Save it for later
-								ArrayList<Feature> fs = CodeMiner.extractVPsFromStatement(scrElem.getTextContent());
+								ArrayList<Feature> fs = CodeMiner.extractVPsFromStatement(scrElem.getTextContent(),spl);
 								VPDependency vpd = new VPDependency(nowElement.getAttribute("cm:id"),
 										scrElem.getTextContent(), fs);
 								DepResolver.addVPDep(vpd);
@@ -340,9 +335,9 @@ public class FamilyModelMiner {
 		return null;
 	}
 
-	public static CodeElement findCodeElementById(String id) {
-		if (MainClass.getSPL() != null) {
-			for (CodeElement ce : MainClass.getSPL().getCodeElements()) {
+	public static CodeElement findCodeElementById(String id, SPL spl) {
+		if (spl != null) {
+			for (CodeElement ce : spl.getCodeElements()) {
 				if (ce.getId().equals(id))
 					return ce;
 			}
@@ -354,9 +349,9 @@ public class FamilyModelMiner {
 		}
 	}
 
-	public static CodeElement findRootCodeElement() {
-		if (MainClass.getSPL() != null) {
-			for (CodeElement ce : MainClass.getSPL().getCodeElements()) {
+	public static CodeElement findRootCodeElement(SPL spl) {
+		if (spl != null) {
+			for (CodeElement ce : spl.getCodeElements()) {
 				if (ce.getParent() == null)
 					return ce;
 			}
@@ -368,17 +363,17 @@ public class FamilyModelMiner {
 		}
 	}
 
-	private static void resolveDependencies() {
+	private static void resolveDependencies(SPL spl) {
 
 		for (VPDependency vpd : DepResolver.getVPDeps()) {
-			CodeElement ce = findCodeElementById(vpd.getFileId());
+			CodeElement ce = findCodeElementById(vpd.getFileId(), spl);
 			if (ce != null) {
 				int vpSize = calculateCodeElementVPSize(ce);
 				VariationPoint vp = new VariationPoint(vpd.getExpresion(), ce, vpSize);
 				
 				for(Feature f : vpd.getReferencedFeatures()) {
 					vp.addReferencedFeature(f);
-					FeatureSizeUtil.updateFeatureSizePlus(f, vpSize);
+					FeatureSizeUtil.updateFeatureSizePlus(f, vpSize,spl);
 				}
 				
 				ce.addVariationPoint(vp);

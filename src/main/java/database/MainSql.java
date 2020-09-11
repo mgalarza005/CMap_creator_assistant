@@ -4,6 +4,7 @@ import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
+import domain.SPL;
 import main.MainClass;
 
 public class MainSql {
@@ -32,19 +33,19 @@ public class MainSql {
 				+ "\"";
 	}
 
-	public static void generateSPLInsert() {
+	public static void generateSPLInsert(SPL spl) {
 		
 		String s = INSERT_SPL
-					.replace(":id", MainSql.str(MainClass.getSPL().getId()))
-					.replace(":name", MainSql.str(MainClass.getSPL().getName()));
+					.replace(":id", MainSql.str(spl.getId()))
+					.replace(":name", MainSql.str(spl.getName()));
 		inserts.add(s);
 		
 		SimpleDateFormat dateFormater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 		
 		String g = INSERT_GIT_SPL
-					.replace(":splId", MainSql.str(MainClass.getSPL().getId()))
-					.replace(":url", MainSql.str(MainClass.getSPL().getGitHubUrl()))
-					.replace(":last_changed", MainSql.str(dateFormater.format(MainClass.getSPL().getLastChange())));
+					.replace(":splId", MainSql.str(spl.getId()))
+					.replace(":url", MainSql.str(spl.getGitHubUrl()))
+					.replace(":last_changed", MainSql.str(dateFormater.format(spl.getLastChange())));
 		inserts.add(g);
 	}
 	

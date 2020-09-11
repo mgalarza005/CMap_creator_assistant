@@ -1,9 +1,6 @@
 package database;
 
-import domain.VariantCode;
-import domain.VariantComponent;
-import domain.VariantFeature;
-import domain.VariantModel;
+import domain.*;
 import main.MainClass;
 
 public class VariantModelDB {
@@ -13,15 +10,15 @@ public class VariantModelDB {
 	private static final String INSERT_VARIANT_FEATURE = "INSERT INTO VARIANT_FEATURE (VC_ID,FEATURE_ID) VALUES (:vc_id,:feature_id);";
 	private static final String INSERT_VARIANT_CODE = "INSERT INTO VARIANT_CODE (VC_ID,CODE_ELEMENT_ID) VALUES (:vc_id,:code_element_id);";
 	
-	public static void generateAllInserts() {
+	public static void generateAllInserts(SPL spl) {
 		
-		for(VariantModel vm : MainClass.getSPL().getVariantModels()) {
+		for(VariantModel vm : spl.getVariantModels()) {
 			// 1: Variant Model's insert
 			String vmInsert = INSERT_VARIANT_MODEL
 					.replace(":id", MainSql.str(vm.getId()))
 					.replace(":filename", MainSql.str(vm.getFilename()))
 					.replace(":path", MainSql.str(vm.getPath()))
-					.replace(":spl_id", MainSql.str(MainClass.getSPL().getId()));
+					.replace(":spl_id", MainSql.str(spl.getId()));
 		
 			MainSql.addInsert(vmInsert);
 			

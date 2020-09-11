@@ -7,15 +7,12 @@ import java.util.List;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 
+import domain.*;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import domain.Attribute;
-import domain.Feature;
-import domain.FeatureModel;
-import domain.RelType;
 import main.MainClass;
 import utils.DepResolver;
 import utils.DepResolver.FeatureDependency;
@@ -26,10 +23,10 @@ public class FeatureModelMiner {
 	private FeatureModelMiner() {
 	}
 
-	public static boolean mineAll() {
+	public static boolean mineAll(SPL spl) {
 
 		// 1: Mine all the FeatureModels
-		for (FeatureModel fm : MainClass.getSPL().getFeatureModels()) {
+		for (FeatureModel fm : spl.getFeatureModels()) {
 			if (!mine(fm)) {
 				MainClass.getLogger().severe("Error while mining Feature Model. Id: " + fm.getId());
 				return false;
@@ -37,7 +34,7 @@ public class FeatureModelMiner {
 		}
 
 		// 2: Resolve dependencies
-		resolveDependencies();
+		resolveDependencies(spl);
 
 		return true;
 
@@ -240,15 +237,15 @@ public class FeatureModelMiner {
 
 	}
 
-	private static void resolveDependencies() {
+	private static void resolveDependencies(SPL spl) {
 
 		for (FeatureDependency d : DepResolver.getDeps()) {
-			Feature source = findFeatureById(d.getSourceFeature());
+			Feature source = findFeatureById(d.getSourceFeature(),spl);
 			List<Feature> targets = new ArrayList<>();
 			RelType type = d.getType();
 
 			for (String id : d.getTargetFeatures()) {
-				targets.add(findFeatureById(id));
+				targets.add(findFeatureById(id,spl));
 			}
 
 			if (source != null && !targets.contains(null)) {
@@ -331,13 +328,13 @@ public class FeatureModelMiner {
 		return null;
 	}
 
-	public static Feature findFeatureById(String id) {
+	public static Feature findFeatureById(String id, SPL spl) {
 		if (id == null) {
 			return null;
 		}
 
-		if (MainClass.getSPL() != null) {
-			for (FeatureModel fm : MainClass.getSPL().getFeatureModels()) {
+		if (spl != null) {
+			for (FeatureModel fm : spl.getFeatureModels()) {
 				for (Feature f : fm.getFeatures()) {
 					if (f.getId().contentEquals(id))
 						return f;

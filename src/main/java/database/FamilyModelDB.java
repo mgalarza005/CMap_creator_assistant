@@ -1,11 +1,6 @@
 package database;
 
-import domain.CodeElement;
-import domain.CodeFile;
-import domain.Code_VariationPoint;
-import domain.Feature;
-import domain.Part;
-import domain.VariationPoint;
+import domain.*;
 import miners.FamilyModelMiner;
 
 public class FamilyModelDB {
@@ -18,11 +13,11 @@ public class FamilyModelDB {
 	private static final String INSERT_VARIATION_POINT_FEATURE = "INSERT INTO VARIATION_POINT_FEATURE (VP_ID,FEATURE_ID) VALUES (:vp_id,:feature_id);";
 	private static final String INSERT_CODE_VARIATION_POINT = "INSERT INTO CODE_VARIATION_POINT (VP_ID,START_LINE,END_LINE,CONTENT,NESTING_LEVEL) VALUES (:vp_id,:start_line,:end_line,:content,:nesting_level);";
 	
-	public static void generateAllInserts(){
+	public static void generateAllInserts(SPL spl){
 		
 		// 1: All Feature's inserts, beginning from root, recursively
 		// That way, all cross-references (FK) will be solved.
-		CodeElement root = FamilyModelMiner.findRootCodeElement();
+		CodeElement root = FamilyModelMiner.findRootCodeElement(spl);
 		
 		if(root != null) {
 			createCodeElementsInsertsRecursive(root);
