@@ -86,7 +86,7 @@ public class CodeMiner {
 			String line;
 			ArrayList<Feature> feats;
 			while ((line = readLine()) != null) {
-
+				cf.setContent(cf.getContent().concat(line+"\n"));
 				if (checkVPString) {
 					checkVPString = false;
 					vpString = "";
@@ -234,6 +234,7 @@ public class CodeMiner {
 			String line;
 			while ((line = readLine()) != null) {
 				xmlString += line + "\n";
+				cf.setContent(cf.getContent().concat(line+"\n"));
 			}
 
 			InputStream is = new ByteArrayInputStream(xmlString.getBytes());

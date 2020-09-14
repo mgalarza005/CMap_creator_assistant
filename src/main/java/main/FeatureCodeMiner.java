@@ -210,7 +210,7 @@ public class FeatureCodeMiner {
                 PrintWriter writer = new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/showcases_config.json", "UTF-8");
                 writer.print("{");
                 for (Feature feature : features) {
-                    writer.print("\""+feature.getName()+"\": {\n \"language\":\"JavaScript\",\n \"group\":\"Test\"},");
+                    writer.print("\"" + feature.getName() + "\": {\n \"language\":\"JavaScript\",\n \"group\":\"Test\"},");
                     Files.createDirectories(Paths.get("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName()));
                     featureFiles.put(feature.getName(), new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName() + "/" + feature.getName() + ".js", "UTF-8"));
                 }
@@ -222,6 +222,11 @@ public class FeatureCodeMiner {
                         for (Feature feature : variationPoint.getReferencedFeatures()) {
                             if (variationPoint instanceof Code_VariationPoint) {
                                 featureFiles.get(feature.getName()).print(((Code_VariationPoint) variationPoint).getContent());
+                                featureFiles.get(feature.getName()).print(((CodeFile)variationPoint.getFile()).getFilename();
+                            } else if (variationPoint.getFile() instanceof CodeFile) {
+                                featureFiles.get(feature.getName()).print(((CodeFile) variationPoint.getFile()).getContent());
+                            } else {
+                                extractFeatureCodeFromDirectory(variationPoint.getFile(), featureFiles.get(feature.getName()));
                             }
                         }
                     }
@@ -236,6 +241,16 @@ public class FeatureCodeMiner {
             logger.severe(e.getMessage());
         }
 
+    }
+
+    private static void extractFeatureCodeFromDirectory(CodeElement directory, PrintWriter printWriter) {
+        for (CodeElement codeElement : directory.getChildren()) {
+            if (codeElement instanceof CodeFile) {
+                printWriter.print(((CodeFile) codeElement).getContent());
+            } else {
+                extractFeatureCodeFromDirectory(codeElement, printWriter);
+            }
+        }
     }
 
     // Regex used for autodetection
