@@ -16,6 +16,7 @@ import org.eclipse.jgit.treewalk.TreeWalk;
 import utils.DepResolver;
 
 import java.io.File;
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -88,9 +89,9 @@ public class FeatureCodeMiner {
     // name (SPL_NAME + _INSERTS.sql)
 
     // This function can make different mining processes (configure on MINING_TYPE variable):
-    //	[1] Whole SPL mining
-    //	[2] Partial SPL mining only for CMap connections (without SPL inserts)
-    //	[3] Whole SPL mining and CMap connections
+    //  [1] Whole SPL mining
+    //  [2] Partial SPL mining only for CMap connections (without SPL inserts)
+    //  [3] Whole SPL mining and CMap connections
     public static void main(String[] args) {
 
         logger.setLevel(Level.INFO);
@@ -207,30 +208,33 @@ public class FeatureCodeMiner {
                             .collect(Collectors.toList());
             Map<String, PrintWriter> featureFiles = new HashMap<>();
             try {
-                PrintWriter writer = new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/showcases_config.json", "UTF-8");
-                writer.print("{");
-                for (Feature feature : features) {
-                    writer.print("\"" + feature.getName() + "\": {\n \"language\":\"JavaScript\",\n \"group\":\"Test\"},");
-                    Files.createDirectories(Paths.get("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName()));
-                    featureFiles.put(feature.getName(), new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName() + "/" + feature.getName() + ".js", "UTF-8"));
-                }
-                writer.print("}");
+                PrintWriter writer;
 
-                writer.close();
                 for (CodeElement codeElement : spl.getCodeElements()) {
                     for (VariationPoint variationPoint : codeElement.getVariationPoints()) {
                         for (Feature feature : variationPoint.getReferencedFeatures()) {
                             if (variationPoint instanceof Code_VariationPoint) {
-                                featureFiles.get(feature.getName()).print(((Code_VariationPoint) variationPoint).getContent());
-                                featureFiles.get(feature.getName()).print(((CodeFile)variationPoint.getFile()).getFilename();
+                                if ((writer = featureFiles.get(feature.getName())) == null) {
+                                    Files.createDirectories(Paths.get("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName()));
+                                    featureFiles.put(feature.getName(), new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName() + "/" + feature.getName() + ".js", "UTF-8"));
+                                    writer = featureFiles.get(feature.getName());
+                                }
+                                writer.print(((Code_VariationPoint) variationPoint).getContent());
                             } else if (variationPoint.getFile() instanceof CodeFile) {
                                 featureFiles.get(feature.getName()).print(((CodeFile) variationPoint.getFile()).getContent());
                             } else {
-                                extractFeatureCodeFromDirectory(variationPoint.getFile(), featureFiles.get(feature.getName()));
+                                extractFeatureCodeFromDirectory(variationPoint.getFile(), featureFiles, feature);
                             }
                         }
                     }
                 }
+                writer = new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/showcases_config.json", "UTF-8");
+                writer.print("{");
+                for (String feature: featureFiles.keySet()) {
+                    writer.print("\"" + feature + "\": {\n \"language\":\"JavaScript\",\n \"group\":\"Test\"},");
+                }
+                writer.print("}");
+                writer.close();
                 featureFiles.forEach((k, v) -> v.close());
             } catch (Exception e) {
                 logger.severe(e.getMessage());
@@ -243,14 +247,26 @@ public class FeatureCodeMiner {
 
     }
 
-    private static void extractFeatureCodeFromDirectory(CodeElement directory, PrintWriter printWriter) {
+    private static void extractFeatureCodeFromDirectory(CodeElement directory, Map<String, PrintWriter> featureFiles, Feature feature) throws IOException {
         for (CodeElement codeElement : directory.getChildren()) {
-            if (codeElement instanceof CodeFile) {
-                printWriter.print(((CodeFile) codeElement).getContent());
+            if (codeElement instanceof CodeFile && ((CodeFile) codeElement).getFilename().endsWith(".js")) {
+                printFeatureCode((CodeFile) codeElement, featureFiles, feature);
             } else {
-                extractFeatureCodeFromDirectory(codeElement, printWriter);
+                extractFeatureCodeFromDirectory(codeElement, featureFiles, feature);
             }
         }
+    }
+
+    private static void printFeatureCode(CodeFile codeElement, Map<String, PrintWriter> featureFiles, Feature feature) throws IOException {
+        PrintWriter writer;
+        if ((writer = featureFiles.get(feature.getName())) == null) {
+            Files.createDirectories(Paths.get("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName()));
+            featureFiles.put(feature.getName(), new PrintWriter("/Users/RaulMedeiros/Documents/19CustomDiff/SPLMiner/featureCode/" + feature.getName() + "/" + feature.getName() + ".js", "UTF-8"));
+            writer = featureFiles.get(feature.getName());
+        }
+        writer.print(codeElement.getContent());
+        writer.print(codeElement.getFilename());
+
     }
 
     // Regex used for autodetection
