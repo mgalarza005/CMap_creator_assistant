@@ -1,6 +1,11 @@
 package miners;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -63,13 +68,17 @@ public class FamilyModelMiner {
 
 			// 1: Open FamilyModel as XML
 			File fXmlFile = new File(familyModelPath);
+			System.out.println("MIKEL !!!!!!!!");
+			
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
 			doc = dBuilder.parse(fXmlFile);
+			
 			doc.getDocumentElement().normalize();
 
 			// 2: Check if actually is FamilyModel
 			NodeList fileIdNL = doc.getElementsByTagName("cm:consulmodel");
+			
 			if (fileIdNL.getLength() != 1) {
 				// It's not the FamilyModel!
 				MainClass.getLogger().severe("Specified FamilyModel isn't valid, aborting...");
@@ -77,24 +86,92 @@ public class FamilyModelMiner {
 			}
 			Node fileIdN = fileIdNL.item(0);
 			Element fileIdE = (Element) fileIdN;
+			
 			if (!fileIdE.getAttribute("cm:type").contentEquals("ps:ccfm")) {
 				MainClass.getLogger().severe("Specified FamilyModel isn't valid, aborting...");
 				return false;
 			}
 
-			// 3: Find root Element ID
+			// 3: Find root Element ID  (----------- WebAnnotator.ccfm fitxategiko root elementua-------)
 			NodeList rootF = doc.getElementsByTagName("cm:elements");
+			
 			Element rootElem = (Element) rootF.item(0);
-			String rootID = rootElem.getAttribute("cm:rootid");
+			System.out.println("Root element-en id-a. " + rootElem.getAttribute("cm:rootid"));
 
+			//rekorritzeko
+			NodeList elementuak = doc.getElementsByTagName("cm:element");
+			/*
+			for (int i=0; i < elementuak.getLength(); i++) {
+				Node n=elementuak.item(i);
+				System.out.println("eztatik" + n.getTextContent());
+				i++;
+			}
+			System.out.println("elementuak size" +elementuak.getLength());
+				
+			*/
+			
+			
+			//ADIBIDEA REKORRER XML adibidea
+			/*		
+			
+			try {
+            // Creo una instancia de DocumentBuilderFactory
+            DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+            // Creo un documentBuilder
+            DocumentBuilder builder = factory.newDocumentBuilder();
+ 
+            // Obtengo el documento, a partir del XML
+            Document documento = builder.parse(new File("concesionario.xml"));
+ 
+            // Cojo todas las etiquetas coche del documento
+            NodeList listaCoches = documento.getElementsByTagName("coche");
+ 
+            // Recorro las etiquetas
+            for (int i = 0; i < listaCoches.getLength(); i++) {
+                // Cojo el nodo actual
+                Node nodo = listaCoches.item(i);
+                // Compruebo si el nodo es un elemento
+                if (nodo.getNodeType() == Node.ELEMENT_NODE) {
+                    // Lo transformo a Element
+                    Element e = (Element) nodo;
+                    // Obtengo sus hijos
+                    NodeList hijos = e.getChildNodes();
+                    // Recorro sus hijos
+                    for (int j = 0; j < hijos.getLength(); j++) {
+                        // Obtengo al hijo actual
+                        Node hijo = hijos.item(j);
+                        // Compruebo si es un nodo
+                        if (hijo.getNodeType() == Node.ELEMENT_NODE) {
+                            // Muestro el contenido
+                            System.out.println("Propiedad: " + hijo.getNodeName()
+                                    + ", Valor: " + hijo.getTextContent());
+                        }
+ 
+                    }
+                    System.out.println("");
+                }
+ 
+            }
+ 
+        } catch (ParserConfigurationException | SAXException | IOException ex) {
+            System.out.println(ex.getMessage());
+        }
+    }
+			 */
+			
+			String rootID = rootElem.getAttribute("cm:rootid");
+			
 			// 4: Create CodeElement with all root's the info
 			CodeElement ce = new Directory(rootID, "", "ps:mandatory", spl, null);
 
 			// 5: Get all child CodeElements tree starting from root
 			ce.setChildren(getCodeElementTreeRecursively(rootID, ce, spl));
+			System.out.println("Hau ere ez dit inprrri");
 
 			// 6: Now, we have completed our CodeElement's info. Save to the SPL.
 			spl.addCodeElement(ce);
+			System.out.println("Ez dit hau inprimitzen");
+			System.out.println("SPL-aren kodeElementu kopurua: "+spl.getCodeElements().size());
 
 			return true;
 
@@ -106,8 +183,9 @@ public class FamilyModelMiner {
 
 	}
 
-	private static ArrayList<CodeElement> getCodeElementTreeRecursively(String nowId, CodeElement parentCodeElement, SPL spl) {
-
+	private static ArrayList<CodeElement> getCodeElementTreeRecursively(String nowId, CodeElement parentCodeElement, SPL spl) throws IOException {
+		
+		 
 		ArrayList<CodeElement> resultChildren = new ArrayList<>();
 
 		// 1: Get XML element of 'nowId' (parentID)

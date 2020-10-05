@@ -52,6 +52,7 @@ public class MainSql {
 	public static void exportToFile(String filepath) {
 		try {
 			PrintWriter writer = new PrintWriter(filepath, "UTF-8");
+			
 			for (String i : inserts) {
 				writer.println(i);
 			}

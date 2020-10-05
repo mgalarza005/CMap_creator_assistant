@@ -155,8 +155,7 @@ public class FeatureModelMiner {
 		
 	}
 
-	private static ArrayList<Feature> getFeatureTreeRecursively(FeatureModel fm, String path, String nowId,
-			Feature parentFeature) {
+	private static ArrayList<Feature> getFeatureTreeRecursively(FeatureModel fm, String path, String nowId, Feature parentFeature) {
 
 		ArrayList<Feature> resultChildren = new ArrayList<Feature>();
 
@@ -171,8 +170,7 @@ public class FeatureModelMiner {
 				Node relation = relations.item(i);
 				if (relation.getNodeType() == Node.ELEMENT_NODE) {
 					Element rElem = (Element) relation;
-					if (rElem.getAttribute("cm:type").contains("ps:requires")
-							|| rElem.getAttribute("cm:type").contains("ps:conflicts")) {
+					if (rElem.getAttribute("cm:type").contains("ps:requires") || rElem.getAttribute("cm:type").contains("ps:conflicts")) {
 
 						// 2.1: Relations here are dependencies (requires, requiresAll, conflicts...)
 						NodeList targets = relation.getChildNodes();

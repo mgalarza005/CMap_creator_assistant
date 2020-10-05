@@ -1,9 +1,15 @@
 package miners;
 
+import java.awt.List;
 import java.io.BufferedReader;
+
 import java.io.ByteArrayInputStream;
 import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -21,6 +27,18 @@ import utils.Pair;
 import utils.PositionalXMLReader;
 
 public class CodeMiner {
+	//Redirigir a un archivo .txt 
+	
+	
+	 
+
+	 //create an print writer for writing to a file
+  
+	 
+	 
+         
+	private static String kodeaBariableekin="";
+	private static String kodea="";
 
 	private static CodeFile cf;
 	private static BufferedReader bf;
@@ -49,6 +67,29 @@ public class CodeMiner {
 			// [ERROR]
 			e.printStackTrace();
 			return "";
+		}
+	}
+	
+	public static void idatziFitxategianBariableaK (String i) throws IOException {
+		//BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+		FileWriter fw = new FileWriter("/Users/MIKEL1/git/WacLine/outputWithVariables.txt");
+		try {
+			fw.write(kodeaBariableekin);
+			fw.close();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+	public static void idatziFitxategiBatean (String i) throws IOException {
+		//BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+
+		FileWriter fw = new FileWriter("/Users/MIKEL1/git/WacLine/output.txt");
+		try {
+			fw.write(kodea);
+			fw.close();
+		}catch (Exception e){
+			e.printStackTrace();
 		}
 	}
 
@@ -85,8 +126,25 @@ public class CodeMiner {
 
 			String line;
 			ArrayList<Feature> feats;
+			System.out.println("KOOOOODEEEEAAAAA!!!!!!!!!!!!!!!");
+			System.out.println(code.getPath().toString());
 			while ((line = readLine()) != null) {
+				kodea+="Kode lerroa: "+ line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
+				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
+					String[] kk = line.split("var");
+					String g = kk[1];
+					String[] oo = g.split(" ");
+					String emaitza = oo[1];
+					kodeaBariableekin += "Bariablea: " + emaitza+ "\n";
+					
+					
+					
+				}
+				
+				
+				
+				//System.out.println("Kode lerroa:" + line);
 				if (checkVPString) {
 					checkVPString = false;
 					vpString = "";
@@ -100,7 +158,8 @@ public class CodeMiner {
 					findNestedVPs(feats, readingIndex, expr, line.substring(line.indexOf(expr)) + "\n",0, spl);
 				}
 			}
-
+			idatziFitxategiBatean(line);
+			idatziFitxategianBariableaK(kodeaBariableekin);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

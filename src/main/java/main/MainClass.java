@@ -28,28 +28,33 @@ import miners.cmap.CMapMiner;
 import utils.DepResolver;
 
 public class MainClass {
+	
+	
 
 	/*
 	 * CONFIGURATION
 	 */
 
 	// Folder where it's located .git/ folder
-	private static final String SPL_LOCAL_GIT_REPO = "/Users/RaulMedeiros/Documents/19CustomDiff/WacLine";
+	private static final String SPL_LOCAL_GIT_REPO ="/Users/MIKEL1/git/WacLine";
+	
+	//"/Users/RaulMedeiros/Documents/19CustomDiff/WacLine"
 
 	// Folder where are all the code files, images...
 	private static final String SPL_CODE_FOLDER = SPL_LOCAL_GIT_REPO + "/input";
+	
 
 	// SPL info
 	private static final String SPL_NAME = "WacLine";
 	
 	// Mining type
-	private static final int MINING_TYPE = 3;
+	private static final int MINING_TYPE = 1;
 	
 	// CMap configuration (for MINING_TYPE == 2 OR 3)
 	private static final String CMAPS_FOLDER = "/cmaps";
 	private static final String[] CMAPS = {
 				SPL_LOCAL_GIT_REPO + CMAPS_FOLDER + "/WebAnnotation.cxl"
-			};
+	};
 
 	/*
 	 * IMPLEMENTATION
@@ -122,11 +127,13 @@ public class MainClass {
 
 			while (treeWalk.next()) {
 				String path = treeWalk.getPathString();
+			
 
 				if (isFeatureModel(path)) {
 					FeatureModel fm = new FeatureModel(SPL_LOCAL_GIT_REPO + "/" + path);
 					spl.addFeatureModel(fm);
 				} else if (isFamilyModel(path)) {
+					System.out.println("familyModelPath" + path);
 					familyModelPaths.add(SPL_LOCAL_GIT_REPO + "/" + path);
 				} else if (isVariantModel(path)) {
 					VariantModel vm = new VariantModel(SPL_LOCAL_GIT_REPO + "/" + path);
@@ -145,12 +152,17 @@ public class MainClass {
 			switch (MINING_TYPE) {
 			case 1:
 				logger.info("--     Whole SPL minging      --");
+				logger.info( String.valueOf(MINING_TYPE));
 				break;
 			case 2:
 				logger.info("--    Connect: CMap mining    --");
+				logger.info( String.valueOf(MINING_TYPE));
+
 				break;
 			case 3:
-				logger.info("-- Whole SPL and CMap mining  --");
+				logger.info("-- Whole SPL and CMap mining  --");	
+				logger.info( String.valueOf(MINING_TYPE));
+
 				break;
 			}
 			
