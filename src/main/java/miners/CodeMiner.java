@@ -73,7 +73,9 @@ public class CodeMiner {
 	public static void idatziFitxategianBariableaK (String i) throws IOException {
 		//BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-		FileWriter fw = new FileWriter("/Users/MIKEL1/git/WacLine/outputWithVariables.txt");
+		
+		//FileWriter fw = new FileWriter("/Users/MIKEL1/git/WacLine/outputWithVariables.txt");
+		FileWriter fw = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/outputWithVariables.txt");
 		try {
 			fw.write(kodeaBariableekin);
 			fw.close();
@@ -84,7 +86,7 @@ public class CodeMiner {
 	public static void idatziFitxategiBatean (String i) throws IOException {
 		//BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
 
-		FileWriter fw = new FileWriter("/Users/MIKEL1/git/WacLine/output.txt");
+		FileWriter fw = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/output.txt");
 		try {
 			fw.write(kodea);
 			fw.close();
