@@ -215,7 +215,11 @@ public class MainClass {
 				clean();
 				return;
 			}
+			CodeMiner.inprimatuAldagaiTaula();
+			CodeMiner.AldagaiTaulaOrdenatu();
 			CodeMiner.idatziJSKlaseak();
+			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
+			CodeMiner.idatziAldagaiTaulak();
 
 			logger.info("Ending Family Model mining process");
 

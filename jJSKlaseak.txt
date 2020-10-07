@@ -1,4 +1,6 @@
 --JAVASCRIPT KLASEAK--
+
+
 messages.json
 browserStorageSearch.html
 pdf.js

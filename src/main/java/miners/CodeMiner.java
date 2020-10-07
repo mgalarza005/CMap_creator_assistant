@@ -1,6 +1,7 @@
 package miners;
 
 import java.awt.List;
+
 import java.io.BufferedReader;
 
 import java.io.ByteArrayInputStream;
@@ -15,6 +16,10 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import domain.*;
+import domain.cmap.creator.AldagaiTaula;
+import domain.cmap.creator.Aldagaia;
+
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -38,6 +43,8 @@ public class CodeMiner {
 	 
 	private static String javaScriptKlasea="--JAVASCRIPT KLASEAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodeaBariableekin="--ALDAGAI--" + "\n"+ "\n"+ "\n";
+	private static String kodeaBariableekin2="--ALDAGAI_TAULAN--" + "\n"+ "\n"+ "\n";
+
 	private static String kodeaFuntzioekin="--FUNTZIOAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodea="--KODEA--"+ "\n"+ "\n"+ "\n";
 
@@ -48,6 +55,11 @@ public class CodeMiner {
 	private static boolean reprocess = false;
 	private static boolean checkVPString = false;
 	private static String vpString = "";
+	
+	private static AldagaiTaula aldagaiTaula = new AldagaiTaula(new ArrayList<Aldagaia>());
+	
+	
+	//private static ArrayList<Aldagaia> aldagaiT= new ArrayList<Aldagaia>();
 	
 	/* REGEX */
 	private final static String INSIDE_BRACKETS = "\\((\\w+|\\w+\\(.*\\)|[\\s\\'\\.\\,\\:\\-\\>\\=\\<])+\\)";
@@ -97,6 +109,26 @@ public class CodeMiner {
 		try {
 			fw.write(kodea);
 			fw.close();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
+	
+	public static void inprimatuAldagaiTaula() {
+		aldagaiTaula.getAldagaiT().sort(Aldagaia, agerpenKop);
+		
+		for(int i=0; i<aldagaiTaula.getAldagaiT().size(); i++ ) {
+			kodeaBariableekin2 += "Izena: "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
+					"Kontua: " + aldagaiTaula.getAldagaiT().get(i).getAgerpenKop() + "\n";
+		}
+		
+	}
+	public static void idatziAldagaiTaulak() throws IOException {
+		FileWriter fw4 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/AldagaiTaula.txt");
+		try {
+			
+			fw4.write(kodeaBariableekin2);
+			fw4.close();
 		}catch (Exception e){
 			e.printStackTrace();
 		}
@@ -161,6 +193,14 @@ public class CodeMiner {
 						String[] lerroarenBigarrenZatia = g.split(" ");
 						if(lerroarenBigarrenZatia.length>1) {
 							String emaitza = lerroarenBigarrenZatia[1];
+							if(emaitza!=null) {
+								if(aldagaiTaula.agertzenDa(emaitza)){
+									aldagaiTaula.gehituKopurua(emaitza);
+								}else {
+									Aldagaia a= new Aldagaia(emaitza,1);
+									aldagaiTaula.getAldagaiT().add(a);
+								}
+							}
 							kodeaBariableekin += emaitza+ "\n";	
 						}
 					}
@@ -627,5 +667,8 @@ public class CodeMiner {
 
 		return null;
 	}
+
+	
+	
 
 }
