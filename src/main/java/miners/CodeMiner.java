@@ -12,6 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -25,6 +26,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
+import AldagaiAgerpenComparator.AldagaiAgerpenComparator;
+import AldagaiAgerpenComparator.AldagaiChainedComparator;
 import main.MainClass;
 import utils.FeatureSizeUtil;
 import utils.GenericUtils;
@@ -115,11 +118,12 @@ public class CodeMiner {
 	}
 	
 	public static void inprimatuAldagaiTaula() {
-		aldagaiTaula.getAldagaiT().sort(Aldagaia, agerpenKop);
+		Collections.sort(aldagaiTaula.getAldagaiT(), new AldagaiChainedComparator(new AldagaiAgerpenComparator()));
+		//aldagaiTaula.getAldagaiT().sort(Aldagaia, agerpenKop);
 		
 		for(int i=0; i<aldagaiTaula.getAldagaiT().size(); i++ ) {
-			kodeaBariableekin2 += "Izena: "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
-					"Kontua: " + aldagaiTaula.getAldagaiT().get(i).getAgerpenKop() + "\n";
+			kodeaBariableekin2 += "Aldagai izena zena:   "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
+					"   eta kontua:   " + aldagaiTaula.getAldagaiT().get(i).getAgerpenKop() + "\n";
 		}
 		
 	}

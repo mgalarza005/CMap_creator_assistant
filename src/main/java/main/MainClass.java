@@ -216,7 +216,7 @@ public class MainClass {
 				return;
 			}
 			CodeMiner.inprimatuAldagaiTaula();
-			CodeMiner.AldagaiTaulaOrdenatu();
+			
 			CodeMiner.idatziJSKlaseak();
 			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
 			CodeMiner.idatziAldagaiTaulak();
