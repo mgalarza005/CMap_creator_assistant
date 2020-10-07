@@ -1,187 +1,188 @@
-Klasea: messages.json
-Klasea: browserStorageSearch.html
-Klasea: pdf.js
-Klasea: pdf.worker.js
-Klasea: viewer.css
-Klasea: viewer.html
-Klasea: viewer.js
-Klasea: index.html
-Klasea: index.js
-Klasea: groupSelection.html
-Klasea: sidebar.html
-Klasea: tagWrapper.html
-Klasea: toolset.html
-Klasea: userFilterWrapper.html
-Klasea: reviewCanvas.html
-Klasea: filePermission.html
-Klasea: options.html
-Klasea: popup.html
-Klasea: CreateAnnotation.js
-Klasea: Assessing.js
-Klasea: Body.js
-Klasea: Classifying.js
-Klasea: Commenting.js
-Klasea: CommentingForm.js
-Klasea: PreviousAssignments.js
-Klasea: ReplyAnnotation.js
-Klasea: SuggestingLiterature.js
-Klasea: AnnotationList.js
-Klasea: Canvas.js
-Klasea: GoogleSheetGenerator.js
-Klasea: MoodleComment.js
-Klasea: MoodleReport.js
-Klasea: ReadAnnotation.js
-Klasea: Resume.js
-Klasea: Screenshots.js
-Klasea: TextSummary.js
-Klasea: UserFilter.js
-Klasea: Annotation.js
-Klasea: AnnotationManagement.js
-Klasea: DeleteAnnotation.js
-Klasea: UpdateAnnotation.js
-Klasea: BrowserStorage.js
-Klasea: BrowserStorageClient.js
-Klasea: BrowserStorageManager.js
-Klasea: EmptyDatabase.json
-Klasea: Hypothesis.js
-Klasea: HypothesisClientManager.js
-Klasea: Neo4JClient.js
-Klasea: Neo4JClientManager.js
-Klasea: AnnotationServer.js
-Klasea: AnnotationServerManager.js
-Klasea: CreateHighlighterTask.js
-Klasea: Task.js
-Klasea: AnnotationServerManager.js
-Klasea: GoogleSheetsManager.js
-Klasea: HypothesisManager.js
-Klasea: MoodleBackgroundManager.js
-Klasea: MoodleDownloadManager.js
-Klasea: Neo4JManager.js
-Klasea: TargetManager.js
-Klasea: TaskManager.js
-Klasea: Code.js
-Klasea: Codebook.js
-Klasea: Theme.js
-Klasea: BuiltIn.js
-Klasea: BuiltInCodebookScheme.json
-Klasea: EmptyCodebook.js
-Klasea: GSheetParser.js
-Klasea: GSheetProvider.js
-Klasea: GroupInitializer.js
-Klasea: MoodleAugmentation.js
-Klasea: MoodleGraderAugmentation.js
-Klasea: MoodleGradingAugmentation.js
-Klasea: MoodleViewPluginAssignSubmissionAugmentation.js
-Klasea: MoodleProvider.js
-Klasea: MoodleScraping.js
-Klasea: NoCodebook.js
-Klasea: NoCodebookScheme.json
-Klasea: CreateCodebook.js
-Klasea: DeleteCodebook.js
-Klasea: DeleteGroup.js
-Klasea: ExportCodebook.js
-Klasea: ExportCodebookJSON.js
-Klasea: ImportCodebook.js
-Klasea: ImportCodebookJSON.js
-Klasea: Buttons.js
-Klasea: ReadCodebook.js
-Klasea: RenameCodebook.js
-Klasea: UpdateCodebook.js
-Klasea: CodebookManager.js
-Klasea: AnnotatedContentManager.js
-Klasea: AnnotationBasedInitializer.js
-Klasea: ContentScriptManager.js
-Klasea: ModeManager.js
-Klasea: RolesManager.js
-Klasea: Sidebar.js
-Klasea: Toolset.js
-Klasea: reviewModel.js
-Klasea: GoogleSheetClient.js
-Klasea: GoogleSheetsClientManager.js
-Klasea: GroupSelector.js
-Klasea: AnnotationExporter.js
-Klasea: AnnotationImporter.js
-Klasea: APISimulation.js
-Klasea: BackToWorkspace.js
-Klasea: MoodleClient.js
-Klasea: MoodleClientManager.js
-Klasea: MoodleFunctions.js
-Klasea: MoodleUtils.js
-Klasea: Options.js
-Klasea: Popup.js
-Klasea: HTML.js
-Klasea: PDF.js
-Klasea: TXT.js
-Klasea: TargetManager.js
-Klasea: Alerts.js
-Klasea: AnnotationUtils.js
-Klasea: ChromeStorage.js
-Klasea: ColorUtils.js
-Klasea: CryptoUtils.js
-Klasea: DOM.js
-Klasea: DOMTextUtils.js
-Klasea: DataUtils.js
-Klasea: DateUtils.js
-Klasea: FileUtils.js
-Klasea: LanguageUtils.js
-Klasea: PDFTextUtils.js
-Klasea: RandomUtils.js
-Klasea: SheetUtils.js
-Klasea: URLUtils.js
-Klasea: BrowserStorageSearch.js
-Klasea: Config.js
-Klasea: Events.js
-Klasea: acmContentScript.js
-Klasea: background.js
-Klasea: contentScript.js
-Klasea: googleSheetsContentScript.js
-Klasea: hypothesisGroupContentScript.js
-Klasea: moodleAssignmentAddContentScript.js
-Klasea: moodleContentScript.js
-Klasea: options.js
-Klasea: popup.js
-Klasea: scienceDirectContentScript.js
-Klasea: springerContentScript.js
-Klasea: browserStorageSearch.scss
-Klasea: contentScript.scss
-Klasea: exam.scss
-Klasea: groupSelection.scss
-Klasea: locationManager.scss
-Klasea: options.scss
-Klasea: pdfjs.scss
-Klasea: review.scss
-Klasea: reviewAssistant.scss
-Klasea: reviewCanvas.scss
-Klasea: sidebar.scss
-Klasea: slrDataExtraction.scss
-Klasea: tagWrapper.scss
-Klasea: textAnnotator.scss
-Klasea: toolset.scss
-Klasea: userFilter.scss
-Klasea: variables.scss
-Klasea: manifest.json
-Klasea: applyBrowserPrefixesFor.js
-Klasea: args.js
-Klasea: build.js
-Klasea: chromereload.js
-Klasea: clean.js
-Klasea: content.js
-Klasea: default.js
-Klasea: fonts.js
-Klasea: images.js
-Klasea: locales.js
-Klasea: manifest.js
-Klasea: pack.js
-Klasea: pages.js
-Klasea: scripts.js
-Klasea: styles.js
-Klasea: test.js
-Klasea: version.js
-Klasea: .babelrc
-Klasea: .editorconfig
-Klasea: .eslintrc
-Klasea: .gitignore
-Klasea: dependencies.ps1
-Klasea: dependencies.sh
-Klasea: gulpfile.babel.js
-Klasea: package.json
+--JAVASCRIPT KLASEAK--
+messages.json
+browserStorageSearch.html
+pdf.js
+pdf.worker.js
+viewer.css
+viewer.html
+viewer.js
+index.html
+index.js
+groupSelection.html
+sidebar.html
+tagWrapper.html
+toolset.html
+userFilterWrapper.html
+reviewCanvas.html
+filePermission.html
+options.html
+popup.html
+CreateAnnotation.js
+Assessing.js
+Body.js
+Classifying.js
+Commenting.js
+CommentingForm.js
+PreviousAssignments.js
+ReplyAnnotation.js
+SuggestingLiterature.js
+AnnotationList.js
+Canvas.js
+GoogleSheetGenerator.js
+MoodleComment.js
+MoodleReport.js
+ReadAnnotation.js
+Resume.js
+Screenshots.js
+TextSummary.js
+UserFilter.js
+Annotation.js
+AnnotationManagement.js
+DeleteAnnotation.js
+UpdateAnnotation.js
+BrowserStorage.js
+BrowserStorageClient.js
+BrowserStorageManager.js
+EmptyDatabase.json
+Hypothesis.js
+HypothesisClientManager.js
+Neo4JClient.js
+Neo4JClientManager.js
+AnnotationServer.js
+AnnotationServerManager.js
+CreateHighlighterTask.js
+Task.js
+AnnotationServerManager.js
+GoogleSheetsManager.js
+HypothesisManager.js
+MoodleBackgroundManager.js
+MoodleDownloadManager.js
+Neo4JManager.js
+TargetManager.js
+TaskManager.js
+Code.js
+Codebook.js
+Theme.js
+BuiltIn.js
+BuiltInCodebookScheme.json
+EmptyCodebook.js
+GSheetParser.js
+GSheetProvider.js
+GroupInitializer.js
+MoodleAugmentation.js
+MoodleGraderAugmentation.js
+MoodleGradingAugmentation.js
+MoodleViewPluginAssignSubmissionAugmentation.js
+MoodleProvider.js
+MoodleScraping.js
+NoCodebook.js
+NoCodebookScheme.json
+CreateCodebook.js
+DeleteCodebook.js
+DeleteGroup.js
+ExportCodebook.js
+ExportCodebookJSON.js
+ImportCodebook.js
+ImportCodebookJSON.js
+Buttons.js
+ReadCodebook.js
+RenameCodebook.js
+UpdateCodebook.js
+CodebookManager.js
+AnnotatedContentManager.js
+AnnotationBasedInitializer.js
+ContentScriptManager.js
+ModeManager.js
+RolesManager.js
+Sidebar.js
+Toolset.js
+reviewModel.js
+GoogleSheetClient.js
+GoogleSheetsClientManager.js
+GroupSelector.js
+AnnotationExporter.js
+AnnotationImporter.js
+APISimulation.js
+BackToWorkspace.js
+MoodleClient.js
+MoodleClientManager.js
+MoodleFunctions.js
+MoodleUtils.js
+Options.js
+Popup.js
+HTML.js
+PDF.js
+TXT.js
+TargetManager.js
+Alerts.js
+AnnotationUtils.js
+ChromeStorage.js
+ColorUtils.js
+CryptoUtils.js
+DOM.js
+DOMTextUtils.js
+DataUtils.js
+DateUtils.js
+FileUtils.js
+LanguageUtils.js
+PDFTextUtils.js
+RandomUtils.js
+SheetUtils.js
+URLUtils.js
+BrowserStorageSearch.js
+Config.js
+Events.js
+acmContentScript.js
+background.js
+contentScript.js
+googleSheetsContentScript.js
+hypothesisGroupContentScript.js
+moodleAssignmentAddContentScript.js
+moodleContentScript.js
+options.js
+popup.js
+scienceDirectContentScript.js
+springerContentScript.js
+browserStorageSearch.scss
+contentScript.scss
+exam.scss
+groupSelection.scss
+locationManager.scss
+options.scss
+pdfjs.scss
+review.scss
+reviewAssistant.scss
+reviewCanvas.scss
+sidebar.scss
+slrDataExtraction.scss
+tagWrapper.scss
+textAnnotator.scss
+toolset.scss
+userFilter.scss
+variables.scss
+manifest.json
+applyBrowserPrefixesFor.js
+args.js
+build.js
+chromereload.js
+clean.js
+content.js
+default.js
+fonts.js
+images.js
+locales.js
+manifest.js
+pack.js
+pages.js
+scripts.js
+styles.js
+test.js
+version.js
+.babelrc
+.editorconfig
+.eslintrc
+.gitignore
+dependencies.ps1
+dependencies.sh
+gulpfile.babel.js
+package.json

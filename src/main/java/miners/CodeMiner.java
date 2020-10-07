@@ -36,10 +36,10 @@ public class CodeMiner {
   
 	 
 	 
-	private static String javaScriptKlasea="";
-	private static String kodeaBariableekin="";
-	private static String kodeaFuntzioekin="";
-	private static String kodea="";
+	private static String javaScriptKlasea="--JAVASCRIPT KLASEAK--"+ "\n"+ "\n"+ "\n";
+	private static String kodeaBariableekin="--ALDAGAI--" + "\n"+ "\n"+ "\n";
+	private static String kodeaFuntzioekin="--FUNTZIOAK--"+ "\n"+ "\n"+ "\n";
+	private static String kodea="--KODEA--"+ "\n"+ "\n"+ "\n";
 
 	private static CodeFile cf;
 	private static BufferedReader bf;
@@ -114,7 +114,7 @@ public class CodeMiner {
 		} else {
 			// Non XML mode
 			extractVPsFromNonXMLFile(cf,spl);
-			javaScriptKlasea += "Klasea: " +cf.getFilename() + "\n";
+			javaScriptKlasea += cf.getFilename() + "\n";
 		}
 
 		for (VariationPoint vp : cf.getVariationPoints()) {
@@ -128,6 +128,7 @@ public class CodeMiner {
 	public static void idatziJSKlaseak() throws IOException {
 		FileWriter fw3 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/jJSKlaseak.txt");
 		try {
+			
 			fw3.write(javaScriptKlasea);
 			fw3.close();
 		}catch (Exception e){
@@ -150,7 +151,7 @@ public class CodeMiner {
 			System.out.println("KOOOOODEEEEAAAAA!!!!!!!!!!!!!!!");
 			System.out.println("Path-a" + code.getPath().toString() + "Klase izena: "+  cf.getFilename());
 			while ((line = readLine()) != null) {
-				kodea+="Kode lerroa: "+ line + "\n";
+				kodea+=line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
 				//Aldagaien izena lortzeko
 				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
@@ -160,7 +161,7 @@ public class CodeMiner {
 						String[] lerroarenBigarrenZatia = g.split(" ");
 						if(lerroarenBigarrenZatia.length>1) {
 							String emaitza = lerroarenBigarrenZatia[1];
-							kodeaBariableekin += "Bariablea: " + emaitza+ "\n";	
+							kodeaBariableekin += emaitza+ "\n";	
 						}
 					}
 				}
@@ -177,10 +178,10 @@ public class CodeMiner {
 								String[] pp = emaitza.split("\\(");
 								if(pp.length>0) {
 									String azkenEmaitza = pp[0].trim();
-									if( azkenEmaitza.isEmpty() || azkenEmaitza.contains("{")) {
+									if( azkenEmaitza.isEmpty() || azkenEmaitza.contains("{") || azkenEmaitza.contains("(") || azkenEmaitza.contains(",")) {
 										
 									}else {
-										kodeaFuntzioekin += "Funtzioa: " + azkenEmaitza+ "\n";	
+										kodeaFuntzioekin += azkenEmaitza+ "\n";	
 									}
 							
 								}
