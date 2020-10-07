@@ -215,6 +215,7 @@ public class MainClass {
 				clean();
 				return;
 			}
+			CodeMiner.idatziJSKlaseak();
 
 			logger.info("Ending Family Model mining process");
 

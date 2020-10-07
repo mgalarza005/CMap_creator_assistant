@@ -36,8 +36,9 @@ public class CodeMiner {
   
 	 
 	 
-         
+	private static String javaScriptKlasea="";
 	private static String kodeaBariableekin="";
+	private static String kodeaFuntzioekin="";
 	private static String kodea="";
 
 	private static CodeFile cf;
@@ -70,11 +71,7 @@ public class CodeMiner {
 		}
 	}
 	
-	public static void idatziFitxategianBariableaK (String i) throws IOException {
-		//BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-
-		
-		//FileWriter fw = new FileWriter("/Users/MIKEL1/git/WacLine/outputWithVariables.txt");
+	public static void idatziFitxategianBariableak (String i) throws IOException {
 		FileWriter fw = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/outputWithVariables.txt");
 		try {
 			fw.write(kodeaBariableekin);
@@ -83,9 +80,19 @@ public class CodeMiner {
 			e.printStackTrace();
 		}
 	}
-	public static void idatziFitxategiBatean (String i) throws IOException {
-		//BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
+	
+	public static void idatziFitxategianFuntzioak (String r) throws IOException {
+		FileWriter fw1 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/outputWithFunctions.txt");
+		try {
+			fw1.write(kodeaFuntzioekin);
+			fw1.close();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	} 
 
+
+	public static void idatziFitxategiBatean (String i) throws IOException {
 		FileWriter fw = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/output.txt");
 		try {
 			fw.write(kodea);
@@ -95,7 +102,7 @@ public class CodeMiner {
 		}
 	}
 
-	public static void extractVPsFromFile(CodeFile code, String type, SPL spl) {
+	public static void extractVPsFromFile(CodeFile code, String type, SPL spl) throws IOException {
 
 		cf = code;
 
@@ -107,6 +114,7 @@ public class CodeMiner {
 		} else {
 			// Non XML mode
 			extractVPsFromNonXMLFile(cf,spl);
+			javaScriptKlasea += "Klasea: " +cf.getFilename() + "\n";
 		}
 
 		for (VariationPoint vp : cf.getVariationPoints()) {
@@ -114,6 +122,17 @@ public class CodeMiner {
 		}
 		
 		MainClass.getLogger().info("Mining of " + cf.getFilename() + " ended.");
+		idatziJSKlaseak();
+	}
+
+	public static void idatziJSKlaseak() throws IOException {
+		FileWriter fw3 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/jJSKlaseak.txt");
+		try {
+			fw3.write(javaScriptKlasea);
+			fw3.close();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
 	}
 
 	// Main function for extracting VPs on non XML file
@@ -129,18 +148,45 @@ public class CodeMiner {
 			String line;
 			ArrayList<Feature> feats;
 			System.out.println("KOOOOODEEEEAAAAA!!!!!!!!!!!!!!!");
-			System.out.println(code.getPath().toString());
+			System.out.println("Path-a" + code.getPath().toString() + "Klase izena: "+  cf.getFilename());
 			while ((line = readLine()) != null) {
 				kodea+="Kode lerroa: "+ line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
+				//Aldagaien izena lortzeko
 				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
 					String[] kk = line.split("var");
-					String g = kk[1];
-					String[] oo = g.split(" ");
-					String emaitza = oo[1];
-					kodeaBariableekin += "Bariablea: " + emaitza+ "\n";
-					
-					
+					if(kk.length>1) {
+						String g = kk[1];
+						String[] lerroarenBigarrenZatia = g.split(" ");
+						if(lerroarenBigarrenZatia.length>1) {
+							String emaitza = lerroarenBigarrenZatia[1];
+							kodeaBariableekin += "Bariablea: " + emaitza+ "\n";	
+						}
+					}
+				}
+				
+				//Funtzioen izena lortzeko
+				if (line.contains("function") || line.contains(" function") || line.contains("function ")) {
+					String[] kk = line.split("function");
+					if(kk.length>1){
+						String lerroarenBigarrenZatia = kk[1];
+						if(lerroarenBigarrenZatia.contains("(") && lerroarenBigarrenZatia.contains(")") && lerroarenBigarrenZatia.contains("{")){
+							String[] funtzioarenIzenaEtaLehenParametroa = lerroarenBigarrenZatia.split(" ");
+							if(funtzioarenIzenaEtaLehenParametroa.length>1) {
+								String emaitza = funtzioarenIzenaEtaLehenParametroa[1];
+								String[] pp = emaitza.split("\\(");
+								if(pp.length>0) {
+									String azkenEmaitza = pp[0].trim();
+									if( azkenEmaitza.isEmpty() || azkenEmaitza.contains("{")) {
+										
+									}else {
+										kodeaFuntzioekin += "Funtzioa: " + azkenEmaitza+ "\n";	
+									}
+							
+								}
+							}
+						}
+					}
 					
 				}
 				
@@ -161,7 +207,8 @@ public class CodeMiner {
 				}
 			}
 			idatziFitxategiBatean(line);
-			idatziFitxategianBariableaK(kodeaBariableekin);
+			idatziFitxategianBariableak(kodeaBariableekin);
+			idatziFitxategianFuntzioak(kodeaFuntzioekin);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
