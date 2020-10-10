@@ -2,22 +2,22 @@ package domain.cmap.creator;
 
 public class Aldagaia {
 	
-	private String aldagaIzena;
+	private String izena;
 	
 	
 	public Aldagaia(String aldagaIzena, int agerpenKop) {
 		super();
-		this.aldagaIzena = aldagaIzena;
+		this.izena = aldagaIzena;
 		this.agerpenKop = agerpenKop;
 	}
 	private int agerpenKop;
 	
 	
 	public String getAldagaIzena() {
-		return aldagaIzena;
+		return izena;
 	}
 	public void setAldagaIzena(String aldagaIzena) {
-		this.aldagaIzena = aldagaIzena;
+		this.izena = aldagaIzena;
 	}
 	public int getAgerpenKop() {
 		return agerpenKop;

@@ -23,7 +23,7 @@ public class AldagaiTaula {
 	
 	public boolean agertzenDa(String a) {
 		
-		if(a!=null) {
+		if(a!=null || a!=" ") {
 			int j=0;
 			while(j<this.aldagaiT.size()) {
 				if(this.aldagaiT.get(j).getAldagaIzena().equals(a)) {

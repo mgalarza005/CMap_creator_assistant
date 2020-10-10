@@ -143,8 +143,8 @@ public class MainClass {
 			}
 
 			revWalk.dispose();
-
-			/* MINING */
+			
+			// MINING 
 			logger.info("--------------------------------");
 			logger.info("-- STARTING SPL TO DB PROCESS --");
 			
@@ -177,7 +177,8 @@ public class MainClass {
 				clean();
 				return;
 			}
-
+			
+			
 			// 1: Mine all the files
 
 			// 1.1: Mine the Feature Model
@@ -190,7 +191,8 @@ public class MainClass {
 			}
 
 			logger.info("Ending Feature mining process");
-
+			
+			/*
 			if(MINING_TYPE != 1) {
 				
 				for(String cmapPath : CMAPS) {
@@ -206,7 +208,8 @@ public class MainClass {
 				if(MINING_TYPE == 2)
 					return;
 			}
-
+ 			*/
+			
 			// 1.2: Mine the Family Model
 			logger.info("2. Starting Family Model mining process");
 
@@ -215,14 +218,11 @@ public class MainClass {
 				clean();
 				return;
 			}
-			CodeMiner.inprimatuAldagaiTaula();
 			
-			CodeMiner.idatziJSKlaseak();
-			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
-			CodeMiner.idatziAldagaiTaulak();
-
+			
+			
 			logger.info("Ending Family Model mining process");
-
+			
 			// 1.3: Mine the Variant Models
 			logger.info("3. Starting Variant Model mining process");
 
@@ -230,8 +230,24 @@ public class MainClass {
 
 			logger.info("Ending Variant Model mining process");
 
+			
+			
+			
+			
+			CodeMiner.idatziJSKlaseak();
+			
+			
+			CodeMiner.inprimatuAldagaiTaularenInfo();
+			
+			
+			CodeMiner.agerpenTotalakKontatu();
+			//CodeMiner.idatziFitxategiBateanBigarrena();
+			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
+			CodeMiner.inprimatuAldagaiTaula();
+			CodeMiner.idatziAldagaiTaulakFitxategiBatean();
+			
 			// 2: Generate inserts for filling the DB
-
+			/*
 			// 2.1: SPL related insert
 			MainSql.generateSPLInsert(spl);
 
@@ -249,7 +265,7 @@ public class MainClass {
 
 			logger.info("SPL mining process ended, " + MainSql.getInserts().size() + " inserts generated.");
 			logger.info("Inserts are stored at: " + SPL_LOCAL_GIT_REPO + "/" + SPL_NAME + "_INSERTS.sql");
-			
+			*/
 			clean();
 
 		} catch (Exception e) {

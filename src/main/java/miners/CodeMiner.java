@@ -13,6 +13,7 @@ import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -35,22 +36,19 @@ import utils.Pair;
 import utils.PositionalXMLReader;
 
 public class CodeMiner {
-	//Redirigir a un archivo .txt 
+	
 	
 	
 	 
 
 	 //create an print writer for writing to a file
-  
-	 
-	 
-	private static String javaScriptKlasea="--JAVASCRIPT KLASEAK--"+ "\n"+ "\n"+ "\n";
+  	private static String javaScriptKlasea="--JAVASCRIPT KLASEAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodeaBariableekin="--ALDAGAI--" + "\n"+ "\n"+ "\n";
 	private static String kodeaBariableekin2="--ALDAGAI_TAULAN--" + "\n"+ "\n"+ "\n";
 
 	private static String kodeaFuntzioekin="--FUNTZIOAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodea="--KODEA--"+ "\n"+ "\n"+ "\n";
-
+	private static String kodea2="--KODEA2--"+ "\n"+ "\n"+ "\n";
 	private static CodeFile cf;
 	private static BufferedReader bf;
 	private static int readingIndex;
@@ -116,18 +114,26 @@ public class CodeMiner {
 			e.printStackTrace();
 		}
 	}
-	
+	public static void idatziFitxategiBateanBigarrena() throws IOException {
+		FileWriter fw = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/output2.txt");
+		try {
+			fw.write(kodea2);
+			fw.close();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+	}
 	public static void inprimatuAldagaiTaula() {
 		Collections.sort(aldagaiTaula.getAldagaiT(), new AldagaiChainedComparator(new AldagaiAgerpenComparator()));
 		//aldagaiTaula.getAldagaiT().sort(Aldagaia, agerpenKop);
 		
 		for(int i=0; i<aldagaiTaula.getAldagaiT().size(); i++ ) {
-			kodeaBariableekin2 += "Aldagai izena zena:   "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
+			kodeaBariableekin2 += "Aldagai izena: "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
 					"   eta kontua:   " + aldagaiTaula.getAldagaiT().get(i).getAgerpenKop() + "\n";
 		}
 		
 	}
-	public static void idatziAldagaiTaulak() throws IOException {
+	public static void idatziAldagaiTaulakFitxategiBatean() throws IOException {
 		FileWriter fw4 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/AldagaiTaula.txt");
 		try {
 			
@@ -137,6 +143,56 @@ public class CodeMiner {
 			e.printStackTrace();
 		}
 	}
+	
+	
+	public static void inprimatuAldagaiTaularenInfo() {
+		System.out.println("Aldagai kopurua (aldagaiTaula.size())" +aldagaiTaula.getAldagaiT().size());
+				;
+	}
+
+	public static void agerpenTotalakKontatu() {
+		
+		readingIndex = 0;
+
+		try {
+
+			BufferedReader bf1 = new BufferedReader(new FileReader("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/output.txt"));
+			
+			String line;
+			
+			//System.out.println("KOOOOODEEEEAAAAA2!!!!!!!!!!!!!!!");
+			
+			while ( (line = bf1.readLine()) != null ) {
+				String[] words = line.split(" ");
+				
+				for(int i=0; i<words.length; i++) {
+					if ((words[i] != " ") && (!words[i].isEmpty()) && words[i].length()>2){
+						if(aldagaiTaula.agertzenDa(words[i])){
+							aldagaiTaula.gehituKopurua(words[i]);
+						}
+					}
+				}
+				/*
+				for(int i=0; i<hitzak.length ; i++) {
+					System.out.println(hitzak[i]);
+					System.out.println(aldagaiTaula.agertzenDa(hitzak[i]));
+					if(aldagaiTaula.agertzenDa(hitzak[i])){
+						aldagaiTaula.gehituKopurua(hitzak[i]);
+					}
+						
+				}*/
+			}
+			bf1.close();
+			System.out.println("Gehiketak egin dira!!");
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		//ir linea por linea 
+		//en cada linea separar las palabras por espacios 
+		//y mirar si cada palabra esta en aldagaiTaula
+		//si esta +1 (con aldagaiTaula.agertzenDa()
+	}
+
 
 	public static void extractVPsFromFile(CodeFile code, String type, SPL spl) throws IOException {
 
@@ -189,29 +245,62 @@ public class CodeMiner {
 			while ((line = readLine()) != null) {
 				kodea+=line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
+				
+				
 				//Aldagaien izena lortzeko
 				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
 					String[] kk = line.split("var");
 					if(kk.length>1) {
 						String g = kk[1];
 						String[] lerroarenBigarrenZatia = g.split(" ");
-						if(lerroarenBigarrenZatia.length>1) {
-							String emaitza = lerroarenBigarrenZatia[1];
-							if(emaitza!=null) {
-								if(aldagaiTaula.agertzenDa(emaitza)){
-									aldagaiTaula.gehituKopurua(emaitza);
-								}else {
-									Aldagaia a= new Aldagaia(emaitza,1);
-									aldagaiTaula.getAldagaiT().add(a);
+						if(g.contains("=")) {
+							if(lerroarenBigarrenZatia.length>1) {
+								String emaitza = lerroarenBigarrenZatia[1];
+								if(emaitza!=null && !emaitza.contains(",") && emaitza.length()>2) {
+									if(aldagaiTaula.agertzenDa(emaitza)){
+										aldagaiTaula.gehituKopurua(emaitza);
+									}else {
+										Aldagaia a= new Aldagaia(emaitza,1);
+										aldagaiTaula.getAldagaiT().add(a);
+									}
 								}
-							}
-							kodeaBariableekin += emaitza+ "\n";	
+						}else {
+							for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
+								String[] emaitza = lerroarenBigarrenZatia[p].split(",");
+								if(emaitza[0].contains(";")) {
+									String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
+									if(emaitzaAux!=null && emaitzaAux[0].length()>2) {
+										if(aldagaiTaula.agertzenDa(emaitzaAux[0])){
+											aldagaiTaula.gehituKopurua(emaitzaAux[0]);
+											kodeaBariableekin += emaitzaAux[0]+ "\n";
+										}else {
+											Aldagaia a= new Aldagaia(emaitzaAux[0],1);
+											aldagaiTaula.getAldagaiT().add(a);
+											kodeaBariableekin += emaitzaAux[0]+ "\n";
+										}
+									}
+	
+								}else {
+									if(emaitza!=null) {
+										if(aldagaiTaula.agertzenDa(emaitza[0])){
+											aldagaiTaula.gehituKopurua(emaitza[0]);
+											kodeaBariableekin += emaitza[0]+ "\n";
+										}else {
+											Aldagaia a= new Aldagaia(emaitza[0],1);
+											aldagaiTaula.getAldagaiT().add(a);
+											kodeaBariableekin += emaitza[0]+ "\n";
+										}
+								}
+								}
+							}			
+						}
+								
 						}
 					}
 				}
 				
 				//Funtzioen izena lortzeko
-				if (line.contains("function") || line.contains(" function") || line.contains("function ")) {
+				if ((line.contains("function") || line.contains(" function") || line.contains("function ")) && (line.contains("'function'"))) {
 					String[] kk = line.split("function");
 					if(kk.length>1){
 						String lerroarenBigarrenZatia = kk[1];
@@ -225,7 +314,16 @@ public class CodeMiner {
 									if( azkenEmaitza.isEmpty() || azkenEmaitza.contains("{") || azkenEmaitza.contains("(") || azkenEmaitza.contains(",")) {
 										
 									}else {
-										kodeaFuntzioekin += azkenEmaitza+ "\n";	
+										if(aldagaiTaula.agertzenDa(azkenEmaitza)){
+											aldagaiTaula.gehituKopurua(azkenEmaitza);
+											kodeaBariableekin += azkenEmaitza+ "\n";
+											kodeaFuntzioekin += azkenEmaitza+ "\n";	
+										}else {
+											Aldagaia a= new Aldagaia(azkenEmaitza,1);
+											aldagaiTaula.getAldagaiT().add(a);
+											kodeaBariableekin += azkenEmaitza+ "\n";
+											kodeaFuntzioekin += azkenEmaitza+ "\n";	
+										}
 									}
 							
 								}
@@ -672,6 +770,7 @@ public class CodeMiner {
 		return null;
 	}
 
+	
 	
 	
 
