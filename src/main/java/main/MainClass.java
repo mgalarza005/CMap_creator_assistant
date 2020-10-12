@@ -218,9 +218,7 @@ public class MainClass {
 				clean();
 				return;
 			}
-			
-			
-			
+						
 			logger.info("Ending Family Model mining process");
 			
 			// 1.3: Mine the Variant Models
@@ -230,21 +228,13 @@ public class MainClass {
 
 			logger.info("Ending Variant Model mining process");
 
-			
-			
-			
-			
 			CodeMiner.idatziJSKlaseak();
-			
-			
-			CodeMiner.inprimatuAldagaiTaularenInfo();
-			
 			
 			CodeMiner.agerpenTotalakKontatu();
 			//CodeMiner.idatziFitxategiBateanBigarrena();
 			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
 			CodeMiner.inprimatuAldagaiTaula();
-			CodeMiner.idatziAldagaiTaulakFitxategiBatean();
+			
 			
 			// 2: Generate inserts for filling the DB
 			/*

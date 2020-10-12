@@ -48,7 +48,7 @@ public class CodeMiner {
 
 	private static String kodeaFuntzioekin="--FUNTZIOAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodea="--KODEA--"+ "\n"+ "\n"+ "\n";
-	private static String kodea2="--KODEA2--"+ "\n"+ "\n"+ "\n";
+	
 	private static CodeFile cf;
 	private static BufferedReader bf;
 	private static int readingIndex;
@@ -97,6 +97,7 @@ public class CodeMiner {
 	public static void idatziFitxategianFuntzioak (String r) throws IOException {
 		FileWriter fw1 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/outputWithFunctions.txt");
 		try {
+			System.out.println("Funtzio denak fitxategi batean idatziko dira");
 			fw1.write(kodeaFuntzioekin);
 			fw1.close();
 		}catch (Exception e){
@@ -114,26 +115,21 @@ public class CodeMiner {
 			e.printStackTrace();
 		}
 	}
-	public static void idatziFitxategiBateanBigarrena() throws IOException {
-		FileWriter fw = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/output2.txt");
-		try {
-			fw.write(kodea2);
-			fw.close();
-		}catch (Exception e){
-			e.printStackTrace();
-		}
-	}
-	public static void inprimatuAldagaiTaula() {
+
+	public static void inprimatuAldagaiTaula() throws IOException {
 		Collections.sort(aldagaiTaula.getAldagaiT(), new AldagaiChainedComparator(new AldagaiAgerpenComparator()));
-		//aldagaiTaula.getAldagaiT().sort(Aldagaia, agerpenKop);
+		
+		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'AldagaiTaula.txt' fitxategian idatziko dira");
 		
 		for(int i=0; i<aldagaiTaula.getAldagaiT().size(); i++ ) {
 			kodeaBariableekin2 += "Aldagai izena: "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
 					"   eta kontua:   " + aldagaiTaula.getAldagaiT().get(i).getAgerpenKop() + "\n";
 		}
+		idatziAldagaiTaulakFitxategiBatean();
+		inprimatuAldagaiTaularenInfo();
 		
 	}
-	public static void idatziAldagaiTaulakFitxategiBatean() throws IOException {
+	private static void idatziAldagaiTaulakFitxategiBatean() throws IOException {
 		FileWriter fw4 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/AldagaiTaula.txt");
 		try {
 			
@@ -146,8 +142,8 @@ public class CodeMiner {
 	
 	
 	public static void inprimatuAldagaiTaularenInfo() {
-		System.out.println("Aldagai kopurua (aldagaiTaula.size())" +aldagaiTaula.getAldagaiT().size());
-				;
+		System.out.println("Termino kopurua (aldagaiTaula.size()): " +aldagaiTaula.getAldagaiT().size());
+
 	}
 
 	public static void agerpenTotalakKontatu() {
