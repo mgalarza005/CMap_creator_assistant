@@ -1,7 +1,5 @@
 package miners;
 
-import java.awt.List;
-
 import java.io.BufferedReader;
 
 import java.io.ByteArrayInputStream;
@@ -10,10 +8,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Scanner;
+
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -36,16 +33,11 @@ import utils.Pair;
 import utils.PositionalXMLReader;
 
 public class CodeMiner {
-	
-	
-	
-	 
-
-	 //create an print writer for writing to a file
+	//create an print writer for writing to a file
   	private static String javaScriptKlasea="--JAVASCRIPT KLASEAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodeaBariableekin="--ALDAGAI--" + "\n"+ "\n"+ "\n";
-	private static String kodeaBariableekin2="--ALDAGAI_TAULAN--" + "\n"+ "\n"+ "\n";
-
+	private static String kodeaBariableekin2="";
+	private static String clusterTerms="";
 	private static String kodeaFuntzioekin="--FUNTZIOAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodea="--KODEA--"+ "\n"+ "\n"+ "\n";
 	
@@ -122,10 +114,35 @@ public class CodeMiner {
 		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'AldagaiTaula.txt' fitxategian idatziko dira");
 		
 		for(int i=0; i<aldagaiTaula.getAldagaiT().size(); i++ ) {
-			kodeaBariableekin2 += "Aldagai izena: "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
-					"   eta kontua:   " + aldagaiTaula.getAldagaiT().get(i).getAgerpenKop() + "\n";
+			if(aldagaiTaula.getAldagaiT().get(i).getAgerpenKop()>15) {
+			kodeaBariableekin2 += "Terminoa: "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
+					"   eta agerpen kopurua:   " + aldagaiTaula.getAldagaiT().get(i).getAgerpenKop() + "\n";
+			}
 		}
 		idatziAldagaiTaulakFitxategiBatean();
+		inprimatuAldagaiTaularenInfo();
+		
+	}
+	public static void inprimatuAldagaiTaulaClusterarentzako() throws IOException {
+		Collections.sort(aldagaiTaula.getAldagaiT(), new AldagaiChainedComparator(new AldagaiAgerpenComparator()));
+		
+		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'AldagaiTaula.txt' fitxategian idatziko dira");
+		
+		for(int i=0; i<aldagaiTaula.getAldagaiT().size(); i++ ) {
+			
+			if(aldagaiTaula.getAldagaiT().get(i).getAgerpenKop()>15) {
+				clusterTerms += aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + " ";
+			}				
+		}
+		FileWriter fw4 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/cluster.txt");
+		try {
+			
+			fw4.write(clusterTerms);
+			fw4.close();
+		}catch (Exception e){
+			e.printStackTrace();
+		}
+		
 		inprimatuAldagaiTaularenInfo();
 		
 	}
@@ -145,6 +162,50 @@ public class CodeMiner {
 		System.out.println("Termino kopurua (aldagaiTaula.size()): " +aldagaiTaula.getAldagaiT().size());
 
 	}
+	public static void clusterraAplikatu() throws IOException {
+		//String pandas="pip install pandas";
+		//String sklearn="pip install sklearn";
+		//String matplotlib="pip install matplotlib";
+		
+		
+		//String pandas="pip install pandas";
+		Process p1 =Runtime.getRuntime().exec("pip intall pandas");
+				
+				//String sklearn="pip install sklearn";
+		Process p2 =Runtime.getRuntime().exec("pip intall sklearn");
+				
+				//String matplotlib="pip install matplotlib";
+		Process p3 =Runtime.getRuntime().exec("pip intall matplotlib");
+		
+		
+		String c = "python C:\\Users\\MIKEL1\\git\\CMap_creator_assistant\\CMap_creator_assistant\\k_means.py";
+		Process p=Runtime.getRuntime().exec(c);
+		
+		
+		/*
+        String s=null;
+        BufferedReader stdInput = new BufferedReader(new 
+                InputStreamReader(p.getInputStream()));
+        
+        BufferedReader stdError = new BufferedReader(new 
+                InputStreamReader(p.getErrorStream()));
+        
+		// read the output from the command
+        while ((s = stdInput.readLine()) != null) {
+            System.out.println(s);
+        }
+        
+		
+		
+        // read any errors from the attempted command
+        //System.out.println("Here is the standard error of the command (if any):\n");
+        while ((s = stdError.readLine()) != null) {
+            System.out.println(s);
+        */
+		
+		System.out.println("Amaitu da, begiratu cluster.txt fitxategia");
+		
+	}
 
 	public static void agerpenTotalakKontatu() {
 		
@@ -156,8 +217,7 @@ public class CodeMiner {
 			
 			String line;
 			
-			//System.out.println("KOOOOODEEEEAAAAA2!!!!!!!!!!!!!!!");
-			
+				
 			while ( (line = bf1.readLine()) != null ) {
 				String[] words = line.split(" ");
 				
@@ -168,25 +228,14 @@ public class CodeMiner {
 						}
 					}
 				}
-				/*
-				for(int i=0; i<hitzak.length ; i++) {
-					System.out.println(hitzak[i]);
-					System.out.println(aldagaiTaula.agertzenDa(hitzak[i]));
-					if(aldagaiTaula.agertzenDa(hitzak[i])){
-						aldagaiTaula.gehituKopurua(hitzak[i]);
-					}
-						
-				}*/
+				
 			}
 			bf1.close();
 			System.out.println("Gehiketak egin dira!!");
 		}catch (Exception e){
 			e.printStackTrace();
 		}
-		//ir linea por linea 
-		//en cada linea separar las palabras por espacios 
-		//y mirar si cada palabra esta en aldagaiTaula
-		//si esta +1 (con aldagaiTaula.agertzenDa()
+		
 	}
 
 
@@ -236,7 +285,6 @@ public class CodeMiner {
 
 			String line;
 			ArrayList<Feature> feats;
-			System.out.println("KOOOOODEEEEAAAAA!!!!!!!!!!!!!!!");
 			System.out.println("Path-a" + code.getPath().toString() + "Klase izena: "+  cf.getFilename());
 			while ((line = readLine()) != null) {
 				kodea+=line + "\n";
@@ -252,7 +300,7 @@ public class CodeMiner {
 						if(g.contains("=")) {
 							if(lerroarenBigarrenZatia.length>1) {
 								String emaitza = lerroarenBigarrenZatia[1];
-								if(emaitza!=null && !emaitza.contains(",") && emaitza.length()>2) {
+								if(emaitza!=null && !emaitza.contains(",") && !emaitza.contains("_")  && !aldagaiTaula.stopWordAgertzenDa(emaitza) && emaitza.length()>2) {
 									if(aldagaiTaula.agertzenDa(emaitza)){
 										aldagaiTaula.gehituKopurua(emaitza);
 									}else {
@@ -260,10 +308,10 @@ public class CodeMiner {
 										aldagaiTaula.getAldagaiT().add(a);
 									}
 								}
-						}else {
+						}else if (!(aldagaiTaula.stopWordAgertzenDa(lerroarenBigarrenZatia[1]))){
 							for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
 								String[] emaitza = lerroarenBigarrenZatia[p].split(",");
-								if(emaitza[0].contains(";")) {
+								if(emaitza[0].contains(";") && !emaitza[0].contains("_")) {
 									String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
 									if(emaitzaAux!=null && emaitzaAux[0].length()>2) {
 										if(aldagaiTaula.agertzenDa(emaitzaAux[0])){
@@ -307,9 +355,7 @@ public class CodeMiner {
 								String[] pp = emaitza.split("\\(");
 								if(pp.length>0) {
 									String azkenEmaitza = pp[0].trim();
-									if( azkenEmaitza.isEmpty() || azkenEmaitza.contains("{") || azkenEmaitza.contains("(") || azkenEmaitza.contains(",")) {
-										
-									}else {
+									if( !(azkenEmaitza.isEmpty() || azkenEmaitza.contains("{") || azkenEmaitza.contains("(") || azkenEmaitza.contains(",") || aldagaiTaula.stopWordAgertzenDa(azkenEmaitza) && !emaitza.contains("_"))) {
 										if(aldagaiTaula.agertzenDa(azkenEmaitza)){
 											aldagaiTaula.gehituKopurua(azkenEmaitza);
 											kodeaBariableekin += azkenEmaitza+ "\n";
@@ -480,6 +526,7 @@ public class CodeMiner {
 			String xmlString = "";
 			String line;
 			while ((line = readLine()) != null) {
+				System.out.println("Kodea: " + line);
 				xmlString += line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
 			}
@@ -765,6 +812,8 @@ public class CodeMiner {
 
 		return null;
 	}
+
+
 
 	
 	

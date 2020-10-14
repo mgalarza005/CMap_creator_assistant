@@ -1,6 +1,7 @@
 package main;
 
 import java.io.File;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -18,13 +19,13 @@ import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.treewalk.TreeWalk;
 
 import database.*;
-import database.cmap.CMapDB;
+
 import domain.FeatureModel;
 import domain.SPL;
 import domain.VariantModel;
-import domain.cmap.CMap;
+
 import miners.*;
-import miners.cmap.CMapMiner;
+
 import utils.DepResolver;
 
 public class MainClass {
@@ -50,11 +51,11 @@ public class MainClass {
 	// Mining type
 	private static final int MINING_TYPE = 1;
 	
-	// CMap configuration (for MINING_TYPE == 2 OR 3)
+	/* CMap configuration (for MINING_TYPE == 2 OR 3)
 	private static final String CMAPS_FOLDER = "/cmaps";
 	private static final String[] CMAPS = {
 				SPL_LOCAL_GIT_REPO + CMAPS_FOLDER + "/WebAnnotation.cxl"
-	};
+	};*/
 
 	/*
 	 * IMPLEMENTATION
@@ -234,7 +235,9 @@ public class MainClass {
 			//CodeMiner.idatziFitxategiBateanBigarrena();
 			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
 			CodeMiner.inprimatuAldagaiTaula();
+			CodeMiner.inprimatuAldagaiTaulaClusterarentzako();
 			
+			CodeMiner.clusterraAplikatu();
 			
 			// 2: Generate inserts for filling the DB
 			/*

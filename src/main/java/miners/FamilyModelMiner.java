@@ -68,7 +68,7 @@ public class FamilyModelMiner {
 
 			// 1: Open FamilyModel as XML
 			File fXmlFile = new File(familyModelPath);
-			System.out.println("MIKEL !!!!!!!!");
+			
 			
 			DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
 			DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
@@ -100,15 +100,7 @@ public class FamilyModelMiner {
 
 			//rekorritzeko
 			NodeList elementuak = doc.getElementsByTagName("cm:element");
-			/*
-			for (int i=0; i < elementuak.getLength(); i++) {
-				Node n=elementuak.item(i);
-				System.out.println("eztatik" + n.getTextContent());
-				i++;
-			}
-			System.out.println("elementuak size" +elementuak.getLength());
-				
-			*/
+		
 			
 			
 			//ADIBIDEA REKORRER XML adibidea
@@ -166,11 +158,11 @@ public class FamilyModelMiner {
 
 			// 5: Get all child CodeElements tree starting from root
 			ce.setChildren(getCodeElementTreeRecursively(rootID, ce, spl));
-			System.out.println("Hau ere ez dit inprrri");
+			
 
 			// 6: Now, we have completed our CodeElement's info. Save to the SPL.
 			spl.addCodeElement(ce);
-			System.out.println("Ez dit hau inprimitzen");
+			
 			System.out.println("SPL-aren kodeElementu kopurua: "+spl.getCodeElements().size());
 
 			return true;
