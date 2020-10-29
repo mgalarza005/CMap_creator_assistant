@@ -1,6 +1,7 @@
 package main;
 
-import database.MainSql;
+
+
 import domain.*;
 import miners.FamilyModelMiner;
 import miners.FeatureModelMiner;
@@ -80,7 +81,7 @@ public class FeatureCodeMiner {
 
     private static void clean() {
         DepResolver.emptyRelations();
-        MainSql.emptyInserts();
+        
     }
 
     // This function will try to read the Git repository and automatically get all

@@ -1,4 +1,4 @@
---JAVASCRIPT KLASEAK--
+--JAVASCRIPT CLASSES--
 
 
 messages.json

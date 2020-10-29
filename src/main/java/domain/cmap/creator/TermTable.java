@@ -3,8 +3,8 @@ package domain.cmap.creator;
 import java.util.Arrays;
 import java.util.List;
 
-public class AldagaiTaula {
-	private List<Aldagaia> aldagaiT;
+public class TermTable {
+	private List<Term> termT;
 	private static List<String> stopWords=Arrays.asList(new String[] {"break","case","catch","continue","default","delete","do","else","finally","for","function","if","in","instanceof","new","return","switch","this","trhow","try","typeof","var","void","while","with","abstract","boolean","byte",
 			"char","class","const","debugger","double","enum","export","extends","final","float","goto","implements","import","int","interface","long","native","package","private","protected",
 			"public","short","static","super","syncronized","trhows","transient","volatile", "from", "value", "result"});
@@ -15,29 +15,29 @@ public class AldagaiTaula {
 	}
 
 	public void setStopWords(List<String> stopWords) {
-		AldagaiTaula.stopWords = stopWords;
+		TermTable.stopWords = stopWords;
 	}
 
-	public AldagaiTaula(List<Aldagaia> aldagaiT) {
+	public TermTable(List<Term> termT) {
 		super();
-		this.aldagaiT = aldagaiT;
+		this.termT = termT;
 		
 	}
 
-	public List<Aldagaia> getAldagaiT() {
-		return aldagaiT;
+	public List<Term> getTermTable() {
+		return termT;
 	}
 
-	public void setAldagaiT(List<Aldagaia> aldagaiT) {
-		this.aldagaiT = aldagaiT;
+	public void setTermTable(List<Term> termT) {
+		this.termT = termT;
 	}
 	
-	public boolean agertzenDa(String a) {
+	public boolean appears(String a) {
 		
 		if(a!=null || a!=" ") {
 			int j=0;
-			while(j<this.aldagaiT.size()) {
-				if(this.aldagaiT.get(j).getAldagaIzena().equals(a)) {
+			while(j<this.termT.size()) {
+				if(this.termT.get(j).getTermName().equals(a)) {
 					return true;
 				}
 				j++;
@@ -45,21 +45,21 @@ public class AldagaiTaula {
 		}
 		return false;
 	}
-	public void gehituKopurua(String izena) {
+	public void sumApparition(String izena) {
 		
 		int i=0;
 		Boolean topatua=false;
-		while(i<this.aldagaiT.size() && topatua.booleanValue()==false) {
-			if(this.aldagaiT.get(i).getAldagaIzena().equals(izena)) {
-				this.aldagaiT.get(i).setAgerpenKop(this.aldagaiT.get(i).getAgerpenKop()+1);
+		while(i<this.termT.size() && topatua.booleanValue()==false) {
+			if(this.termT.get(i).getTermName().equals(izena)) {
+				this.termT.get(i).setapparitionCont(this.termT.get(i).getapparitionCont()+1);
 				topatua=true;
 			}
 			i++;
 		}
 	}
 
-	public boolean stopWordAgertzenDa(String param) {
-		if (AldagaiTaula.stopWords.contains(param)) {
+	public boolean itsStopWord(String param) {
+		if (TermTable.stopWords.contains(param)) {
 			return true;
 		}else {
 			return false;

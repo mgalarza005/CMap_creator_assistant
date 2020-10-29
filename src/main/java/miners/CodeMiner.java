@@ -15,8 +15,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import domain.*;
-import domain.cmap.creator.AldagaiTaula;
-import domain.cmap.creator.Aldagaia;
+import domain.cmap.creator.TermTable;
+import domain.cmap.creator.Term;
 
 
 import org.w3c.dom.Document;
@@ -24,8 +24,8 @@ import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
-import AldagaiAgerpenComparator.AldagaiAgerpenComparator;
-import AldagaiAgerpenComparator.AldagaiChainedComparator;
+import AldagaiAgerpenComparator.TermApparitionComparator;
+import AldagaiAgerpenComparator.TermChainedComparator;
 import main.MainClass;
 import utils.FeatureSizeUtil;
 import utils.GenericUtils;
@@ -34,11 +34,11 @@ import utils.PositionalXMLReader;
 
 public class CodeMiner {
 	//create an print writer for writing to a file
-  	private static String javaScriptKlasea="--JAVASCRIPT KLASEAK--"+ "\n"+ "\n"+ "\n";
-	private static String kodeaBariableekin="--ALDAGAI--" + "\n"+ "\n"+ "\n";
-	private static String kodeaBariableekin2="";
+  	private static String javaScriptClass="--JAVASCRIPT CLASSES--"+ "\n"+ "\n"+ "\n";
+	private static String codeWithVariables="--ALDAGAI--" + "\n"+ "\n"+ "\n";
+	private static String codeWithVariables2="";
 	private static String clusterTerms="";
-	private static String kodeaFuntzioekin="--FUNTZIOAK--"+ "\n"+ "\n"+ "\n";
+	private static String codeWithFunctions="--FUNTZIOAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodea="--KODEA--"+ "\n"+ "\n"+ "\n";
 	
 	private static CodeFile cf;
@@ -49,7 +49,7 @@ public class CodeMiner {
 	private static boolean checkVPString = false;
 	private static String vpString = "";
 	
-	private static AldagaiTaula aldagaiTaula = new AldagaiTaula(new ArrayList<Aldagaia>());
+	private static TermTable termTable = new TermTable(new ArrayList<Term>());
 	
 	
 	//private static ArrayList<Aldagaia> aldagaiT= new ArrayList<Aldagaia>();
@@ -76,21 +76,20 @@ public class CodeMiner {
 		}
 	}
 	
-	public static void idatziFitxategianBariableak (String i) throws IOException {
+	public static void printVariablesInFile (String i) throws IOException {
 		FileWriter fw = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/outputWithVariables.txt");
 		try {
-			fw.write(kodeaBariableekin);
+			fw.write(codeWithVariables);
 			fw.close();
 		}catch (Exception e){
 			e.printStackTrace();
 		}
 	}
 	
-	public static void idatziFitxategianFuntzioak (String r) throws IOException {
+	public static void printFunctionInFile (String r) throws IOException {
 		FileWriter fw1 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/outputWithFunctions.txt");
 		try {
-			System.out.println("Funtzio denak fitxategi batean idatziko dira");
-			fw1.write(kodeaFuntzioekin);
+			fw1.write(codeWithFunctions);
 			fw1.close();
 		}catch (Exception e){
 			e.printStackTrace();
@@ -98,7 +97,7 @@ public class CodeMiner {
 	} 
 
 
-	public static void idatziFitxategiBatean (String i) throws IOException {
+	public static void printCodeInFile (String i) throws IOException {
 		FileWriter fw = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/output.txt");
 		try {
 			fw.write(kodea);
@@ -108,30 +107,30 @@ public class CodeMiner {
 		}
 	}
 
-	public static void inprimatuAldagaiTaula() throws IOException {
-		Collections.sort(aldagaiTaula.getAldagaiT(), new AldagaiChainedComparator(new AldagaiAgerpenComparator()));
+	public static void printTermTable() throws IOException {
+		Collections.sort(termTable.getTermTable(), new TermChainedComparator(new TermApparitionComparator()));
 		
-		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'AldagaiTaula.txt' fitxategian idatziko dira");
+		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'termTable.txt' fitxategian idatziko dira");
 		
-		for(int i=0; i<aldagaiTaula.getAldagaiT().size(); i++ ) {
-			if(aldagaiTaula.getAldagaiT().get(i).getAgerpenKop()>15) {
-			kodeaBariableekin2 += "Terminoa: "+ aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + 
-					"   eta agerpen kopurua:   " + aldagaiTaula.getAldagaiT().get(i).getAgerpenKop() + "\n";
+		for(int i=0; i<termTable.getTermTable().size(); i++ ) {
+			if(termTable.getTermTable().get(i).getapparitionCont()>15) {
+			codeWithVariables2 += "Terminoa: "+ termTable.getTermTable().get(i).getTermName() + 
+					"   eta agerpen kopurua:   " + termTable.getTermTable().get(i).getapparitionCont() + "\n";
 			}
 		}
-		idatziAldagaiTaulakFitxategiBatean();
-		inprimatuAldagaiTaularenInfo();
+		idatzitermTablekFitxategiBatean();
+		inprimatutermTablerenInfo();
 		
 	}
-	public static void inprimatuAldagaiTaulaClusterarentzako() throws IOException {
-		Collections.sort(aldagaiTaula.getAldagaiT(), new AldagaiChainedComparator(new AldagaiAgerpenComparator()));
+	public static void printTermTableForCluster() throws IOException {
+		Collections.sort(termTable.getTermTable(), new TermChainedComparator(new TermApparitionComparator()));
 		
-		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'AldagaiTaula.txt' fitxategian idatziko dira");
+		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'termTable.txt' fitxategian idatziko dira");
 		
-		for(int i=0; i<aldagaiTaula.getAldagaiT().size(); i++ ) {
+		for(int i=0; i<termTable.getTermTable().size(); i++ ) {
 			
-			if(aldagaiTaula.getAldagaiT().get(i).getAgerpenKop()>15) {
-				clusterTerms += aldagaiTaula.getAldagaiT().get(i).getAldagaIzena() + " ";
+			if(termTable.getTermTable().get(i).getapparitionCont()>15) {
+				clusterTerms += termTable.getTermTable().get(i).getTermName() + " ";
 			}				
 		}
 		FileWriter fw4 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/cluster.txt");
@@ -143,14 +142,14 @@ public class CodeMiner {
 			e.printStackTrace();
 		}
 		
-		inprimatuAldagaiTaularenInfo();
+		inprimatutermTablerenInfo();
 		
 	}
-	private static void idatziAldagaiTaulakFitxategiBatean() throws IOException {
-		FileWriter fw4 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/AldagaiTaula.txt");
+	private static void idatzitermTablekFitxategiBatean() throws IOException {
+		FileWriter fw4 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/termTable.txt");
 		try {
 			
-			fw4.write(kodeaBariableekin2);
+			fw4.write(codeWithVariables2);
 			fw4.close();
 		}catch (Exception e){
 			e.printStackTrace();
@@ -158,8 +157,8 @@ public class CodeMiner {
 	}
 	
 	
-	public static void inprimatuAldagaiTaularenInfo() {
-		System.out.println("Termino kopurua (aldagaiTaula.size()): " +aldagaiTaula.getAldagaiT().size());
+	public static void inprimatutermTablerenInfo() {
+		System.out.println("Termino kopurua (termTable.size()): " +termTable.getTermTable().size());
 
 	}
 	public static void clusterraAplikatu() throws IOException {
@@ -223,8 +222,8 @@ public class CodeMiner {
 				
 				for(int i=0; i<words.length; i++) {
 					if ((words[i] != " ") && (!words[i].isEmpty()) && words[i].length()>2){
-						if(aldagaiTaula.agertzenDa(words[i])){
-							aldagaiTaula.gehituKopurua(words[i]);
+						if(termTable.appears(words[i])){
+							termTable.sumApparition(words[i]);
 						}
 					}
 				}
@@ -251,7 +250,7 @@ public class CodeMiner {
 		} else {
 			// Non XML mode
 			extractVPsFromNonXMLFile(cf,spl);
-			javaScriptKlasea += cf.getFilename() + "\n";
+			javaScriptClass += cf.getFilename() + "\n";
 		}
 
 		for (VariationPoint vp : cf.getVariationPoints()) {
@@ -266,7 +265,7 @@ public class CodeMiner {
 		FileWriter fw3 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/jJSKlaseak.txt");
 		try {
 			
-			fw3.write(javaScriptKlasea);
+			fw3.write(javaScriptClass);
 			fw3.close();
 		}catch (Exception e){
 			e.printStackTrace();
@@ -300,39 +299,39 @@ public class CodeMiner {
 						if(g.contains("=")) {
 							if(lerroarenBigarrenZatia.length>1) {
 								String emaitza = lerroarenBigarrenZatia[1];
-								if(emaitza!=null && !emaitza.contains(",") && !emaitza.contains("_")  && !aldagaiTaula.stopWordAgertzenDa(emaitza) && emaitza.length()>2) {
-									if(aldagaiTaula.agertzenDa(emaitza)){
-										aldagaiTaula.gehituKopurua(emaitza);
+								if(emaitza!=null && !emaitza.contains(",") && !emaitza.contains("_")  && !termTable.itsStopWord(emaitza) && emaitza.length()>2) {
+									if(termTable.appears(emaitza)){
+										termTable.sumApparition(emaitza);
 									}else {
-										Aldagaia a= new Aldagaia(emaitza,1);
-										aldagaiTaula.getAldagaiT().add(a);
+										Term a= new Term(emaitza,1);
+										termTable.getTermTable().add(a);
 									}
 								}
-						}else if (!(aldagaiTaula.stopWordAgertzenDa(lerroarenBigarrenZatia[1]))){
+						}else if (!(termTable.itsStopWord(lerroarenBigarrenZatia[1]))){
 							for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
 								String[] emaitza = lerroarenBigarrenZatia[p].split(",");
 								if(emaitza[0].contains(";") && !emaitza[0].contains("_")) {
 									String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
 									if(emaitzaAux!=null && emaitzaAux[0].length()>2) {
-										if(aldagaiTaula.agertzenDa(emaitzaAux[0])){
-											aldagaiTaula.gehituKopurua(emaitzaAux[0]);
-											kodeaBariableekin += emaitzaAux[0]+ "\n";
+										if(termTable.appears(emaitzaAux[0])){
+											termTable.sumApparition(emaitzaAux[0]);
+											codeWithVariables += emaitzaAux[0]+ "\n";
 										}else {
-											Aldagaia a= new Aldagaia(emaitzaAux[0],1);
-											aldagaiTaula.getAldagaiT().add(a);
-											kodeaBariableekin += emaitzaAux[0]+ "\n";
+											Term a= new Term(emaitzaAux[0],1);
+											termTable.getTermTable().add(a);
+											codeWithVariables += emaitzaAux[0]+ "\n";
 										}
 									}
 	
 								}else {
 									if(emaitza!=null) {
-										if(aldagaiTaula.agertzenDa(emaitza[0])){
-											aldagaiTaula.gehituKopurua(emaitza[0]);
-											kodeaBariableekin += emaitza[0]+ "\n";
+										if(termTable.appears(emaitza[0])){
+											termTable.sumApparition(emaitza[0]);
+											codeWithVariables += emaitza[0]+ "\n";
 										}else {
-											Aldagaia a= new Aldagaia(emaitza[0],1);
-											aldagaiTaula.getAldagaiT().add(a);
-											kodeaBariableekin += emaitza[0]+ "\n";
+											Term a= new Term(emaitza[0],1);
+											termTable.getTermTable().add(a);
+											codeWithVariables += emaitza[0]+ "\n";
 										}
 								}
 								}
@@ -355,16 +354,16 @@ public class CodeMiner {
 								String[] pp = emaitza.split("\\(");
 								if(pp.length>0) {
 									String azkenEmaitza = pp[0].trim();
-									if( !(azkenEmaitza.isEmpty() || azkenEmaitza.contains("{") || azkenEmaitza.contains("(") || azkenEmaitza.contains(",") || aldagaiTaula.stopWordAgertzenDa(azkenEmaitza) && !emaitza.contains("_"))) {
-										if(aldagaiTaula.agertzenDa(azkenEmaitza)){
-											aldagaiTaula.gehituKopurua(azkenEmaitza);
-											kodeaBariableekin += azkenEmaitza+ "\n";
-											kodeaFuntzioekin += azkenEmaitza+ "\n";	
+									if( !(azkenEmaitza.isEmpty() || azkenEmaitza.contains("{") || azkenEmaitza.contains("(") || azkenEmaitza.contains(",") || termTable.itsStopWord(azkenEmaitza) && !emaitza.contains("_"))) {
+										if(termTable.appears(azkenEmaitza)){
+											termTable.sumApparition(azkenEmaitza);
+											codeWithVariables += azkenEmaitza+ "\n";
+											codeWithFunctions += azkenEmaitza+ "\n";	
 										}else {
-											Aldagaia a= new Aldagaia(azkenEmaitza,1);
-											aldagaiTaula.getAldagaiT().add(a);
-											kodeaBariableekin += azkenEmaitza+ "\n";
-											kodeaFuntzioekin += azkenEmaitza+ "\n";	
+											Term a= new Term(azkenEmaitza,1);
+											termTable.getTermTable().add(a);
+											codeWithVariables += azkenEmaitza+ "\n";
+											codeWithFunctions += azkenEmaitza+ "\n";	
 										}
 									}
 							
@@ -374,9 +373,6 @@ public class CodeMiner {
 					}
 					
 				}
-				
-				
-				
 				//System.out.println("Kode lerroa:" + line);
 				if (checkVPString) {
 					checkVPString = false;
@@ -391,9 +387,9 @@ public class CodeMiner {
 					findNestedVPs(feats, readingIndex, expr, line.substring(line.indexOf(expr)) + "\n",0, spl);
 				}
 			}
-			idatziFitxategiBatean(line);
-			idatziFitxategianBariableak(kodeaBariableekin);
-			idatziFitxategianFuntzioak(kodeaFuntzioekin);
+			printCodeInFile(line);
+			printVariablesInFile(codeWithVariables);
+			printFunctionInFile(codeWithFunctions);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

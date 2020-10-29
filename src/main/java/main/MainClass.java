@@ -2,6 +2,7 @@ package main;
 
 import java.io.File;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -18,7 +19,7 @@ import org.eclipse.jgit.revwalk.RevTree;
 import org.eclipse.jgit.revwalk.RevWalk;
 import org.eclipse.jgit.treewalk.TreeWalk;
 
-import database.*;
+
 
 import domain.FeatureModel;
 import domain.SPL;
@@ -82,7 +83,7 @@ public class MainClass {
 	
 	private static void clean() {
 		DepResolver.emptyRelations();
-		MainSql.emptyInserts();
+		
 	}
 
 	// This function will try to read the Git repository and automatically get all
@@ -234,10 +235,10 @@ public class MainClass {
 			CodeMiner.agerpenTotalakKontatu();
 			//CodeMiner.idatziFitxategiBateanBigarrena();
 			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
-			CodeMiner.inprimatuAldagaiTaula();
-			CodeMiner.inprimatuAldagaiTaulaClusterarentzako();
+			CodeMiner.printTermTable();
+			CodeMiner.printTermTableForCluster();
 			
-			CodeMiner.clusterraAplikatu();
+			//CodeMiner.clusterraAplikatu();
 			
 			// 2: Generate inserts for filling the DB
 			/*
