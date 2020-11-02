@@ -1,0 +1,226 @@
+Terminoa: Alerts   eta agerpen kopurua:   37    Agertzen da: 
+			Alerts.js, 
+Terminoa: handler:   eta agerpen kopurua:   36    Agertzen da: 
+			Buttons.js, 
+Terminoa: LanguageUtils   eta agerpen kopurua:   29    Agertzen da: 
+			LanguageUtils.js, 
+Terminoa: Codebook   eta agerpen kopurua:   18    Agertzen da: 
+			Codebook.js, 
+Terminoa: Annotation   eta agerpen kopurua:   15    Agertzen da: 
+			Annotation.js, reviewModel.js, 
+Terminoa: Theme   eta agerpen kopurua:   13    Agertzen da: 
+			Theme.js, 
+Terminoa: AnnotationServerManager   eta agerpen kopurua:   12    Agertzen da: 
+			AnnotationServerManager.js, 
+Terminoa: ChromeStorage   eta agerpen kopurua:   12    Agertzen da: 
+			ChromeStorage.js, 
+Terminoa: Body   eta agerpen kopurua:   11    Agertzen da: 
+			Body.js, 
+Terminoa: URLUtils   eta agerpen kopurua:   11    Agertzen da: 
+			URLUtils.js, 
+Terminoa: DOM   eta agerpen kopurua:   10    Agertzen da: 
+			DOM.js, 
+Terminoa: Sidebar   eta agerpen kopurua:   8    Agertzen da: 
+			Sidebar.js, 
+Terminoa: Code   eta agerpen kopurua:   7    Agertzen da: 
+			GoogleSheetGenerator.js, Code.js, 
+Terminoa: AnnotationServer   eta agerpen kopurua:   7    Agertzen da: 
+			AnnotationServer.js, 
+Terminoa: TargetManager   eta agerpen kopurua:   7    Agertzen da: 
+			TargetManager.js, 
+Terminoa: MoodleScraping   eta agerpen kopurua:   7    Agertzen da: 
+			MoodleScraping.js, 
+Terminoa: Classifying   eta agerpen kopurua:   6    Agertzen da: 
+			Classifying.js, 
+Terminoa: MoodleReport   eta agerpen kopurua:   6    Agertzen da: 
+			MoodleReport.js, 
+Terminoa: Task   eta agerpen kopurua:   6    Agertzen da: 
+			Task.js, 
+Terminoa: Toolset   eta agerpen kopurua:   6    Agertzen da: 
+			Toolset.js, 
+Terminoa: Review   eta agerpen kopurua:   6    Agertzen da: 
+			reviewModel.js, 
+Terminoa: MoodleClient   eta agerpen kopurua:   6    Agertzen da: 
+			MoodleClient.js, 
+Terminoa: MoodleClientManager   eta agerpen kopurua:   6    Agertzen da: 
+			MoodleClientManager.js, 
+Terminoa: AnnotationUtils   eta agerpen kopurua:   6    Agertzen da: 
+			AnnotationUtils.js, 
+Terminoa: Commenting   eta agerpen kopurua:   5    Agertzen da: 
+			Commenting.js, 
+Terminoa: Hypothesis   eta agerpen kopurua:   5    Agertzen da: 
+			Hypothesis.js, 
+Terminoa: AnnotationBasedInitializer   eta agerpen kopurua:   5    Agertzen da: 
+			AnnotationBasedInitializer.js, 
+Terminoa: RolesManager   eta agerpen kopurua:   5    Agertzen da: 
+			RolesManager.js, 
+Terminoa: GoogleSheetClient   eta agerpen kopurua:   5    Agertzen da: 
+			GoogleSheetClient.js, 
+Terminoa: MoodleUtils   eta agerpen kopurua:   5    Agertzen da: 
+			MoodleUtils.js, 
+Terminoa: Popup   eta agerpen kopurua:   5    Agertzen da: 
+			Popup.js, 
+Terminoa: ColorUtils   eta agerpen kopurua:   5    Agertzen da: 
+			ColorUtils.js, 
+Terminoa: DOMTextUtils   eta agerpen kopurua:   5    Agertzen da: 
+			DOMTextUtils.js, 
+Terminoa: FileUtils   eta agerpen kopurua:   5    Agertzen da: 
+			FileUtils.js, 
+Terminoa: PDFTextUtils   eta agerpen kopurua:   5    Agertzen da: 
+			PDFTextUtils.js, 
+Terminoa: RandomUtils   eta agerpen kopurua:   5    Agertzen da: 
+			RandomUtils.js, 
+Terminoa: CreateAnnotation   eta agerpen kopurua:   4    Agertzen da: 
+			CreateAnnotation.js, 
+Terminoa: Codes   eta agerpen kopurua:   4    Agertzen da: 
+			GoogleSheetGenerator.js, 
+Terminoa: ReadAnnotation   eta agerpen kopurua:   4    Agertzen da: 
+			ReadAnnotation.js, 
+Terminoa: AnnotationManagement   eta agerpen kopurua:   4    Agertzen da: 
+			AnnotationManagement.js, 
+Terminoa: DeleteAnnotation   eta agerpen kopurua:   4    Agertzen da: 
+			DeleteAnnotation.js, 
+Terminoa: UpdateAnnotation   eta agerpen kopurua:   4    Agertzen da: 
+			UpdateAnnotation.js, 
+Terminoa: BrowserStorageClient   eta agerpen kopurua:   4    Agertzen da: 
+			BrowserStorageClient.js, 
+Terminoa: BrowserStorageManager   eta agerpen kopurua:   4    Agertzen da: 
+			BrowserStorageManager.js, 
+Terminoa: HypothesisClientManager   eta agerpen kopurua:   4    Agertzen da: 
+			HypothesisClientManager.js, 
+Terminoa: Neo4JClient   eta agerpen kopurua:   4    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: CreateHighlighterTask   eta agerpen kopurua:   4    Agertzen da: 
+			CreateHighlighterTask.js, 
+Terminoa: GSheetParser   eta agerpen kopurua:   4    Agertzen da: 
+			GSheetParser.js, 
+Terminoa: GroupInitializer   eta agerpen kopurua:   4    Agertzen da: 
+			GroupInitializer.js, 
+Terminoa: MoodleAugmentation   eta agerpen kopurua:   4    Agertzen da: 
+			MoodleAugmentation.js, 
+Terminoa: MoodleGraderAugmentation   eta agerpen kopurua:   4    Agertzen da: 
+			MoodleGraderAugmentation.js, 
+Terminoa: MoodleGradingAugmentation   eta agerpen kopurua:   4    Agertzen da: 
+			MoodleGradingAugmentation.js, 
+Terminoa: MoodleViewPluginAssignSubmissionAugmentation   eta agerpen kopurua:   4    Agertzen da: 
+			MoodleViewPluginAssignSubmissionAugmentation.js, 
+Terminoa: MoodleProvider   eta agerpen kopurua:   4    Agertzen da: 
+			MoodleProvider.js, 
+Terminoa: CreateCodebook   eta agerpen kopurua:   4    Agertzen da: 
+			CreateCodebook.js, 
+Terminoa: ExportCodebookJSON   eta agerpen kopurua:   4    Agertzen da: 
+			ExportCodebookJSON.js, 
+Terminoa: ImportCodebook   eta agerpen kopurua:   4    Agertzen da: 
+			ImportCodebook.js, 
+Terminoa: ImportCodebookJSON   eta agerpen kopurua:   4    Agertzen da: 
+			ImportCodebookJSON.js, 
+Terminoa: Buttons   eta agerpen kopurua:   4    Agertzen da: 
+			Buttons.js, 
+Terminoa: ReadCodebook   eta agerpen kopurua:   4    Agertzen da: 
+			ReadCodebook.js, 
+Terminoa: CodebookManager   eta agerpen kopurua:   4    Agertzen da: 
+			CodebookManager.js, 
+Terminoa: AnnotatedTheme   eta agerpen kopurua:   4    Agertzen da: 
+			AnnotatedContentManager.js, 
+Terminoa: ContentScriptManager   eta agerpen kopurua:   4    Agertzen da: 
+			ContentScriptManager.js, 
+Terminoa: GoogleSheetsClientManager   eta agerpen kopurua:   4    Agertzen da: 
+			GoogleSheetsClientManager.js, 
+Terminoa: GroupSelector   eta agerpen kopurua:   4    Agertzen da: 
+			GroupSelector.js, 
+Terminoa: APISimulation   eta agerpen kopurua:   4    Agertzen da: 
+			APISimulation.js, 
+Terminoa: Options   eta agerpen kopurua:   4    Agertzen da: 
+			Options.js, 
+Terminoa: CryptoUtils   eta agerpen kopurua:   4    Agertzen da: 
+			CryptoUtils.js, 
+Terminoa: Assessing   eta agerpen kopurua:   3    Agertzen da: 
+			Assessing.js, 
+Terminoa: CommentingForm   eta agerpen kopurua:   3    Agertzen da: 
+			CommentingForm.js, 
+Terminoa: PreviousAssignments   eta agerpen kopurua:   3    Agertzen da: 
+			PreviousAssignments.js, 
+Terminoa: ReplyAnnotation   eta agerpen kopurua:   3    Agertzen da: 
+			ReplyAnnotation.js, 
+Terminoa: SuggestingLiterature   eta agerpen kopurua:   3    Agertzen da: 
+			SuggestingLiterature.js, 
+Terminoa: AnnotationList   eta agerpen kopurua:   3    Agertzen da: 
+			AnnotationList.js, 
+Terminoa: Canvas   eta agerpen kopurua:   3    Agertzen da: 
+			Canvas.js, 
+Terminoa: GoogleSheetGenerator   eta agerpen kopurua:   3    Agertzen da: 
+			GoogleSheetGenerator.js, 
+Terminoa: MoodleComment   eta agerpen kopurua:   3    Agertzen da: 
+			MoodleComment.js, 
+Terminoa: Resume   eta agerpen kopurua:   3    Agertzen da: 
+			Resume.js, 
+Terminoa: Screenshots   eta agerpen kopurua:   3    Agertzen da: 
+			Screenshots.js, 
+Terminoa: TextSummary   eta agerpen kopurua:   3    Agertzen da: 
+			TextSummary.js, 
+Terminoa: UserFilter   eta agerpen kopurua:   3    Agertzen da: 
+			UserFilter.js, 
+Terminoa: BrowserStorage   eta agerpen kopurua:   3    Agertzen da: 
+			BrowserStorage.js, 
+Terminoa: Neo4JClientManager   eta agerpen kopurua:   3    Agertzen da: 
+			Neo4JClientManager.js, 
+Terminoa: GoogleSheetsManager   eta agerpen kopurua:   3    Agertzen da: 
+			GoogleSheetsManager.js, 
+Terminoa: HypothesisManager   eta agerpen kopurua:   3    Agertzen da: 
+			HypothesisManager.js, 
+Terminoa: MoodleBackgroundManager   eta agerpen kopurua:   3    Agertzen da: 
+			MoodleBackgroundManager.js, 
+Terminoa: MoodleDownloadManager   eta agerpen kopurua:   3    Agertzen da: 
+			MoodleDownloadManager.js, 
+Terminoa: Neo4JManager   eta agerpen kopurua:   3    Agertzen da: 
+			Neo4JManager.js, 
+Terminoa: TaskManager   eta agerpen kopurua:   3    Agertzen da: 
+			TaskManager.js, 
+Terminoa: BuiltIn   eta agerpen kopurua:   3    Agertzen da: 
+			BuiltIn.js, 
+Terminoa: EmptyCodebook   eta agerpen kopurua:   3    Agertzen da: 
+			EmptyCodebook.js, 
+Terminoa: GoogleSheetContentScriptManager   eta agerpen kopurua:   3    Agertzen da: 
+			GSheetProvider.js, 
+Terminoa: NoCodebook   eta agerpen kopurua:   3    Agertzen da: 
+			NoCodebook.js, 
+Terminoa: DeleteCodebook   eta agerpen kopurua:   3    Agertzen da: 
+			DeleteCodebook.js, 
+Terminoa: DeleteGroup   eta agerpen kopurua:   3    Agertzen da: 
+			DeleteGroup.js, 
+Terminoa: ExportCodebook   eta agerpen kopurua:   3    Agertzen da: 
+			ExportCodebook.js, 
+Terminoa: RenameCodebook   eta agerpen kopurua:   3    Agertzen da: 
+			RenameCodebook.js, 
+Terminoa: UpdateCodebook   eta agerpen kopurua:   3    Agertzen da: 
+			UpdateCodebook.js, 
+Terminoa: AnnotatedContentManager   eta agerpen kopurua:   3    Agertzen da: 
+			AnnotatedContentManager.js, 
+Terminoa: ModeManager   eta agerpen kopurua:   3    Agertzen da: 
+			ModeManager.js, 
+Terminoa: AnnotationExporter   eta agerpen kopurua:   3    Agertzen da: 
+			AnnotationExporter.js, 
+Terminoa: AnnotationImporter   eta agerpen kopurua:   3    Agertzen da: 
+			AnnotationImporter.js, 
+Terminoa: BackToWorkspace   eta agerpen kopurua:   3    Agertzen da: 
+			BackToWorkspace.js, 
+Terminoa: DataUtils   eta agerpen kopurua:   3    Agertzen da: 
+			DataUtils.js, 
+Terminoa: DateUtils   eta agerpen kopurua:   3    Agertzen da: 
+			DateUtils.js, 
+Terminoa: SheetUtils   eta agerpen kopurua:   3    Agertzen da: 
+			SheetUtils.js, 
+Terminoa: PrimaryStudy   eta agerpen kopurua:   2    Agertzen da: 
+			GoogleSheetGenerator.js, 
+Terminoa: AnnotationGroup   eta agerpen kopurua:   2    Agertzen da: 
+			reviewModel.js, 
+Terminoa: BrowserStorageSearch   eta agerpen kopurua:   2    Agertzen da: 
+			BrowserStorageSearch.js, 
+Terminoa: ACMContentScript   eta agerpen kopurua:   2    Agertzen da: 
+			acmContentScript.js, 
+Terminoa: Background   eta agerpen kopurua:   2    Agertzen da: 
+			background.js, 
+Terminoa: ScienceDirectContentScript   eta agerpen kopurua:   2    Agertzen da: 
+			scienceDirectContentScript.js, 
+Terminoa: SpringerContentScript   eta agerpen kopurua:   2    Agertzen da: 
+			springerContentScript.js, 

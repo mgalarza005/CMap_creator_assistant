@@ -226,7 +226,7 @@ public class MainClass {
 			// 1.3: Mine the Variant Models
 			logger.info("3. Starting Variant Model mining process");
 
-			VariantModelMiner.mineAll(spl);
+			//VariantModelMiner.mineAll(spl);
 
 			logger.info("Ending Variant Model mining process");
 
@@ -238,7 +238,12 @@ public class MainClass {
 			CodeMiner.printTermTable();
 			CodeMiner.printTermTableForCluster();
 			
-			//CodeMiner.clusterraAplikatu();
+			CodeMiner.clusterraAplikatu();
+			
+			
+			
+			
+			
 			
 			// 2: Generate inserts for filling the DB
 			/*

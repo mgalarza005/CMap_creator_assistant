@@ -77342,9 +77342,7 @@ exports.PDFPrintService = PDFPrintService;
 })()
 <div id="groupSelectorContainer">
   // PVSCL:IFCOND(Hypothesis, LINE)
-
   // PVSCL:IFCOND(Manual, LINE)
-
 </div>
 <div id="abwaSidebarWrapper">
   <div id="abwaBucketBar"></div>
@@ -77493,15 +77491,10 @@ exports.PDFPrintService = PDFPrintService;
         </div>
       </div>
       // PVSCL:IFCOND(MoodleProvider,LINE)
-
       // PVSCL:IFCOND(MoodleProvider,LINE)
-
       // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()>1,LINE)
-
       // PVSCL:IFCOND(BrowserStorage,LINE)
-
       // PVSCL:IFCOND(Neo4J, LINE)
-
     </div>
   </div>
 </div>
@@ -77529,7 +77522,6 @@ import PDFTextUtils from '../../utils/PDFTextUtils'
 import PDF from '../../target/formats/PDF'
 import $ from 'jquery'
 // PVSCL:IFCOND(Classifying, LINE)
-
 
 class CreateAnnotation {
   constructor () {
@@ -77597,7 +77589,6 @@ class CreateAnnotation {
   obtainTagsToCreateAnnotation ({
     tags,
     /* PVSCL:IFCOND(Classifying) */ codeId /* PVSCL:ENDCOND */
-
   }) {
     if (tags) {
       tags = _.isArray(tags) ? tags : [tags]
@@ -77605,20 +77596,16 @@ class CreateAnnotation {
       tags = []
     }
     // PVSCL:IFCOND(Classifying, LINE)
-
     // PVSCL:IFCOND(Assessing, LINE)
-
     return tags
   }
 
   obtainBodyToCreateAnnotation ({
     /* PVSCL:IFCOND(Classifying) */codeId /* PVSCL:ENDCOND */
-
   }) {
     // Get bodies and tags for the annotation to be created
     const body = []
     // PVSCL:IFCOND(Classifying, LINE)
-
     return body
   }
 
@@ -77635,7 +77622,6 @@ class CreateAnnotation {
       source.id = window.abwa.targetManager.getDocumentId()
       target[0].source = source // Add source to the target
       // PVSCL:IFCOND(Selector, LINE)
-
       return target
     }
   }
@@ -77743,7 +77729,6 @@ class Body {
 export default Body
 import Body from './Body'
 // PVSCL:IFCOND(Hierarchy, LINE)
-
 import Theme from '../../codebook/model/Theme'
 import LanguageUtils from '../../utils/LanguageUtils'
 import _ from 'lodash'
@@ -77753,7 +77738,6 @@ class Classifying extends Body {
     super(purpose)
     if (!_.isEmpty(code)) {
       if (/* PVSCL:IFCOND(Hierarchy) */LanguageUtils.isInstanceOf(code, Code) || /* PVSCL:ENDCOND */LanguageUtils.isInstanceOf(code, Theme)) {
-LanguageUtils.isInstanceOf(code, Theme)) {
         this.value = code.toObject()
       } else {
         this.value = code
@@ -77780,7 +77764,6 @@ LanguageUtils.isInstanceOf(code, Theme)) {
     let tooltip = ''
     const code = window.abwa.codebookManager.codebookReader.codebook.getCodeOrThemeFromId(this.value.id)
     // PVSCL:IFCOND(Hierarchy, LINE)
-
     return tooltip
   }
 }
@@ -77815,19 +77798,13 @@ export default Commenting
 import _ from 'lodash'
 import Alerts from '../../utils/Alerts'
 // PVSCL:IFCOND(MoodleProvider OR Autocomplete, LINE)
-
 // PVSCL:IFCOND(Autocomplete,LINE)
-
 import $ from 'jquery'
 // PVSCL:IFCOND(SentimentAnalysis,LINE)
-
 // PVSCL:IFCOND(Commenting, LINE)
-
 import Config from '../../Config'
 // PVSCL:IFCOND(Assessing, LINE)
-
 // PVSCL:IFCOND(SuggestedLiterature, LINE)
-
 
 class CommentingForm {
   /**
@@ -77841,7 +77818,6 @@ class CommentingForm {
     const sidebarStatus = window.abwa.sidebar.isOpened()
     window.abwa.sidebar.closeSidebar()
     // PVSCL:IFCOND(PreviousAssignments,LINE)
-
     const title = CommentingForm.getFormTitle(annotation)
     const showForm = (preConfirmData = {}) => {
       // Get last call to this form annotation text, not the init one
@@ -77851,9 +77827,7 @@ class CommentingForm {
       // Create form
       const generateFormObjects = { annotation, showForm, sidebarStatus }
       // PVSCL:IFCOND(Autocomplete,LINE)
-
       // PVSCL:IFCOND(PreviousAssignments,LINE)
-
       const html = CommentingForm.generateCommentFormHTML({ annotation, addingHtml })
       const swalCallback = CommentingForm.generateCommentFormCallback({ annotation, preConfirmData, sidebarStatus, callback })
       const preConfirm = CommentingForm.generateCommentFormPreConfirm({ preConfirmData, swalCallback, showForm })
@@ -77873,38 +77847,29 @@ class CommentingForm {
   static getFormTitle (annotation) {
     let title = 'Commenting'
     // PVSCL:IFCOND(Classifying, LINE)
-
     return title
   }
 
   // PVSCL:IFCOND(Classifying, LINE)
 
-
   // PVSCL:IFCOND(PreviousAssignments,LINE)
-
 
   static generateCommentFormPreConfirm ({ preConfirmData, callback, showForm }) {
     const preConfirm = () => {
       preConfirmData.comment = document.querySelector('#comment').value
       // PVSCL:IFCOND(SuggestedLiterature, LINE)
-
       // PVSCL:IFCOND(Categorize, LINE)
-
       // PVSCL:IFCOND(SentimentAnalysis, LINE)
-
     }
     return preConfirm
   }
 
   // PVSCL:IFCOND(SentimentAnalysis, LINE)
 
-
   static generateCommentFormHTML ({ annotation, addingHtml }) {
     let html = addingHtml || ''
     // PVSCL:IFCOND(PreviousAssignments,LINE)
-
     // PVSCL:IFCOND(Categorize, LINE)
-
     let purposeCommentingBody
     if (_.isArray(annotation.body)) {
       purposeCommentingBody = annotation.body.find(body => body.purpose === 'commenting')
@@ -77912,7 +77877,6 @@ class CommentingForm {
     const commentText = purposeCommentingBody ? purposeCommentingBody.value : ''
     html += '<textarea class="swal2-textarea" data-minchars="1" data-multiple id="comment" rows="6" autofocus>' + commentText + '</textarea>'
     // PVSCL:IFCOND(SuggestedLiterature,LINE)
-
     return html
   }
 
@@ -77920,19 +77884,14 @@ class CommentingForm {
     // On before open
     let onBeforeOpen = () => {
       // PVSCL:IFCOND(Autocomplete,LINE)
-
       // PVSCL:IFCOND(SuggestedLiterature, LINE)
-
       // PVSCL:IFCOND(Categorize, LINE)
-
       // PVSCL:IFCOND(PreviousAssignments,LINE)
-
     }
     return onBeforeOpen
   }
 
   // PVSCL:IFCOND(Autocomplete,LINE)
-
 
   static generateCommentFormCallback ({ annotation, preConfirmData, callback, sidebarStatus }) {
     // Callback
@@ -77946,9 +77905,7 @@ class CommentingForm {
           // Update annotation
           annotation.text = preConfirmData.comment || ''
           // PVSCL:IFCOND(SuggestedLiterature,LINE)
-
           // PVSCL:IFCOND(Assessing, LINE)
-
           // Update annotation's body
           annotation.body = _.uniqBy(_.concat(bodyToUpdate, annotation.body), a => a.purpose)
           if (sidebarStatus) {
@@ -78133,7 +78090,6 @@ class ReplyAnnotation {
     let textSpanClassName = 'reply_text'
     const dateSpanClassName = 'reply_date'
     // PVSCL:IFCOND( Validate, LINE )
-
     // Add user name
     if (reply.creator === window.abwa.groupSelector.getCreatorData()) {
       htmlText += '<span class="' + userSpanClassName + '">You: </span>'
@@ -78142,7 +78098,6 @@ class ReplyAnnotation {
       htmlText += '<span class="' + userSpanClassName + '">' + username + ': </span>'
     }
     // PVSCL:IFCOND(Commenting, LINE)
-
     if (reply.modified) {
       htmlText += '<span title="' + moment(reply.modified).format('MMMM Do YYYY, h:mm:ss a') + '" class="' + dateSpanClassName + '">' + moment(reply.modified).fromNow() + '</span>'
     }
@@ -78545,7 +78500,6 @@ class GoogleSheetGenerator {
         if (annotationWithTitle) {
           title = annotationWithTitle.target[0].source.title
         } /* PVSCL:IFCOND(Hypothesis) */else {
-
       } catch (e) {
         title = 'Document ' + i
       }
@@ -79198,15 +79152,11 @@ import LanguageUtils from '../../utils/LanguageUtils'
 import Events from '../../Events'
 import _ from 'lodash'
 // PVSCL:IFCOND(UserFilter, LINE)
-
 import Annotation from '../Annotation'
 // PVSCL:IFCOND(Replying, LINE)
-
 import $ from 'jquery'
 // PVSCL:IFCOND(Commenting, LINE)
-
 // PVSCL:IFCOND(Remote, LINE)
-
 const ANNOTATION_OBSERVER_INTERVAL_IN_SECONDS = 3
 require('jquery-contextmenu/dist/jquery.contextMenu')
 
@@ -79221,24 +79171,18 @@ class ReadAnnotation {
     // Event listener deleted annotation
     this.initAnnotationDeletedEventListener()
     // PVSCL:IFCOND(DeleteAll, LINE)
-
     // Event listener updated annotation
     // PVSCL:IFCOND(Update, LINE)
-
     this.loadAnnotations((err) => {
       // PVSCL:IFCOND(UserFilter, LINE)
-
       if (_.isFunction(callback)) {
         callback(err)
       }
     })
     // PVSCL:IFCOND(CodebookUpdate, LINE)
-
     this.initAnnotationsObserver()
     // PVSCL:IFCOND(Remote, LINE)
-
     // PVSCL:IFCOND(ImportAnnotations, LINE)
-
   }
 
   destroy () {
@@ -79250,15 +79194,12 @@ class ReadAnnotation {
     // Destroy annotations observer
     clearInterval(this.observerInterval)
     // PVSCL:IFCOND(Remote, LINE)
-
     // Destroy annotations clean interval if exist
     clearInterval(this.cleanInterval)
     // PVSCL:IFCOND(UserFilter, LINE)
-
   }
 
   // PVSCL:IFCOND(Remote, LINE)
-
 
   /**
    * Initializes annotations observer, to ensure dynamic web pages maintain highlights on the screen
@@ -79269,7 +79210,6 @@ class ReadAnnotation {
       // console.debug('Observer interval')
       let annotationsToHighlight
       // PVSCL:IFCOND(UserFilter, LINE)
-
       if (annotationsToHighlight) {
         for (let i = 0; i < this.allAnnotations.length; i++) {
           const annotation = this.allAnnotations[i]
@@ -79299,9 +79239,7 @@ class ReadAnnotation {
   }
 
   // PVSCL:IFCOND(Create, LINE)
-
   // PVSCL:IFCOND(Delete, LINE)
-
 
   updateAllAnnotations (callback) {
     // Retrieve annotations for current url and group
@@ -79319,9 +79257,7 @@ class ReadAnnotation {
         // Deserialize retrieved annotations
         this.allAnnotations = annotationObjects.map(annotationObject => Annotation.deserialize(annotationObject))
         // PVSCL:IFCOND(Replying, LINE)
-
         // PVSCL:IFCOND(UserFilter, LINE)
-
         // Redraw all annotations
         this.redrawAnnotations()
         LanguageUtils.dispatchCustomEvent(Events.updatedAllAnnotations, { annotations: this.allAnnotations })
@@ -79343,9 +79279,7 @@ class ReadAnnotation {
       } else {
         let unHiddenAnnotations
         // PVSCL:IFCOND(UserFilter, LINE)
-
         // PVSCL:IFCOND(Selector, LINE)
-
         if (_.isFunction(callback)) {
           callback()
         }
@@ -79356,12 +79290,10 @@ class ReadAnnotation {
   retrieveCurrentAnnotations () {
     let currentAnnotations
     // PVSCL:IFCOND(UserFilter, LINE)
-
     return currentAnnotations
   }
 
   // PVSCL:IFCOND(Selector, LINE)
-
           },
           items: items
         }
@@ -79374,7 +79306,6 @@ class ReadAnnotation {
     this.unHighlightAllAnnotations()
     // Highlight all annotations
     // PVSCL:IFCOND(UserFilter, LINE)
-
   }
 
   unHighlightAllAnnotations () {
@@ -79394,16 +79325,11 @@ class ReadAnnotation {
   }
   // PVSCL:ENDCOND
   // PVSCL:IFCOND(UserFilter, LINE)
-
   // PVSCL:IFCOND(Update, LINE)
-
   // PVSCL:IFCOND(DeleteAll, LINE)
 
-
   // PVSCL:IFCOND(ImportAnnotations, LINE)
-
   // PVSCL:IFCOND(CodebookUpdate, LINE)
-
 }
 
 export default ReadAnnotation
@@ -79785,15 +79711,10 @@ export default UserFilter
 import _ from 'lodash'
 import LanguageUtils from '../utils/LanguageUtils'
 // PVSCL:IFCOND(Classifying, LINE)
-
 // PVSCL:IFCOND(Commenting, LINE)
-
 // PVSCL:IFCOND(SuggestedLiterature, LINE)
-
 // PVSCL:IFCOND(Assessing, LINE)
-
 // PVSCL:IFCOND(Hypothesis,LINE)
-
 
 class Annotation {
   constructor ({
@@ -79853,15 +79774,12 @@ class Annotation {
       },
       references: this.references || [],
       // PVSCL:IFCOND(SuggestedLiterature,LINE)
-
       tags: this.tags,
       target: this.target,
       text: '',
       uri: /* PVSCL:IFCOND(DOI) */ this.target[0].source.doi || /* PVSCL:ENDCOND */ this.target[0].source.url || this.target[0].source.urn
- this.target[0].source.url || this.target[0].source.urn
     }
     // PVSCL:IFCOND(Hypothesis, LINE)
-
     return data
   }
 
@@ -79880,17 +79798,12 @@ class Annotation {
     if (_.isArray(annotation.body)) {
       annotation.body = annotationObject.body.map((body) => {
         // PVSCL:IFCOND(Classifying, LINE)
-
         // PVSCL:IFCOND(Commenting, LINE)
-
         // PVSCL:IFCOND(SuggestedLiterature, LINE)
-
         // PVSCL:IFCOND(Assessing, LINE)
-
       })
     }
     // PVSCL:IFCOND(Hypothesis, LINE)
-
     return annotation
   }
 }
@@ -79915,7 +79828,6 @@ class AnnotationManagement {
     this.annotationDeleter = new DeleteAnnotation()
     this.events = {}
     // PVSCL:IFCOND(SidebarNavigation, LINE)
-
   }
 
   init (callback) {
@@ -79934,7 +79846,6 @@ class AnnotationManagement {
     this.annotationDeleter.init()
     this.activateSelectionEvent()
     // PVSCL:IFCOND(SidebarNavigation, LINE)
-
   }
 
   activateSelectionEvent (callback) {
@@ -80031,7 +79942,6 @@ class AnnotationManagement {
   }
 
   // PVSCL:IFCOND(SidebarNavigation, LINE)
-
 }
 
 export default AnnotationManagement
@@ -82019,11 +81929,8 @@ import AnnotationUtils from '../../utils/AnnotationUtils'
 import Codebook from '../../codebook/model/Codebook'
 import Config from '../../Config'
 // PVSCL:IFCOND(Hypothesis, LINE)
-
 // PVSCL:IFCOND(BrowserStorage, LINE)
-
 // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()>1,LINE)
-
 
 class CreateHighlighterTask extends Task {
   constructor (config) {
@@ -82166,12 +82073,10 @@ class CreateHighlighterTask extends Task {
       group = newGroup
     }
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()>1, LINE)
-
   }
 
   updateHighlighterAnnotations ({ rubric, annotations, annotationServer, userProfile }, callback) {
     // PVSCL:IFCOND(Hypothesis,LINE)
-
     // Create teacher annotation if not exists
     this.createTeacherAnnotation({ producerId: userProfile.userid, annotationServer: annotationServer }, (err) => {
       if (err) {
@@ -82211,7 +82116,6 @@ class CreateHighlighterTask extends Task {
     // Generate group annotations
     rubric.annotationServer = annotationServer
     // PVSCL:IFCOND(Hypothesis,LINE)
-
     rubric = Codebook.createCodebookFromObject(rubric) // convert to rubric to be able to run toAnnotations() function
     const annotations = rubric.toAnnotations()
     this.createTeacherAnnotation({ producerId: userProfile.userid, annotationServer: annotationServer }, (err) => {
@@ -82291,7 +82195,6 @@ class CreateHighlighterTask extends Task {
 
   loadAnnotationServer (callback) {
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()=1, LINE)
-
   }
 
   initLoginProcess (callback) {
@@ -82376,7 +82279,6 @@ export default AnnotationServerManager
 import GoogleSheetClient from '../googleSheets/GoogleSheetClient'
 // PVSCL:IFCOND(GoogleSheetConsumer,LINE)
 
-
 class GoogleSheetsManager {
   constructor () {
     this.googleSheetClient = null
@@ -82404,8 +82306,34 @@ class GoogleSheetsManager {
           })
           return true
         }/* PVSCL:IFCOND(GoogleSheetProvider) */ else if (request.cmd === 'getSpreadsheet') {
-/* PVSCL:IFCOND(GoogleSheetConsumer) */ else if (request.cmd === 'createSpreadsheet') {
-
+          chrome.identity.getAuthToken({ interactive: true }, function (token) {
+            if (_.isUndefined(token)) {
+              sendResponse({ error: new Error('Unable to retrieve token, please check if you have synced your browser and your google account. If the application did not ask you for login, please contact developer.') })
+            } else {
+              this.googleSheetClient = new GoogleSheetClient(token)
+              this.googleSheetClient.createSpreadsheet(request.data, (err, result) => {
+                if (err) {
+                  sendResponse({ error: err })
+                } else {
+                  sendResponse(result)
+                }
+              })
+            }
+          })
+          return true
+        } else if (request.cmd === 'updateSpreadsheet') {
+          chrome.identity.getAuthToken({ interactive: true }, function (token) {
+            this.googleSheetClient = new GoogleSheetClient(token)
+            this.googleSheetClient.updateSheetCells(request.data, (err, result) => {
+              if (err) {
+                sendResponse({ error: err })
+              } else {
+                sendResponse(result)
+              }
+            })
+          })
+          return true
+        }/* PVSCL:ENDCOND */
       }
     })
   }
@@ -82927,27 +82855,20 @@ class Neo4JManager {
 export default Neo4JManager
 import DOI from 'doi-regex'
 // PVSCL:IFCOND(ScienceDirect, LINE)
-
 import Config from '../Config'
 import _ from 'lodash'
 
 class TargetManager {
   constructor () {
     // PVSCL:IFCOND(DOI, LINE)
-
     // PVSCL:IFCOND(ScienceDirect, LINE)
-
     // PVSCL:IFCOND(Dropbox, LINE)
-
   }
 
   init () {
     // PVSCL:IFCOND(DOI, LINE)
-
     // PVSCL:IFCOND(ScienceDirect, LINE)
-
     // PVSCL:IFCOND(Dropbox, LINE)
-
   }
 
   extractAnnotationId (url) {
@@ -83143,7 +83064,6 @@ class Code {
     description = '',
     createdDate = new Date(),
     color, theme/* PVSCL:IFCOND(MoodleProvider) */,
-
   }) {
     this.id = id
     this.name = name
@@ -83159,7 +83079,6 @@ class Code {
       }
     }
     // PVSCL:IFCOND(MoodleProvider, LINE)
-
   }
 
   toAnnotations () {
@@ -83172,7 +83091,6 @@ class Code {
     const motivationTag = Config.namespace + ':' + Config.tags.motivation + ':' + 'codebookDevelopment'
     const tags = [codeTag, isCodeOfTag, motivationTag]
     // PVSCL:IFCOND(MoodleProvider, LINE)
-
     return {
       id: this.id,
       group: this.theme.annotationGuide.annotationServer.group.id,
@@ -83208,7 +83126,6 @@ class Code {
         const id = annotation.id
         let codeToReturn
         // PVSCL:IFCOND(MoodleProvider, LINE)
-
         return codeToReturn
       } else {
         console.error('Unable to retrieve mark configuration from annotation')
@@ -83227,7 +83144,6 @@ class Code {
     }
   }
   // PVSCL:IFCOND(MoodleProvider, LINE)
-
 }
 
 export default Code
@@ -83237,30 +83153,24 @@ import Config from '../../Config'
 import _ from 'lodash'
 import LanguageUtils from '../../utils/LanguageUtils'
 // PVSCL:IFCOND(Hierarchy,LINE)
-
 // PVSCL:IFCOND(Hypothesis, LINE)
-
 // PVSCL:IFCOND(BrowserStorage, LINE)
-
 // PVSCL:IFCOND(CodebookUpdate, LINE)
-
 
 class Codebook {
   constructor ({
     id = null,
     name = '',
     annotationServer = null/* PVSCL:IFCOND(MoodleProvider or MoodleReport or MoodleResource) */,
-/* PVSCL:IFCOND(GoogleSheetProvider) */,
-
+    spreadsheetId = null,
+    sheetId = null/* PVSCL:ENDCOND */
   }) {
     this.id = id
     this.name = name
     this.themes = []
     this.annotationServer = annotationServer
     // PVSCL:IFCOND(MoodleProvider,LINE)
-
     // PVSCL:IFCOND(GoogleSheetProvider,LINE)
-
   }
 
   toAnnotation () {
@@ -83268,13 +83178,10 @@ class Codebook {
     const guideTag = Config.namespace + ':guide'
     const tags = [motivationTag, guideTag]
     // PVSCL:IFCOND(MoodleProvider or MoodleReport or MoodleResource,LINE)
-
     // Construct text attribute of the annotation
     let textObject
     // PVSCL:IFCOND(MoodleProvider or MoodleReport or MoodleResource,LINE)
-
     // PVSCL:IFCOND(GoogleSheetProvider,LINE)
-
     // Return the constructed annotation
     return {
       name: this.name,
@@ -83306,11 +83213,8 @@ class Codebook {
     this.setAnnotationServer(null, (annotationServer) => {
       const annotationGuideOpts = { id: annotation.id, name: annotation.name, annotationServer: annotationServer }
       // PVSCL:IFCOND(GoogleSheetProvider or MoodleProvider, LINE)
-
       // PVSCL:IFCOND(GoogleSheetProvider, LINE)
-
       // PVSCL:IFCOND(MoodleProvider, LINE)
-
       let guide
       guide = new Codebook(annotationGuideOpts)
       if (_.isFunction(callback)) {
@@ -83334,7 +83238,6 @@ class Codebook {
           })
         })
         // PVSCL:IFCOND(Hierarchy,LINE)
-
         for (let i = 0; i < themeAnnotations.length; i++) {
           const theme = Theme.fromAnnotation(themeAnnotations[i], guide)
           if (LanguageUtils.isInstanceOf(theme, Theme)) {
@@ -83342,7 +83245,6 @@ class Codebook {
           }
         }
         // PVSCL:IFCOND(Hierarchy,LINE)
-
         if (_.isFunction(callback)) {
           callback(null, guide)
         }
@@ -83361,12 +83263,9 @@ class Codebook {
       group = newGroup
     }
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()>1,LINE)
-
   }
   // PVSCL:IFCOND(BuiltIn or ImportCodebook or NOT(Codebook) or ImportAnnotations, LINE)
-
   // PVSCL:IFCOND(GoogleSheetProvider,LINE)
-
 
   getCodeOrThemeFromId (id) {
     let themeOrCodeToReturn = null
@@ -83376,17 +83275,12 @@ class Codebook {
     if (LanguageUtils.isInstanceOf(theme, Theme)) {
       themeOrCodeToReturn = theme
     } /* PVSCL:IFCOND(Hierarchy) */ else {
-
     return themeOrCodeToReturn
   }
   // PVSCL:IFCOND(CodebookUpdate, LINE)
-
   // PVSCL:IFCOND(MoodleProvider, LINE)
-
   // PVSCL:IFCOND(ExportCodebook or Export, LINE)
-
   // PVSCL:IFCOND(PreviousAssignments, LINE)
-
 
   getThemeByName (name) {
     if (_.isString(name)) {
@@ -83402,9 +83296,7 @@ import jsYaml from 'js-yaml'
 import _ from 'lodash'
 import Config from '../../Config'
 // PVSCL:IFCOND(CodebookUpdate, LINE)
-
 // PVSCL:IFCOND(Hierarchy, LINE)
-
 import LanguageUtils from '../../utils/LanguageUtils'
 
 class Theme {
@@ -83415,8 +83307,7 @@ class Theme {
     annotationGuide,
     createdDate = new Date(),
     description = ''/* PVSCL:IFCOND(GoogleSheetProvider and Hierarchy) */,
-/* PVSCL:IFCOND(MoodleProvider) */,
-
+    moodleCriteriaId/* PVSCL:ENDCOND */
   }) {
     this.id = id
     this.name = name
@@ -83432,11 +83323,8 @@ class Theme {
       }
     }
     // PVSCL:IFCOND(Hierarchy,LINE)
-
     // PVSCL:IFCOND(GoogleSheetProvider and Hierarchy,LINE)
-
     // PVSCL:IFCOND(MoodleProvider, LINE)
-
   }
 
   toAnnotations () {
@@ -83444,7 +83332,6 @@ class Theme {
     // Create its annotations
     annotations.push(this.toAnnotation())
     // PVSCL:IFCOND(Hierarchy,LINE)
-
     return annotations
   }
 
@@ -83453,9 +83340,7 @@ class Theme {
     const motivationTag = Config.namespace + ':' + Config.tags.motivation + ':' + 'codebookDevelopment'
     const tags = [themeTag, motivationTag]
     // PVSCL:IFCOND(MoodleProvider,LINE)
-
     // PVSCL:IFCOND(GoogleSheetProvider and Hierarchy,LINE)
-
     return {
       id: this.id,
       group: this.annotationGuide.annotationServer.group.id,
@@ -83468,7 +83353,6 @@ class Theme {
       target: [],
       text: jsYaml.dump({
         id: this.id || ''/* PVSCL:IFCOND(BuiltIn) */,
-
       }),
       uri: this.annotationGuide.annotationServer.group.links.html
     }
@@ -83483,25 +83367,21 @@ class Theme {
       return tag.includes(Config.namespace + ':' + Config.tags.grouped.group + ':')
     })
     // PVSCL:IFCOND(GoogleSheetProvider and Hierarchy,LINE)
-
     if (_.isString(themeTag)) {
       const name = themeTag.replace(Config.namespace + ':' + Config.tags.grouped.group + ':', '')
       const config = jsYaml.load(annotation.text)
       // PVSCL:IFCOND(GoogleSheetProvider and Hierarchy,LINE)
-
       if (_.isObject(config)) {
         const description = config.description
         const id = annotation.id
         // PVSCL:IFCOND(MoodleReport,LINE)
-
         return new Theme({
           id,
           name,
           description,
           createdDate: annotation.updated,
           annotationGuide/* PVSCL:IFCOND(GoogleSheetProvider and Hierarchy) */,
-/* PVSCL:IFCOND(MoodleReport) */,
-
+          moodleCriteriaId/* PVSCL:ENDCOND */
         })
       } else {
 
@@ -83511,14 +83391,10 @@ class Theme {
     }
   }
   // PVSCL:IFCOND(CodebookUpdate, LINE) // Check if it is possible to add codes to the definition model if it is not selected Dynamic feature
-
   // PVSCL:IFCOND(CodebookUpdate, LINE)
-
   // PVSCL:IFCOND(ExportCodebook, LINE)
 
-
   // PVSCL:IFCOND(MoodleProvider or ExportCodebook, LINE)
-
 
   toObject () {
     return {
@@ -83533,7 +83409,6 @@ class Theme {
   }
 
   // PVSCL:IFCOND(Hierarchy, LINE)
-
 }
 
 export default Theme
@@ -83638,9 +83513,7 @@ class GSheetParser {
             let sheetName
             // Retrieve spreadsheet title
             // PVSCL:IFCOND(Manual,LINE)
-
             // PVSCL:IFCOND(ApplicationBased,LINE)
-
             const codebook = Codebook.fromGoogleSheet({ spreadsheetId, sheetId, spreadsheet, sheetName })
             if (_.isError(codebook)) {
               callback(err)
@@ -83711,9 +83584,7 @@ import GroupInitializer from './GroupInitializer'
 import Alerts from '../../../../utils/Alerts'
 import swal from 'sweetalert2'
 // PVSCL:IFCOND(Hypothesis, LINE)
-
 // PVSCL:IFCOND(BrowserStorage, LINE)
-
 
 class GoogleSheetContentScriptManager {
   init (callback) {
@@ -83775,7 +83646,6 @@ class GoogleSheetContentScriptManager {
 
   loadAnnotationServer (callback) {
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()=1, LINE)
-
   }
 
   initGoogleSheetParsing (callback) {
@@ -83808,7 +83678,6 @@ import Alerts from '../../../../utils/Alerts'
 import ChromeStorage from '../../../../utils/ChromeStorage'
 import Codebook from '../../../model/Codebook'
 // PVSCL:IFCOND(ApplicationBased, LINE)
-
 const selectedGroupNamespace = 'hypothesis.currentGroup'
 
 class GroupInitializer {
@@ -83838,9 +83707,7 @@ class GroupInitializer {
         const group = _.find(groups, (group) => {
           let isGroupNameEqual
           // PVSCL:IFCOND(ApplicationBased, LINE)
-
           // PVSCL:IFCOND(Manual, LINE)
-
           return isGroupNameEqual
         })
         // Create the group if not exists
@@ -84153,11 +84020,8 @@ import MoodleClientManager from '../../../../moodle/MoodleClientManager'
 import MoodleFunctions from '../../../../moodle/MoodleFunctions'
 import _ from 'lodash'
 // PVSCL:IFCOND(Hypothesis, LINE)
-
 // PVSCL:IFCOND(BrowserStorage, LINE)
-
 // PVSCL:IFCOND(Hierarchy, LINE)
-
 import Alerts from '../../../../utils/Alerts'
 import Codebook from '../../../model/Codebook'
 import Theme from '../../../model/Theme'
@@ -84330,7 +84194,6 @@ class MoodleProvider {
 
   loadAnnotationServer (callback) {
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()=1, LINE)
-
   }
 
   initLoginProcess (callback) {
@@ -84363,7 +84226,6 @@ class MoodleProvider {
           const moodleCriteria = rubricCriteria[i]
           const criteria = new Theme({ name: LanguageUtils.normalizeString(moodleCriteria.description), id: moodleCriteria.id, description: LanguageUtils.normalizeString(moodleCriteria.description), annotationGuide: this.rubric })
           // PVSCL:IFCOND(Hierarchy, LINE)
-
           this.rubric.themes.push(criteria)
         }
         callback(null, this.rubric)
@@ -84502,9 +84364,7 @@ export default NoCodebook
 import Events from '../../../Events'
 import _ from 'lodash'
 // PVSCL:IFCOND(BuiltIn, LINE)
-
 // PVSCL:IFCOND(NOT(Classifying), LINE)
-
 import Codebook from '../../model/Codebook'
 import LanguageUtils from '../../../utils/LanguageUtils'
 import Alerts from '../../../utils/Alerts'
@@ -84543,7 +84403,6 @@ class CreateCodebook {
       const promise = new Promise((resolve, reject) => {
         const howCreate = event.detail.howCreate
         // PVSCL:IFCOND(BuiltIn, LINE)
-
       })
       promise.catch((err) => {
         Alerts.errorAlert({ text: err })
@@ -85220,11 +85079,9 @@ import _ from 'lodash'
 import Codebook from '../../model/Codebook'
 import Theme from '../../model/Theme'
 // PVSCL:IFCOND(Hierarchy, LINE)
-
 import ColorUtils from '../../../utils/ColorUtils'
 import LanguageUtils from '../../../utils/LanguageUtils'
 // PVSCL:IFCOND(CodebookUpdate, LINE)
-
 
 class ReadCodebook {
   constructor () {
@@ -85234,7 +85091,6 @@ class ReadCodebook {
 
   init (callback) {
     // PVSCL:IFCOND(CodebookUpdate,LINE)
-
     this.loadCodebook(() => {
       // Add event listener for codebook read event
       this.initCodebookCreatedEvent()
@@ -85254,7 +85110,6 @@ class ReadCodebook {
 
   // EVENTS
   // PVSCL:IFCOND(CodebookUpdate,LINE)
-
 
   initCodebookReadEvent (callback) {
     this.events.codebookReadEvent = { element: document, event: Events.codebookRead, handler: this.codebookReadEventHandler() }
@@ -85327,7 +85182,6 @@ class ReadCodebook {
         const initCodebookPromise = new Promise((resolve, reject) => {
           if (codebookDefinitionAnnotations.length === 0) {
             // PVSCL:IFCOND(BuiltIn AND NOT(ApplicationBased), LINE)
-
           } else {
             Codebook.fromAnnotations(codebookDefinitionAnnotations, (err, codebook) => {
               if (err) {
@@ -85376,7 +85230,6 @@ class ReadCodebook {
           return !this.hasATag(annotation, 'slr:spreadsheet')
         })
         // PVSCL:IFCOND(MoodleResource,LINE)
-
         if (_.isFunction(callback)) {
           callback(null, annotations)
         }
@@ -85396,7 +85249,6 @@ class ReadCodebook {
     // Remove buttons from previous codebook if exists
     this.buttonContainer.innerText = ''
     // PVSCL:IFCOND(Codebook, LINE)
-
     // Populate sidebar buttons container
     this.createButtons()
   }
@@ -85406,20 +85258,15 @@ class ReadCodebook {
    */
   createButtons () {
     // PVSCL:IFCOND(CodebookUpdate, LINE)
-
     // Create current buttons
     const themes = this.codebook.themes
     // PVSCL:IFCOND(Alphabetical, LINE)
-
     // PVSCL:IFCOND(Number, LINE)
-
     // PVSCL:IFCOND(Date, LINE)
-
     for (let i = 0; i < themes.length; i++) {
       const theme = themes[i]
       let themeButtonContainer
       // PVSCL:IFCOND(Hierarchy,LINE)
-
       if (_.isElement(themeButtonContainer)) {
         this.buttonContainer.append(themeButtonContainer)
       }
@@ -85442,11 +85289,8 @@ class ReadCodebook {
             let id = ''
             let tags = ''
             // PVSCL:IFCOND(NOT(Multivalued),LINE)
-
             // PVSCL:IFCOND(MoodleResource,LINE)
-
             // PVSCL:IFCOND(SidebarNavigation, LINE)
-
           }
         }
       },
@@ -85456,11 +85300,9 @@ class ReadCodebook {
           const code = this.codebook.getCodeOrThemeFromId(codeId)
           if (LanguageUtils.isInstanceOf(code, Code)) {
             // PVSCL:IFCOND(NOT(Multivalued),LINE)
-
           }
         }
       }/* PVSCL:IFCOND(CodebookUpdate) */,
-
     })
   }
 
@@ -85478,13 +85320,10 @@ class ReadCodebook {
           if (LanguageUtils.isInstanceOf(theme, Theme)) {
             const tags = [Config.namespace + ':' + Config.tags.grouped.group + ':' + theme.name]
             // PVSCL:IFCOND(MoodleResource,LINE)
-
             // PVSCL:IFCOND(SidebarNavigation, LINE)
-
           }
         }
       }/* PVSCL:IFCOND(CodebookUpdate) */,
-
     })
   }
 
@@ -85525,7 +85364,6 @@ class ReadCodebook {
       this.codebook.themes.forEach((theme) => {
         const color = listOfColors.pop()
         // PVSCL:IFCOND(Hierarchy,LINE)
-
       })
     }
   }
@@ -85537,24 +85375,18 @@ class ReadCodebook {
     return (themeId) => {
       const items = {}
       // PVSCL:IFCOND(CodebookUpdate, LINE)
-
       // PVSCL:IFCOND(SidebarNavigation, LINE)
-
       return {
         callback: (key) => {
           // PVSCL:IFCOND(CodebookUpdate, LINE)
-
           // PVSCL:IFCOND(SidebarNavigation, LINE)
-
         },
         items: items
       }
     }
   }
   // PVSCL:IFCOND(Hierarchy, LINE)
-
   // PVSCL:IFCOND(CodebookUpdate, LINE)
-
 
   /**
    * Creates event handler for event CodebookCreated
@@ -85652,7 +85484,6 @@ import Theme from '../../model/Theme'
 import Classifying from '../../../annotationManagement/purposes/Classifying'
 import Annotation from '../../../annotationManagement/Annotation'
 // PVSCL:IFCOND(Hierarchy,LINE)
-
 import LanguageUtils from '../../../utils/LanguageUtils'
 
 class UpdateCodebook {
@@ -85666,7 +85497,6 @@ class UpdateCodebook {
     this.initRemoveThemeEvent()
     this.initUpdateThemeEvent()
     // PVSCL:IFCOND(Hierarchy,LINE)
-
   }
 
   destroy () {
@@ -85695,7 +85525,6 @@ class UpdateCodebook {
     }
   }
   // PVSCL:IFCOND(Hierarchy,LINE)
-
 
   /**
    * This function adds a button in the sidebar that allows to create new themes.
@@ -85775,7 +85604,6 @@ class UpdateCodebook {
           }
           themeToUpdate = new Theme({ name: themeName, description: themeDescription, annotationGuide: window.abwa.codebookManager.codebookReader.codebook })
           // PVSCL:IFCOND(Hierarchy, LINE)
-
           themeToUpdate.id = theme.id
         },
         callback: () => {
@@ -85819,7 +85647,6 @@ class UpdateCodebook {
     }
   }
   // PVSCL:IFCOND(Hierarchy, LINE)
-
 
   updateCodebookTheme (themeToUpdate, callback) {
     const annotationsToUpdate = themeToUpdate.toAnnotations()
@@ -85866,7 +85693,6 @@ class UpdateCodebook {
       searchByTagPromise(Config.namespace + ':' + Config.tags.grouped.group + ':' + theme.name)
     ]
     // PVSCL:IFCOND(Hierarchy, LINE)
-
     Promise.all(promises).then((resolves) => {
       const annotationObjects = resolves[0] // Get annotations done
       let annotations = annotationObjects.map((annotation) => {
@@ -85886,7 +85712,6 @@ class UpdateCodebook {
             return annotation
           } else {
             /* PVSCL:IFCOND(Hierarchy, LINE) */
-
           }
         }
       })
@@ -85911,30 +85736,20 @@ import _ from 'lodash'
 import CreateCodebook from './operations/create/CreateCodebook'
 import ReadCodebook from './operations/read/ReadCodebook'
 // PVSCL:IFCOND(CodebookUpdate, LINE)
-
 // PVSCL:IFCOND(CodebookDelete, LINE)
-
 // PVSCL:IFCOND(RenameCodebook, LINE)
-
 // PVSCL:IFCOND(ExportCodebook, LINE)
-
 // PVSCL:IFCOND(ImportCodebook, LINE)
-
 
 class CodebookManager {
   constructor () {
     this.codebookCreator = new CreateCodebook()
     this.codebookReader = new ReadCodebook()
     // PVSCL:IFCOND(CodebookUpdate, LINE)
-
     // PVSCL:IFCOND(CodebookDelete, LINE)
-
     // PVSCL:IFCOND(RenameCodebook, LINE)
-
     // PVSCL:IFCOND(ExportCodebook, LINE)
-
     // PVSCL:IFCOND(ImportCodebook, LINE)
-
   }
 
   init (callback) {
@@ -85945,15 +85760,10 @@ class CodebookManager {
       }
     })
     // PVSCL:IFCOND(CodebookUpdate, LINE)
-
     // PVSCL:IFCOND(CodebookDelete, LINE)
-
     // PVSCL:IFCOND(RenameCodebook, LINE)
-
     // PVSCL:IFCOND(ExportCodebook, LINE)
-
     // PVSCL:IFCOND(ImportCodebook, LINE)
-
   }
 
   destroy () {
@@ -85961,27 +85771,20 @@ class CodebookManager {
     this.codebookCreator.destroy()
     this.codebookReader.destroy()
     // PVSCL:IFCOND(CodebookUpdate, LINE)
-
     // PVSCL:IFCOND(CodebookDelete, LINE)
-
     // PVSCL:IFCOND(RenameCodebook, LINE)
-
     // PVSCL:IFCOND(ExportCodebook, LINE)
-
     // PVSCL:IFCOND(ImportCodebook, LINE)
-
   }
 }
 
 export default CodebookManager
 import Events from '../Events'
 // PVSCL:IFCOND(NOT(Multivalued), LINE) // It is only used by SingleCode
-
 import Alerts from '../utils/Alerts'
 import LanguageUtils from '../utils/LanguageUtils'
 import Theme from '../codebook/model/Theme'
 // PVSCL:IFCOND(Hierarchy, LINE)
-
 import _ from 'lodash'
 import Classifying from '../annotationManagement/purposes/Classifying'
 import Annotation from '../annotationManagement/Annotation'
@@ -85991,12 +85794,10 @@ export class AnnotatedTheme {
     theme = null,
     annotations = []
     /* PVSCL:IFCOND(Hierarchy) */, annotatedCodes = []/* PVSCL:ENDCOND */
-
   }) {
     // code
     this.theme = theme
     // PVSCL:IFCOND(Hierarchy, LINE)
-
     this.annotations = annotations
   }
 
@@ -86006,13 +85807,11 @@ export class AnnotatedTheme {
 }
 // PVSCL:IFCOND(Hierarchy, LINE)
 
-
 export class AnnotatedContentManager {
   constructor () {
     this.annotatedThemes = {}
     this.events = {}
     // PVSCL:IFCOND(MoodleResource, LINE)
-
   }
 
   init (callback) {
@@ -86057,7 +85856,6 @@ export class AnnotatedContentManager {
   retrieveAnnotationsForAssignment (callback) {
     let promise
     // PVSCL:IFCOND(MoodleResource, LINE)
-
     // Return retrieved annotations
     promise.catch((err) => {
       callback(err)
@@ -86078,11 +85876,9 @@ export class AnnotatedContentManager {
   defineStructure () {
     let annotatedThemesStructure
     // PVSCL:IFCOND(Hierarchy, LINE)
-
     return annotatedThemesStructure
   }
   // PVSCL:IFCOND(NOT(Multivalued), LINE)
-
 
   addAnnotationToAnnotatedThemesOrCode (annotation, annotatedThemesObject = this.annotatedThemes) {
     // Get classification code
@@ -86123,10 +85919,8 @@ export class AnnotatedContentManager {
         return _.intersection(window.abwa.targetManager.getDocumentLink(), _.values(annotation.target[0].source))
       })
       // PVSCL:IFCOND(Hierarchy, LINE)
-
       return annotations
     } /* PVSCL:IFCOND(Hierarchy) */else if (LanguageUtils.isInstanceOf(themeOrCode, AnnotatedCode)) {
- else {
       return []
     }
   }
@@ -86144,7 +85938,6 @@ export class AnnotatedContentManager {
         return annotatedTheme.theme.id === themeOrCode.id
       })
     } /* PVSCL:IFCOND(Hierarchy) */else if (LanguageUtils.isInstanceOf(themeOrCode, Code)) {
-
   }
 
   initEvents () {
@@ -86158,18 +85951,13 @@ export class AnnotatedContentManager {
     this.events.deletedAllAnnotations = { element: document, event: Events.deletedAllAnnotations, handler: this.createDeletedAllAnnotationsEventHandler() }
     this.events.deletedAllAnnotations.element.addEventListener(this.events.deletedAllAnnotations.event, this.events.deletedAllAnnotations.handler, false)
     // PVSCL:IFCOND(NOT(Multivalued), LINE)
-
     // PVSCL:IFCOND(MoodleReport, LINE) // This one is only related to moodle as is the only feature that requires to take into account the annotated content manager when annotations are updated
-
     // PVSCL:IFCOND(CodebookUpdate, LINE)
-
   }
 
   // PVSCL:IFCOND(CodebookUpdate, LINE)
 
-
   // PVSCL:IFCOND(MoodleReport, LINE)
-
 
   createCodeToAllEventHandler () {
     return (event) => {
@@ -86249,7 +86037,6 @@ export class AnnotatedContentManager {
         const groupNameSpan = annotatedGroupButton[0].querySelector('.groupName')
         groupNameSpan.dataset.numberOfAnnotations = this.getAnnotationsDoneWithThemeOrCodeId(annotatedTheme.theme.id).length
         // PVSCL:IFCOND(Hierarchy, LINE)
-
       } else {
         const annotatedThemeButton = document.querySelectorAll('.tagButton[data-code-id="' + annotatedTheme.theme.id + '"]')
         annotatedThemeButton[0].dataset.numberOfAnnotations = this.getAnnotationsDoneWithThemeOrCodeId(annotatedTheme.theme.id).length
@@ -86333,17 +86120,11 @@ import GroupSelector from '../groupManipulation/GroupSelector'
 import AnnotationBasedInitializer from './AnnotationBasedInitializer'
 import { AnnotatedContentManager } from './AnnotatedContentManager'
 // PVSCL:IFCOND(Manual, LINE)
-
 // PVSCL:IFCOND(MoodleResource, LINE)
-
 // PVSCL:IFCOND(BrowserStorage, LINE)
-
 // PVSCL:IFCOND(PreviousAssignments, LINE)
-
 // PVSCL:IFCOND(MoodleReport, LINE)
-
 // PVSCL:IFCOND(MoodleComment, LINE)
-
 
 class ContentScriptManager {
   constructor () {
@@ -86365,7 +86146,6 @@ class ContentScriptManager {
               // Reload for first time the content by group
               this.reloadContentByGroup()
               // PVSCL:IFCOND(Manual,LINE)
-
             })
           })
         })
@@ -86373,7 +86153,6 @@ class ContentScriptManager {
     })
   }
   // PVSCL:IFCOND(Manual, LINE)
-
 
   reloadContentByGroup (callback) {
     // TODO Use async await or promises
@@ -86388,14 +86167,11 @@ class ContentScriptManager {
         return this.reloadAnnotationManagement()
       })
       // PVSCL:IFCOND(MoodleReport, LINE)
-
       // PVSCL:IFCOND(MoodleComment, LINE)
-
       .then(() => {
         return this.reloadAnnotatedContentManager()
       })
       // PVSCL:IFCOND(MoodleResource, LINE)
-
       .then(() => {
         this.status = ContentScriptManager.status.initialized
         console.debug('Initialized content script manager')
@@ -86450,11 +86226,8 @@ class ContentScriptManager {
     })
   }
   // PVSCL:IFCOND(MoodleReport, LINE)
-
   // PVSCL:IFCOND(MoodleComment, LINE)
-
   // PVSCL:IFCOND(MoodleResource, LINE)
-
 
   reloadToolset () {
     return new Promise((resolve, reject) => {
@@ -86472,9 +86245,7 @@ class ContentScriptManager {
     })
   }
   // PVSCL:IFCOND(MoodleReport, LINE)
-
   // PVSCL:IFCOND(MoodleComment, LINE)
-
 
   destroyCodebookManager () {
     if (!_.isEmpty(window.abwa.codebookManager)) {
@@ -86489,7 +86260,6 @@ class ContentScriptManager {
   }
   // PVSCL:IFCOND(MoodleResource, LINE)
 
-
   destroyToolset () {
     if (window.abwa.toolset) {
       window.abwa.toolset.destroy()
@@ -86502,10 +86272,8 @@ class ContentScriptManager {
       this.destroyCodebookManager()
       this.destroyAnnotationManagement()
       // PVSCL:IFCOND(UserFilter, LINE)
-
       this.destroyToolset()
       // PVSCL:IFCOND(MoodleResource, LINE)
-
       // TODO Destroy groupSelector, roleManager,
       window.abwa.groupSelector.destroy(() => {
         window.abwa.sidebar.destroy(() => {
@@ -86519,7 +86287,6 @@ class ContentScriptManager {
         })
       })
       // PVSCL:IFCOND(Manual, LINE)
-
     })
   }
 
@@ -86544,7 +86311,6 @@ class ContentScriptManager {
 
   loadAnnotationServer (callback) {
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()=1, LINE)
-
   }
 
   destroyAnnotationServer (callback) {
@@ -86841,26 +86607,17 @@ export default Sidebar
 import axios from 'axios'
 import _ from 'lodash'
 // PVSCL:IFCOND(Canvas, LINE)
-
 // PVSCL:IFCOND(AnnotatedPDF, LINE)
-
 // PVSCL:IFCOND(GoogleSheetConsumer, LINE)
-
 // PVSCL:IFCOND(LastAnnotation, LINE)
-
 // PVSCL:IFCOND(TextSummary, LINE)
-
 import Events from '../Events'
 import LanguageUtils from '../utils/LanguageUtils'
 import Alerts from '../utils/Alerts'
 // PVSCL:IFCOND(MoodleReport, LINE)
-
 // PVSCL:IFCOND(AnnotationList, LINE)
-
 // PVSCL:IFCOND(ImportAnnotations, LINE)
-
 // PVSCL:IFCOND(Export, LINE)
-
 import $ from 'jquery'
 
 class Toolset {
@@ -86875,29 +86632,19 @@ class Toolset {
       this.sidebarContainer = document.querySelector('#abwaSidebarContainer')
       // Insert toolset container
       // PVSCL:IFCOND(Manual, LINE)
-
       this.toolsetContainer = this.sidebarContainer.querySelector('#toolset')
       this.toolsetHeader = this.toolsetContainer.querySelector('#toolsetHeader')
       this.toolsetBody = this.sidebarContainer.querySelector('#toolsetBody')
       const toolsetButtonTemplate = this.sidebarContainer.querySelector('#toolsetButtonTemplate')
       // PVSCL:IFCOND(AnnotatedPDF, LINE)
-
       // PVSCL:IFCOND(Canvas, LINE)
-
       // PVSCL:IFCOND(TextSummary, LINE)
-
       // PVSCL:IFCOND(DeleteAll, LINE)
-
       // PVSCL:IFCOND(LastAnnotation, LINE)
-
       // PVSCL:IFCOND(GoogleSheetConsumer, LINE)
-
       // PVSCL:IFCOND(MoodleReport, LINE)
-
       // PVSCL:IFCOND(AnnotationList, LINE)
-
       // PVSCL:IFCOND(JSON OR ImportAnnotations, LINE)
-
       // Check if exist any element in the tools and show it
       if (!_.isEmpty(this.toolsetBody.innerHTML)) {
         this.show()
@@ -86910,15 +86657,10 @@ class Toolset {
   }
 
   // PVSCL:IFCOND(AnnotatedPDF, LINE)
-
   // PVSCL:IFCOND(Canvas, LINE)
-
   // PVSCL:IFCOND(TextSummary, LINE)
-
   // PVSCL:IFCOND(DeleteAll, LINE)
-
   // PVSCL:IFCOND(LastAnnotation, LINE)
-
 
   /**
    * Show toolset in sidebar
@@ -86943,14 +86685,12 @@ class Toolset {
   }
 
   // PVSCL:IFCOND(ImportAnnotations or JSON, LINE)
-
 }
 
 export default Toolset
 /* eslint-disable */
 import Config from '../Config'
 // PVSCL:IFCOND(Assessing, LINE)
-
 
 export class Review {
   constructor(){
@@ -87137,17 +86877,13 @@ export class Review {
         let commentBody = annotations[a].getBodyForPurpose('commenting')
         let comment = commentBody? commentBody.value : ''
         // PVSCL:IFCOND(SuggestedLiterature, LINE)
-
         // PVSCL:IFCOND(Categorize, LINE)
-
         r.insertAnnotation(new Annotation({
           id: annotations[a].id,
           criterion/* PVSCL:IFCOND(Categorize) */,
-,
           highlightText,
           page: pageNumber,
           comment/* PVSCL:IFCOND(SuggestedLiterature) */,
-
         }))
       }
     }
@@ -87437,7 +87173,6 @@ class GoogleSheetClient {
     this.baseURI = 'https://sheets.googleapis.com/v4/spreadsheets'
   }
   // PVSCL:IFCOND(GoogleSheetConsumer, LINE)
-
 
   getSpreadsheet (spreadsheetId, callback) {
     $.ajax({
@@ -87772,13 +87507,9 @@ import Alerts from '../utils/Alerts'
 import ChromeStorage from '../utils/ChromeStorage'
 import LanguageUtils from '../utils/LanguageUtils'
 // PVSCL:IFCOND(Manual, LINE)
-
 // PVSCL:IFCOND(MoodleResourceBased,LINE)
-
 // PVSCL:IFCOND(Hypothesis,LINE)
-
 // PVSCL:IFCOND(BuiltIn or ApplicationBased or NOT(Codebook), LINE)
-
 
 class GroupSelector {
   constructor () {
@@ -87792,13 +87523,9 @@ class GroupSelector {
   init (callback) {
     console.debug('Initializing group selector')
     // PVSCL:IFCOND(CodebookDelete, LINE)
-
     // PVSCL:IFCOND(RenameCodebook, LINE)
-
     // PVSCL:IFCOND(ImportCodebook, LINE)
-
     // PVSCL:IFCOND(ExportCodebook, LINE)
-
     this.checkIsLoggedIn((err) => {
       if (err) {
         // Stop propagating the rest of the functions, because it is not logged in annotation server
@@ -87813,7 +87540,6 @@ class GroupSelector {
           // Define current group
           this.defineCurrentGroup(() => {
             // PVSCL:IFCOND(Manual, LINE)
-
             console.debug('Initialized group selector')
             if (_.isFunction(callback)) {
               callback(null)
@@ -87824,13 +87550,9 @@ class GroupSelector {
     })
   }
   // PVSCL:IFCOND(CodebookDelete, LINE)
-
   // PVSCL:IFCOND(RenameCodebook, LINE)
-
   // PVSCL:IFCOND(ImportCodebook, LINE)
-
   // PVSCL:IFCOND(ExportCodebook, LINE)
-
 
   /**
    * This function defines the group of annotations that is selected by default when the application is opened
@@ -87838,7 +87560,6 @@ class GroupSelector {
    */
   defineCurrentGroup (callback) {
     // PVSCL:IFCOND(ApplicationBased, LINE)
-
   }
 
   defineGroupBasedOnInitAnnotation (callback) {
@@ -87870,7 +87591,6 @@ class GroupSelector {
       $('#abwaSidebarContainer').append($.parseHTML(html))
       if (!window.abwa.annotationServerManager.isLoggedIn()) {
         // PVSCL:IFCOND(Hypothesis,LINE)
-
         if (_.isFunction(callback)) {
           callback(new Error('Is not logged in'))
         }
@@ -87882,11 +87602,8 @@ class GroupSelector {
     })
   }
   // PVSCL:IFCOND(BuiltIn OR NOT(Codebook),LINE)
-
   // PVSCL:IFCOND(Manual, LINE)
-
   // PVSCL:IFCOND(ExportCodebook,LINE)
-
 
   retrieveGroups (callback) {
     window.abwa.annotationServerManager.client.getListOfGroups({}, (err, groups) => {
@@ -87897,7 +87614,6 @@ class GroupSelector {
       } else {
         this.groups = groups
         // PVSCL:IFCOND(Hypothesis,LINE)
-
         if (_.isFunction(callback)) {
           callback(null, groups)
         }
@@ -87931,7 +87647,6 @@ class GroupSelector {
 
   destroy (callback) {
     // PVSCL:IFCOND(Manual, LINE)
-
     if (_.isFunction(callback)) {
       callback()
     }
@@ -88056,10 +87771,8 @@ class AnnotationImporter {
                                 let theme
                                 // Get the theme which is annotation classified
                                 // PVSCL:IFCOND(Hierarchy, LINE)
-
                                 let codeOrTheme
                                 // PVSCL:IFCOND(Hierarchy, LINE)
-
                                 // Update annotation value
                                 if (codeOrTheme) {
                                   annotation.body[annotation.body.findIndex(body => body.purpose === 'classifying')].value = codeOrTheme.toObject()
@@ -88639,30 +88352,20 @@ export default MoodleUtils
 import Alerts from '../utils/Alerts'
 import _ from 'lodash'
 // PVSCL:IFCOND(BrowserStorage,LINE)
-
 // PVSCL:IFCOND(MoodleProvider or MoodleConsumer, LINE)
-
 
 class Options {
   init () {
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()>1, LINE)
-
     // PVSCL:IFCOND(BrowserStorage,LINE)
-
     // PVSCL:IFCOND(Neo4J, LINE)
-
     // PVSCL:IFCOND(MoodleConsumer or MoodleProvider, LINE)
-
     // PVSCL:IFCOND(MoodleResource, LINE)
-
   }
 
   // PVSCL:IFCOND(BrowserStorage,LINE)
-
   // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()>1, LINE)
-
   // PVSCL:IFCOND(Neo4J, LINE)
-
 
   showSelectedAnnotationServerConfiguration (selectedAnnotationServer) {
     // Hide all annotation server configurations
@@ -88678,9 +88381,7 @@ class Options {
   }
   // PVSCL:IFCOND(MoodleProvider or MoodleConsumer, LINE)
 
-
   // PVSCL:IFCOND(MoodleResource, LINE)
-
 }
 
 export default Options
@@ -88726,17 +88427,13 @@ export default {
 import _ from 'lodash'
 import Events from '../Events'
 // PVSCL:IFCOND(PDF, LINE)
-
 // PVSCL:IFCOND(TXT, LINE)
-
 // PVSCL:IFCOND(HTML, LINE)
-
 import URLUtils from '../utils/URLUtils'
 import LanguageUtils from '../utils/LanguageUtils'
 import Alerts from '../utils/Alerts'
 import RandomUtils from '../utils/RandomUtils'
 // PVSCL:IFCOND(URN, LINE)
-
 import axios from 'axios'
 const URL_CHANGE_INTERVAL_IN_SECONDS = 1
 
@@ -88748,11 +88445,8 @@ class TargetManager {
     this.documentId = null
     this.documentTitle = ''
     // PVSCL:IFCOND(HTML, LINE)
-
     // PVSCL:IFCOND(URN, LINE)
-
     // PVSCL:IFCOND(MoodleResource, LINE)
-
   }
 
   init (callback) {
@@ -88771,10 +88465,8 @@ class TargetManager {
 
   reloadTargetInformation (callback) {
     // PVSCL:IFCOND(DOI, LINE)
-
     this.tryToLoadPublicationPDF()
     // PVSCL:IFCOND(Dropbox, LINE)
-
     this.loadDocumentFormat().catch((err) => {
       Alerts.errorAlert({ title: 'Not supported document format', text: err.message })
     }).then(() => {
@@ -88790,14 +88482,12 @@ class TargetManager {
       }
       let promise
       // PVSCL:IFCOND(MoodleResource, LINE)
-
       promise.then(() => {
         if (_.isFunction(callback)) {
           callback()
         }
       }).catch((err) => {
         // PVSCL:IFCOND(MoodleResource, LINE)
-
       })
     })
   }
@@ -88856,9 +88546,7 @@ class TargetManager {
         })
         return true
       } /* PVSCL:IFCOND(TXT) */else if (document.body && document.body.children.length === 1 && document.body.children[0].nodeName === 'PRE') { // TODO Check if document is loaded in content/plainTextFileViewer
-else {
         // PVSCL:IFCOND(HTML, LINE)
-
         if (_.isEmpty(this.documentFormat)) {
           reject(new Error('Unable to identify document format. Probably, this document format is not supported by the tool.'))
         } else {
@@ -88869,10 +88557,8 @@ else {
   }
   // PVSCL:IFCOND(MoodleResource, LINE)
 
-
   destroy (callback) {
     // PVSCL:IFCOND(PDF, LINE)
-
     if (_.isFunction(callback)) {
       callback()
     }
@@ -88890,7 +88576,6 @@ else {
     }, 500)
   }
   // PVSCL:IFCOND(DOI, LINE)
-
 
   tryToLoadURLParam () {
     const decodedUri = decodeURIComponent(window.location.href)
@@ -88913,7 +88598,6 @@ else {
 
   getDocumentRootElement () {
     /* PVSCL:IFCOND(PDF) */if (this.documentFormat === PDF) {
-
   }
 
   getDocumentURIToSearchInAnnotationServer () {
@@ -88956,7 +88640,6 @@ else {
     }
   }
   // PVSCL:IFCOND(URN, LINE)
-
 
   getDocumentURIs () {
     const uris = {}
@@ -90620,24 +90303,19 @@ BrowserStorageSearch.init()
 let defaultAnnotationServer
 // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Collect(p | IF p->pv:Name() = AnnotationServer->pv:Attribute('defaultAnnotationServer') THEN 1 ELSE 0 ENDIF)->pv:Contains(1), LINE)
 
-
 // Tags configuration
 const grouped = {
   group: 'theme'
 }
 // PVSCL:IFCOND(Hierarchy,LINE)
-
 const tags = {
   grouped: grouped,
   motivation: 'motivation'
 }
 // PVSCL:IFCOND(MoodleResource, LINE)
-
 // PVSCL:IFCOND(GoogleSheetProvider, LINE)
-
 const Config = {
   // PVSCL:IFCOND(BuiltIn or ApplicationBased OR NOT(Codebook), LINE)
-
   defaultAnnotationServer: defaultAnnotationServer,
   namespace: 'oa',
   // eslint-disable-next-line quotes
@@ -90663,35 +90341,23 @@ const Events = {
   annotationUpdated: 'annotationUpdated',
   annotationDeleted: 'annotationDeleted',
   // PVSCL:IFCOND(Validate, LINE)
-
   createAnnotation: 'createAnnotation',
   updateAnnotation: 'updateAnnotation',
   deleteAnnotation: 'deleteAnnotation',
   updatedAllAnnotations: 'updatedAllAnnotations',
   // PVSCL:IFCOND(UserFilter, LINE)
-
   updatedDocumentURL: 'updatedDocumentURL',
   // PVSCL:IFCOND(Comment, LINE)
-
   // PVSCL:IFCOND(Reply, LINE)
-
   // PVSCL:IFCOND(DeleteAll, LINE)
-
   // PVSCL:IFCOND(Filter, LINE)
-
   // PVSCL:IFCOND(Codebook, LINE)
-
   // PVSCL:IFCOND(CodebookDelete, LINE)
-
   targetChanged: 'targetChanged', // TODO Review if it is used somewhere
   // PVSCL:IFCOND(NOT (Multivalued), LINE)
-
   // PVSCL:IFCOND(Manual, LINE)
-
   // PVSCL:IFCOND(ImportAnnotations, LINE)
-
   // PVSCL:IFCOND(SidebarNavigation, LINE)
-
   annotatedContentManagerUpdated: 'annotatedContentManagerUpdated',
   navigateToAnnotation: 'navigateToAnnotation',
   codebookRead: 'codebookRead' // Not in codebook variation point because absense of Codebook/Classifying also requires this event currently
@@ -90784,17 +90450,11 @@ window.acm.acmContentScript = new ACMContentScript()
 window.acm.acmContentScript.init()
 import Popup from './popup/Popup'
 // PVSCL:IFCOND(Hypothesis, LINE)
-
 // PVSCL:IFCOND(Neo4J, LINE)
-
 // PVSCL:IFCOND(GoogleSheetProvider or GoogleSheetConsumer, LINE)
-
 // PVSCL:IFCOND(DOI or NavigationScript, LINE)
-
 // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()>1, LINE)
-
 // PVSCL:IFCOND(MoodleProvider, LINE)
-
 
 import _ from 'lodash'
 
@@ -90816,27 +90476,19 @@ chrome.tabs.onCreated.addListener((tab) => {
 class Background {
   constructor () {
     // PVSCL:IFCOND(Hypothesis, LINE)
-
     this.tabs = {}
   }
 
   init () {
     // PVSCL:IFCOND(Hypothesis, LINE)
-
     // PVSCL:IFCOND(Neo4J, LINE)
-
     // PVSCL:IFCOND(GoogleSheetProvider or GoogleSheetConsumer, LINE)
-
     // PVSCL:IFCOND(DOI or NavigationScript, LINE)
-
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()>1, LINE)
-
     // PVSCL:IFCOND(MoodleProvider, LINE)
-
     // Initialize page_action event handler
     chrome.pageAction.onClicked.addListener((tab) => {
       // PVSCL:IFCOND(URN, LINE)
-
     })
 
     // On tab is reloaded
@@ -90906,7 +90558,6 @@ if (_.isEmpty(window.abwa)) {
   // Check if uri contains annotation to initialize
   const promise = new Promise((resolve) => {
     // PVSCL:IFCOND(Dropbox, LINE)
-
   })
   promise.then(() => {
     // Check if uri contains annotation to initialize
@@ -91078,9 +90729,7 @@ window.addEventListener('load', () => {
 import TextUtils from './utils/URLUtils'
 import Config from './Config'
 // PVSCL:IFCOND(Hypothesis,LINE)
-
 // PVSCL:IFCOND(BrowserStorage,LINE)
-
 import _ from 'lodash'
 
 class ScienceDirectContentScript {
@@ -91106,7 +90755,6 @@ class ScienceDirectContentScript {
 
   loadAnnotationServer (callback) {
     // PVSCL:IFCOND(AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()=1, LINE)
-
   }
 }
 
@@ -91275,11 +90923,8 @@ window.springer.springerContentScript.init()
 @import '../../node_modules/components-jqueryui/themes/base/jquery-ui';
 /* PVSCL:IFCOND(Autocomplete, LINE) */
 
-
 /* PVSCL:IFCOND(Manual, LINE) */
-
 /* PVSCL:IFCOND(PreviousAssignments, LINE) */
-
 @import './tagWrapper';
 @import './locationManager';
 @import './sidebar';
@@ -92202,7 +91847,6 @@ body > pre {
 }
 /* PVSCL:IFCOND(Autocomplete, LINE) */
 
-
 // POLE SELECTION IN COMMENT BOX
 .criterionName{
   margin-bottom:5%;
@@ -92223,7 +91867,6 @@ body > pre {
   opacity:1;
 }
 /* PVSCL:IFCOND(Autocomplete, LINE) */
-
 @import "./variables";
 
 .toolButton {
@@ -92277,22 +91920,32 @@ $chromeExtensionMainURL: 'chrome-extension://__MSG_@@extension_id__/'
   "content_scripts": [
     {
       "matches": ["*://*/*"PVSCL:IFCOND(URN), "file:///*/*"PVSCL:ENDCOND],
-],
       // PVSCL:IFCOND(GoogleSheetProvider,LINE)
-
       // PVSCL:IFCOND(MoodleProvider,LINE)
-
       "js": ["scripts/contentScript.js"],
       "css": ["styles/contentScript.css"],
       "run_at": "document_start",
       "all_frames": false
     }PVSCL:IFCOND(GoogleSheetProvider),
-PVSCL:IFCOND(ACM),
-PVSCL:IFCOND(ScienceDirect),
-PVSCL:IFCOND(Springer),
-PVSCL:IFCOND(Manual and Hypothesis and AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()=1),
-PVSCL:IFCOND(MoodleProvider),
-
+    {
+      "matches": ["*://dl.acm.org/citation.cfm?*"],
+      "js": ["scripts/acmContentScript.js"],
+      "run_at": "document_end"
+    }PVSCL:ENDCONDPVSCL:IFCOND(ScienceDirect),
+    {
+      "matches": ["*://link.springer.com/*"],
+      "js": ["scripts/springerContentScript.js"],
+      "run_at": "document_end"
+    }PVSCL:ENDCONDPVSCL:IFCOND(Manual and Hypothesis and AnnotationServer->pv:SelectedChildren('ps:annotationServer')->pv:Size()=1),
+    {
+      "matches": ["*://*/*grade/grading/*", "*://*/*mod/assign/view.php*"],
+      "js": ["scripts/moodleContentScript.js"],
+      "run_at": "document_end"
+    }, {
+      "matches": ["*://*/*course/modedit.php?add=assign*"],
+      "js": ["scripts/moodleAssignmentAddContentScript.js"],
+      "run_at": "document_end"
+    }PVSCL:ENDCOND
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
   "page_action": {
@@ -92308,18 +91961,14 @@ PVSCL:IFCOND(MoodleProvider),
   "permissions": [
     "https://hypothes.is/",
     "storage",PVSCL:IFCOND(GoogleSheetProvider OR GoogleSheetConsumer)
-
     "tabs"PVSCL:IFCOND(URN),
-PVSCL:IFCOND(URL),
-PVSCL:IFCOND(DOI),
-PVSCL:IFCOND(ScienceDirect),
-PVSCL:IFCOND(Dropbox),
-
+    "contextMenus",
+    "webRequest",
+    "webRequestBlocking"PVSCL:ENDCONDPVSCL:IFCOND(DOI),
+    "*://www.sciencedirect.com/science/article/pii/*"PVSCL:ENDCONDPVSCL:IFCOND(Dropbox),
   ],
   PVSCL:IFCOND(GoogleSheetProvider or GoogleSheetConsumer, LINE)
-
   "web_accessible_resources": ["pages/*.html", "content/*", "images/*"]PVSCL:IFCOND(WebAnnotator.WebAnnotationClient->pv:Attribute('key')<>''),
-
 }
 /**
  * Converts and removes keys with a
