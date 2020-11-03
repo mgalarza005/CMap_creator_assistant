@@ -1,0 +1,17 @@
+ - *constructor:* constructor 
+ - *hash:* , back, check, find, hash, hide, keys, open, parse, update, values 
+ - *render:* enqueue, entries, filter, getter, handler, listener, render, wrapper 
+ - *notify:* destroy, lookup, notify, toggle 
+ - *transform:* transform 
+ - *invalid:* initialize, invalid 
+ - *reset:* assert, create, empty, next, request, reset 
+ - *resolve:* decode, reload, remove, resolve, resolved 
+ - *constructor:* constructor 
+ - *render:* create, enqueue, filter, find, getter, handler, listener, render, wrapper 
+ - *transform:* transform 
+ - *Annotation:* Annotation 
+ - *back:* , back, check, hash, hide, keys, lookup, open, update, values 
+ - *initialize:* initialize, invalid 
+ - *reset:* assert, destroy, next, parse, request, reset 
+ - *remove:* Promise, decode, empty, reload, remove, resolve, resolved, toggle 
+ - *toString:* entries, notify, randomString, toString 

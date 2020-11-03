@@ -147,11 +147,11 @@ public class CodeMiner {
 	public static void printTermTableForCluster() throws IOException {
 		Collections.sort(termTable.getTermTable(), new TermChainedComparator(new TermApparitionComparator()));
 
-		System.out.println("TermTable's term are going to be written for cluset in 'forCluster.txt' file");
+		System.out.println("TermTable's term are going to be written for cluster in 'forCluster.txt' file \n");
 
 		for(int i=0; i<termTable.getTermTable().size(); i++ ) {
 
-			if(termTable.getTermTable().get(i).getapparitionCont()>100) {
+			if(termTable.getTermTable().get(i).getapparitionCont()>10 && termTable.getTermTable().get(i).getUpperCaseCont()<2) {
 				clusterTerms += termTable.getTermTable().get(i).getTermName() + " ";
 			}				
 		}
@@ -164,7 +164,7 @@ public class CodeMiner {
 			e.printStackTrace();
 		}
 
-		inprimatutermTablerenInfo();
+		
 
 	}
 	private static void idatzitermTablekFitxategiBatean() throws IOException {
@@ -309,14 +309,14 @@ public class CodeMiner {
 
 			String line;
 			ArrayList<Feature> feats;
-			System.out.println("Path-a" + code.getPath().toString() + "Klase izena: "+  cf.getFilename());
+			System.out.println("Path-a:  " + code.getPath().toString() + "Klase izena:  "+  cf.getFilename());
 			while ((line = bf.readLine()) != null) {
 				kodea+=line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
 
-
+/*
 				//Aldagaien izena lortzeko
-				/*
+				
 				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
 					String[] kk = line.split("var");
 					if(kk.length>1) {
@@ -512,7 +512,7 @@ public class CodeMiner {
 					}
 				}
 				 
-				
+				*/
 
 				
 				//Funtzioen izena lortzeko
@@ -553,7 +553,7 @@ public class CodeMiner {
 					}
 
 				}
-				*/
+				
 				// Klasek lortzeko 
 				if (line.contains("class")  && line.contains("{")) {
 					String[] kk = line.split("class");

@@ -6,7 +6,7 @@ import java.util.List;
 public class TermTable {
 	private List<Term> termT;
 	private static List<String> stopWords=Arrays.asList(new String[] {"break","case","catch","continue","default","delete","do","else","finally","for","function","if","in","instanceof","new","return","switch","this","trhow","try","typeof","var","void","while","with","abstract","boolean","byte",
-			"char","class","const","debugger","double","enum", ":","export","extends","final","float","===", "!==", "(err)","goto","implements","import","int","interface","long","native","package","private","protected",
+			"char","class","const","debugger","double","enum", "", ":", " ","export","extends","final","float","===", "!==", "(err)","goto","implements","import","int","interface","long","native","package","private","protected",
 			"public","short","static","super","syncronized","trhows","transient","volatile", "from", "value", "result", "get", "all", "has","start", "set","error", "close", "size", "load", "cancel", "read"
 			,"defer", "reject", "abort", "print","time", "handler:", "color", "(err)"  });
 	

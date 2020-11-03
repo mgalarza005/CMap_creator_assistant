@@ -1,0 +1,41 @@
+ - *Annotation:* APISimulation, AnnotatedTheme, Annotation, AnnotationGroup, AnnotationList, AnnotationUtils, CreateAnnotation, DeleteAnnotation, GroupInitializer, ReadAnnotation, ReplyAnnotation, UpdateAnnotation 
+ - *Code:* , Body, Canvas, Code, Codebook, Codes, Hypothesis, Popup, Resume, Review, Sidebar, Task, Theme, Toolset 
+ - *MoodleClient:* GoogleSheetClient, GroupSelector, MoodleClient, MoodleComment, MoodleProvider, MoodleReport, MoodleScraping, Neo4JClient 
+ - *MoodleClientManager:* AnnotatedContentManager, HypothesisClientManager, MoodleBackgroundManager, MoodleClientManager, MoodleDownloadManager, Neo4JClientManager 
+ - *Commenting:* Assessing, Classifying, Commenting, CommentingForm 
+ - *MoodleGraderAugmentation:* MoodleAugmentation, MoodleGraderAugmentation, MoodleGradingAugmentation 
+ - *MoodleViewPluginAssignSubmissionAugmentation:* MoodleViewPluginAssignSubmissionAugmentation 
+ - *CreateCodebook:* CreateCodebook, CreateHighlighterTask, DeleteCodebook, ReadCodebook, RenameCodebook, UpdateCodebook 
+ - *ImportCodebook:* EmptyCodebook, ExportCodebook, ExportCodebookJSON, ImportCodebook, ImportCodebookJSON, NoCodebook 
+ - *Buttons:* BackToWorkspace, Background, BuiltIn, Buttons, Options, Screenshots 
+ - *PreviousAssignments:* PreviousAssignments 
+ - *SuggestingLiterature:* SuggestingLiterature 
+ - *BrowserStorage:* BrowserStorage, BrowserStorageClient, BrowserStorageManager, BrowserStorageSearch, ChromeStorage 
+ - *GoogleSheetsManager:* ContentScriptManager, GoogleSheetGenerator, GoogleSheetsClientManager, GoogleSheetsManager 
+ - *GoogleSheetContentScriptManager:* GoogleSheetContentScriptManager 
+ - *ModeManager:* CodebookManager, GSheetParser, HypothesisManager, ModeManager, Neo4JManager, RolesManager, TargetManager, TaskManager 
+ - *AnnotationExporter:* AnnotationBasedInitializer, AnnotationExporter, AnnotationImporter, AnnotationManagement, AnnotationServer, AnnotationServerManager 
+ - *DateUtils:* Alerts, ColorUtils, CryptoUtils, DOMTextUtils, DataUtils, DateUtils, DeleteGroup, FileUtils, LanguageUtils, MoodleUtils, PDFTextUtils, PrimaryStudy, RandomUtils, SheetUtils, TextSummary, URLUtils, UserFilter 
+ - *SpringerContentScript:* ACMContentScript, ScienceDirectContentScript, SpringerContentScript 
+ - *annotation:* APISimulation, AnnotationList, AnnotationUtils, ReadAnnotation, annotation, annotations, position 
+ - *Code:* , Body, Canvas, Code, Codebook, Codes, Hypothesis, Popup, Sidebar, Task, Theme, Toolset, args, buffer, code, data, index, name, promise, scale, state, type, width 
+ - *AnnotationServer:* AnnotatedTheme, AnnotationExporter, AnnotationGroup, AnnotationImporter, AnnotationManagement, AnnotationServer, AnnotationServerManager 
+ - *MoodleClient:* GoogleSheetClient, GroupSelector, MoodleClient, MoodleComment, MoodleProvider, MoodleReport, MoodleScraping, MoodleUtils, Neo4JClient 
+ - *MoodleClientManager:* AnnotatedContentManager, ContentScriptManager, HypothesisClientManager, MoodleBackgroundManager, MoodleClientManager, MoodleDownloadManager, Neo4JClientManager 
+ - *Commenting:* Assessing, Classifying, Commenting, CommentingForm, PrimaryStudy 
+ - *AnnotationBasedInitializer:* AnnotationBasedInitializer 
+ - *CreateAnnotation:* CreateAnnotation, DeleteAnnotation, ReplyAnnotation, UpdateAnnotation 
+ - *CreateHighlighterTask:* CreateHighlighterTask 
+ - *MoodleGraderAugmentation:* MoodleAugmentation, MoodleGraderAugmentation, MoodleGradingAugmentation 
+ - *MoodleViewPluginAssignSubmissionAugmentation:* MoodleViewPluginAssignSubmissionAugmentation 
+ - *CreateCodebook:* CreateCodebook, DeleteCodebook, ReadCodebook, RenameCodebook, UpdateCodebook 
+ - *ImportCodebook:* EmptyCodebook, ExportCodebook, ExportCodebookJSON, ImportCodebook, ImportCodebookJSON, NoCodebook 
+ - *Buttons:* BackToWorkspace, Background, BuiltIn, Buttons, Options 
+ - *GoogleSheetsClientManager:* GoogleSheetContentScriptManager, GoogleSheetGenerator, GoogleSheetsClientManager, GoogleSheetsManager 
+ - *PreviousAssignments:* PreviousAssignments 
+ - *SuggestingLiterature:* SuggestingLiterature 
+ - *BrowserStorage:* BrowserStorage, BrowserStorageClient, BrowserStorageManager, BrowserStorageSearch, ChromeStorage, GroupInitializer 
+ - *ModeManager:* CodebookManager, GSheetParser, HypothesisManager, ModeManager, Neo4JManager, RolesManager, TargetManager, TaskManager, UserFilter 
+ - *DateUtils:* ColorUtils, CryptoUtils, DOMTextUtils, DataUtils, DateUtils, DeleteGroup, FileUtils, LanguageUtils, RandomUtils, SheetUtils, TextSummary, URLUtils 
+ - *SpringerContentScript:* ACMContentScript, ScienceDirectContentScript, SpringerContentScript 
+ - *event:* Alerts, Resume, Review, Screenshots, current, event, height, length, offset, stream 

@@ -18,16 +18,14 @@ affprop = sklearn.cluster.AffinityPropagation(affinity="precomputed", damping=0.
 affprop.fit(lev_similarity)
 
 fitx = open("C:\\Users\\MIKEL1\\git\\CMap_creator_assistant\\CMap_creator_assistant\\clusterakEginda.txt", 'a')
-fi = open("C:\\Users\\MIKEL1\\git\\CMap_creator_assistant\\CMap_creator_assistant\\ck.txt", 'a')
 
-fi.write("CKCKCKCK")
+
 for cluster_id in np.unique(affprop.labels_):
     exemplar = words[affprop.cluster_centers_indices_[cluster_id]]
     cluster = np.unique(words[np.nonzero(affprop.labels_==cluster_id)])
     cluster_str = ", ".join(cluster)
     fitx.write(" - *%s:* %s \n" % (exemplar, cluster_str))
-    
-fi.close()
+
 fitx.close()
 
 

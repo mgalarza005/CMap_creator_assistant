@@ -1,222 +1,3288 @@
-Terminoa: Alerts   eta agerpen kopurua:   236    Agertzen da: 
-			Alerts.js, 
-Terminoa: LanguageUtils   eta agerpen kopurua:   228    Agertzen da: 
-			LanguageUtils.js, 
-Terminoa: Codebook   eta agerpen kopurua:   217    Agertzen da: 
-			Codebook.js, 
-Terminoa: Annotation   eta agerpen kopurua:   214    Agertzen da: 
-			Annotation.js, reviewModel.js, 
-Terminoa: Theme   eta agerpen kopurua:   212    Agertzen da: 
-			Theme.js, 
-Terminoa: AnnotationServerManager   eta agerpen kopurua:   211    Agertzen da: 
-			AnnotationServerManager.js, 
-Terminoa: ChromeStorage   eta agerpen kopurua:   211    Agertzen da: 
-			ChromeStorage.js, 
-Terminoa: Body   eta agerpen kopurua:   210    Agertzen da: 
-			Body.js, 
-Terminoa: URLUtils   eta agerpen kopurua:   210    Agertzen da: 
-			URLUtils.js, 
-Terminoa: Sidebar   eta agerpen kopurua:   207    Agertzen da: 
-			Sidebar.js, 
-Terminoa: Code   eta agerpen kopurua:   206    Agertzen da: 
-			GoogleSheetGenerator.js, Code.js, 
-Terminoa: AnnotationServer   eta agerpen kopurua:   206    Agertzen da: 
-			AnnotationServer.js, 
-Terminoa: TargetManager   eta agerpen kopurua:   206    Agertzen da: 
-			TargetManager.js, 
-Terminoa: MoodleScraping   eta agerpen kopurua:   206    Agertzen da: 
-			MoodleScraping.js, 
-Terminoa: Classifying   eta agerpen kopurua:   205    Agertzen da: 
-			Classifying.js, 
-Terminoa: MoodleReport   eta agerpen kopurua:   205    Agertzen da: 
-			MoodleReport.js, 
-Terminoa: Task   eta agerpen kopurua:   205    Agertzen da: 
-			Task.js, 
-Terminoa: Toolset   eta agerpen kopurua:   205    Agertzen da: 
-			Toolset.js, 
-Terminoa: Review   eta agerpen kopurua:   205    Agertzen da: 
-			reviewModel.js, 
-Terminoa: MoodleClient   eta agerpen kopurua:   205    Agertzen da: 
-			MoodleClient.js, 
-Terminoa: MoodleClientManager   eta agerpen kopurua:   205    Agertzen da: 
-			MoodleClientManager.js, 
-Terminoa: AnnotationUtils   eta agerpen kopurua:   205    Agertzen da: 
-			AnnotationUtils.js, 
-Terminoa: Commenting   eta agerpen kopurua:   204    Agertzen da: 
-			Commenting.js, 
-Terminoa: Hypothesis   eta agerpen kopurua:   204    Agertzen da: 
-			Hypothesis.js, 
-Terminoa: AnnotationBasedInitializer   eta agerpen kopurua:   204    Agertzen da: 
-			AnnotationBasedInitializer.js, 
-Terminoa: RolesManager   eta agerpen kopurua:   204    Agertzen da: 
-			RolesManager.js, 
-Terminoa: GoogleSheetClient   eta agerpen kopurua:   204    Agertzen da: 
-			GoogleSheetClient.js, 
-Terminoa: MoodleUtils   eta agerpen kopurua:   204    Agertzen da: 
-			MoodleUtils.js, 
-Terminoa: Popup   eta agerpen kopurua:   204    Agertzen da: 
-			Popup.js, 
-Terminoa: ColorUtils   eta agerpen kopurua:   204    Agertzen da: 
-			ColorUtils.js, 
-Terminoa: DOMTextUtils   eta agerpen kopurua:   204    Agertzen da: 
-			DOMTextUtils.js, 
-Terminoa: FileUtils   eta agerpen kopurua:   204    Agertzen da: 
-			FileUtils.js, 
-Terminoa: PDFTextUtils   eta agerpen kopurua:   204    Agertzen da: 
-			PDFTextUtils.js, 
-Terminoa: RandomUtils   eta agerpen kopurua:   204    Agertzen da: 
-			RandomUtils.js, 
-Terminoa: CreateAnnotation   eta agerpen kopurua:   203    Agertzen da: 
-			CreateAnnotation.js, 
-Terminoa: Codes   eta agerpen kopurua:   203    Agertzen da: 
-			GoogleSheetGenerator.js, 
-Terminoa: ReadAnnotation   eta agerpen kopurua:   203    Agertzen da: 
-			ReadAnnotation.js, 
-Terminoa: AnnotationManagement   eta agerpen kopurua:   203    Agertzen da: 
-			AnnotationManagement.js, 
-Terminoa: DeleteAnnotation   eta agerpen kopurua:   203    Agertzen da: 
-			DeleteAnnotation.js, 
-Terminoa: UpdateAnnotation   eta agerpen kopurua:   203    Agertzen da: 
-			UpdateAnnotation.js, 
-Terminoa: BrowserStorageClient   eta agerpen kopurua:   203    Agertzen da: 
-			BrowserStorageClient.js, 
-Terminoa: BrowserStorageManager   eta agerpen kopurua:   203    Agertzen da: 
-			BrowserStorageManager.js, 
-Terminoa: HypothesisClientManager   eta agerpen kopurua:   203    Agertzen da: 
-			HypothesisClientManager.js, 
-Terminoa: Neo4JClient   eta agerpen kopurua:   203    Agertzen da: 
+Terminoa: constructor   eta agerpen kopurua:   69    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: hash   eta agerpen kopurua:   52    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: create   eta agerpen kopurua:   46    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: destroy   eta agerpen kopurua:   38    Agertzen da: 
+			pdf.js, pdf.worker.js, viewer.js, 
+Terminoa: handler   eta agerpen kopurua:   29    Agertzen da: 
+			viewer.js, 
+Terminoa: listener   eta agerpen kopurua:   27    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: render   eta agerpen kopurua:   26    Agertzen da: 
+			pdf.js, viewer.js, 
+Terminoa: notify   eta agerpen kopurua:   23    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStream   eta agerpen kopurua:   21    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: resolved   eta agerpen kopurua:   21    Agertzen da: 
+			viewer.js, 
+Terminoa: keys   eta agerpen kopurua:   20    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: next   eta agerpen kopurua:   20    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: transform   eta agerpen kopurua:   20    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: open   eta agerpen kopurua:   20    Agertzen da: 
+			viewer.js, 
+Terminoa: getter   eta agerpen kopurua:   19    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: filter   eta agerpen kopurua:   18    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: wrapper   eta agerpen kopurua:   18    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: invalid   eta agerpen kopurua:   17    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: XRef   eta agerpen kopurua:   17    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: hide   eta agerpen kopurua:   17    Agertzen da: 
+			viewer.js, 
+Terminoa: assert   eta agerpen kopurua:   16    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isEvalSupported   eta agerpen kopurua:   16    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: values   eta agerpen kopurua:   16    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: entries   eta agerpen kopurua:   16    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: empty   eta agerpen kopurua:   16    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: check   eta agerpen kopurua:   15    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: reload   eta agerpen kopurua:   15    Agertzen da: 
+			viewer.js, 
+Terminoa: TypedArray   eta agerpen kopurua:   14    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: find   eta agerpen kopurua:   14    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: Annotation   eta agerpen kopurua:   14    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: back   eta agerpen kopurua:   14    Agertzen da: 
+			viewer.js, 
+Terminoa: update   eta agerpen kopurua:   13    Agertzen da: 
+			pdf.js, viewer.js, 
+Terminoa: Promise   eta agerpen kopurua:   13    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: initialize   eta agerpen kopurua:   13    Agertzen da: 
+			viewer.js, 
+Terminoa: reset   eta agerpen kopurua:   12    Agertzen da: 
+			pdf.js, viewer.js, 
+Terminoa: remove   eta agerpen kopurua:   12    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: resolve   eta agerpen kopurua:   12    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStream   eta agerpen kopurua:   12    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: randomString   eta agerpen kopurua:   12    Agertzen da: 
 			Neo4JClient.js, 
-Terminoa: CreateHighlighterTask   eta agerpen kopurua:   203    Agertzen da: 
-			CreateHighlighterTask.js, 
-Terminoa: GSheetParser   eta agerpen kopurua:   203    Agertzen da: 
-			GSheetParser.js, 
-Terminoa: GroupInitializer   eta agerpen kopurua:   203    Agertzen da: 
-			GroupInitializer.js, 
-Terminoa: MoodleAugmentation   eta agerpen kopurua:   203    Agertzen da: 
-			MoodleAugmentation.js, 
-Terminoa: MoodleGraderAugmentation   eta agerpen kopurua:   203    Agertzen da: 
-			MoodleGraderAugmentation.js, 
-Terminoa: MoodleGradingAugmentation   eta agerpen kopurua:   203    Agertzen da: 
-			MoodleGradingAugmentation.js, 
-Terminoa: MoodleViewPluginAssignSubmissionAugmentation   eta agerpen kopurua:   203    Agertzen da: 
-			MoodleViewPluginAssignSubmissionAugmentation.js, 
-Terminoa: MoodleProvider   eta agerpen kopurua:   203    Agertzen da: 
-			MoodleProvider.js, 
-Terminoa: CreateCodebook   eta agerpen kopurua:   203    Agertzen da: 
-			CreateCodebook.js, 
-Terminoa: ExportCodebookJSON   eta agerpen kopurua:   203    Agertzen da: 
-			ExportCodebookJSON.js, 
-Terminoa: ImportCodebook   eta agerpen kopurua:   203    Agertzen da: 
-			ImportCodebook.js, 
-Terminoa: ImportCodebookJSON   eta agerpen kopurua:   203    Agertzen da: 
-			ImportCodebookJSON.js, 
-Terminoa: Buttons   eta agerpen kopurua:   203    Agertzen da: 
-			Buttons.js, 
-Terminoa: ReadCodebook   eta agerpen kopurua:   203    Agertzen da: 
-			ReadCodebook.js, 
-Terminoa: CodebookManager   eta agerpen kopurua:   203    Agertzen da: 
-			CodebookManager.js, 
-Terminoa: AnnotatedTheme   eta agerpen kopurua:   203    Agertzen da: 
-			AnnotatedContentManager.js, 
-Terminoa: ContentScriptManager   eta agerpen kopurua:   203    Agertzen da: 
-			ContentScriptManager.js, 
-Terminoa: GoogleSheetsClientManager   eta agerpen kopurua:   203    Agertzen da: 
-			GoogleSheetsClientManager.js, 
-Terminoa: GroupSelector   eta agerpen kopurua:   203    Agertzen da: 
-			GroupSelector.js, 
-Terminoa: APISimulation   eta agerpen kopurua:   203    Agertzen da: 
-			APISimulation.js, 
-Terminoa: Options   eta agerpen kopurua:   203    Agertzen da: 
-			Options.js, 
-Terminoa: CryptoUtils   eta agerpen kopurua:   203    Agertzen da: 
-			CryptoUtils.js, 
-Terminoa: Assessing   eta agerpen kopurua:   202    Agertzen da: 
-			Assessing.js, 
-Terminoa: CommentingForm   eta agerpen kopurua:   202    Agertzen da: 
-			CommentingForm.js, 
-Terminoa: PreviousAssignments   eta agerpen kopurua:   202    Agertzen da: 
-			PreviousAssignments.js, 
-Terminoa: ReplyAnnotation   eta agerpen kopurua:   202    Agertzen da: 
-			ReplyAnnotation.js, 
-Terminoa: SuggestingLiterature   eta agerpen kopurua:   202    Agertzen da: 
-			SuggestingLiterature.js, 
-Terminoa: AnnotationList   eta agerpen kopurua:   202    Agertzen da: 
-			AnnotationList.js, 
-Terminoa: Canvas   eta agerpen kopurua:   202    Agertzen da: 
-			Canvas.js, 
-Terminoa: GoogleSheetGenerator   eta agerpen kopurua:   202    Agertzen da: 
-			GoogleSheetGenerator.js, 
-Terminoa: MoodleComment   eta agerpen kopurua:   202    Agertzen da: 
-			MoodleComment.js, 
-Terminoa: Resume   eta agerpen kopurua:   202    Agertzen da: 
-			Resume.js, 
-Terminoa: Screenshots   eta agerpen kopurua:   202    Agertzen da: 
-			Screenshots.js, 
-Terminoa: TextSummary   eta agerpen kopurua:   202    Agertzen da: 
-			TextSummary.js, 
-Terminoa: UserFilter   eta agerpen kopurua:   202    Agertzen da: 
-			UserFilter.js, 
-Terminoa: BrowserStorage   eta agerpen kopurua:   202    Agertzen da: 
-			BrowserStorage.js, 
-Terminoa: Neo4JClientManager   eta agerpen kopurua:   202    Agertzen da: 
-			Neo4JClientManager.js, 
-Terminoa: GoogleSheetsManager   eta agerpen kopurua:   202    Agertzen da: 
-			GoogleSheetsManager.js, 
-Terminoa: HypothesisManager   eta agerpen kopurua:   202    Agertzen da: 
-			HypothesisManager.js, 
-Terminoa: MoodleBackgroundManager   eta agerpen kopurua:   202    Agertzen da: 
-			MoodleBackgroundManager.js, 
-Terminoa: MoodleDownloadManager   eta agerpen kopurua:   202    Agertzen da: 
-			MoodleDownloadManager.js, 
-Terminoa: Neo4JManager   eta agerpen kopurua:   202    Agertzen da: 
-			Neo4JManager.js, 
-Terminoa: TaskManager   eta agerpen kopurua:   202    Agertzen da: 
-			TaskManager.js, 
-Terminoa: BuiltIn   eta agerpen kopurua:   202    Agertzen da: 
-			BuiltIn.js, 
-Terminoa: EmptyCodebook   eta agerpen kopurua:   202    Agertzen da: 
-			EmptyCodebook.js, 
-Terminoa: GoogleSheetContentScriptManager   eta agerpen kopurua:   202    Agertzen da: 
-			GSheetProvider.js, 
-Terminoa: NoCodebook   eta agerpen kopurua:   202    Agertzen da: 
-			NoCodebook.js, 
-Terminoa: DeleteCodebook   eta agerpen kopurua:   202    Agertzen da: 
-			DeleteCodebook.js, 
-Terminoa: DeleteGroup   eta agerpen kopurua:   202    Agertzen da: 
-			DeleteGroup.js, 
-Terminoa: ExportCodebook   eta agerpen kopurua:   202    Agertzen da: 
-			ExportCodebook.js, 
-Terminoa: RenameCodebook   eta agerpen kopurua:   202    Agertzen da: 
-			RenameCodebook.js, 
-Terminoa: UpdateCodebook   eta agerpen kopurua:   202    Agertzen da: 
-			UpdateCodebook.js, 
-Terminoa: AnnotatedContentManager   eta agerpen kopurua:   202    Agertzen da: 
-			AnnotatedContentManager.js, 
-Terminoa: ModeManager   eta agerpen kopurua:   202    Agertzen da: 
-			ModeManager.js, 
-Terminoa: AnnotationExporter   eta agerpen kopurua:   202    Agertzen da: 
-			AnnotationExporter.js, 
-Terminoa: AnnotationImporter   eta agerpen kopurua:   202    Agertzen da: 
-			AnnotationImporter.js, 
-Terminoa: BackToWorkspace   eta agerpen kopurua:   202    Agertzen da: 
-			BackToWorkspace.js, 
-Terminoa: DataUtils   eta agerpen kopurua:   202    Agertzen da: 
-			DataUtils.js, 
-Terminoa: DateUtils   eta agerpen kopurua:   202    Agertzen da: 
-			DateUtils.js, 
-Terminoa: SheetUtils   eta agerpen kopurua:   202    Agertzen da: 
-			SheetUtils.js, 
-Terminoa: PrimaryStudy   eta agerpen kopurua:   201    Agertzen da: 
-			GoogleSheetGenerator.js, 
-Terminoa: AnnotationGroup   eta agerpen kopurua:   201    Agertzen da: 
-			reviewModel.js, 
-Terminoa: BrowserStorageSearch   eta agerpen kopurua:   201    Agertzen da: 
-			BrowserStorageSearch.js, 
-Terminoa: ACMContentScript   eta agerpen kopurua:   201    Agertzen da: 
-			acmContentScript.js, 
-Terminoa: Background   eta agerpen kopurua:   201    Agertzen da: 
-			background.js, 
-Terminoa: ScienceDirectContentScript   eta agerpen kopurua:   201    Agertzen da: 
-			scienceDirectContentScript.js, 
-Terminoa: SpringerContentScript   eta agerpen kopurua:   201    Agertzen da: 
-			springerContentScript.js, 
+Terminoa: enqueue   eta agerpen kopurua:   11    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: toString   eta agerpen kopurua:   11    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: toggle   eta agerpen kopurua:   11    Agertzen da: 
+			pdf.js, pdf.worker.js, viewer.js, 
+Terminoa: parse   eta agerpen kopurua:   11    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: decode   eta agerpen kopurua:   11    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: lookup   eta agerpen kopurua:   11    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: request   eta agerpen kopurua:   11    Agertzen da: 
+			viewer.js, 
+Terminoa: newPromiseCapability   eta agerpen kopurua:   10    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStream   eta agerpen kopurua:   10    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: fallback   eta agerpen kopurua:   10    Agertzen da: 
+			viewer.js, 
+Terminoa: ready   eta agerpen kopurua:   10    Agertzen da: 
+			viewer.js, 
+Terminoa: contains   eta agerpen kopurua:   9    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: write   eta agerpen kopurua:   9    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: property)   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, viewer.js, 
+Terminoa: info   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getWeak   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: fill   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: Empty   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: subarray   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: validate   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defineProperties   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: uncaughtFrozenStore   eta agerpen kopurua:   8    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: show   eta agerpen kopurua:   8    Agertzen da: 
+			viewer.js, 
+Terminoa: download   eta agerpen kopurua:   8    Agertzen da: 
+			viewer.js, 
+Terminoa: progress   eta agerpen kopurua:   8    Agertzen da: 
+			viewer.js, 
+Terminoa: iterator   eta agerpen kopurua:   8    Agertzen da: 
+			applyBrowserPrefixesFor.js, 
+Terminoa: send   eta agerpen kopurua:   7    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: encode   eta agerpen kopurua:   7    Agertzen da: 
+			pdf.js, 
+Terminoa: clear   eta agerpen kopurua:   7    Agertzen da: 
+			pdf.js, pdf.worker.js, viewer.js, 
+Terminoa: every   eta agerpen kopurua:   7    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: Name   eta agerpen kopurua:   7    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: cancelXHRs   eta agerpen kopurua:   7    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Page   eta agerpen kopurua:   7    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: MissingPDFException   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: UnexpectedResponseException   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: AbortException   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: pull   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: postMessage   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: onFreeze   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: cleanup   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, viewer.js, 
+Terminoa: Test   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: addGetter   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: forEach   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: some   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: then   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: rethrowAssertionErrorRejection   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamCloseQueuedOrInFlight   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: releaseLock   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: streamBrandCheckException   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamBYOBReader   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultControllerGetDesiredSize   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: CMap   eta agerpen kopurua:   6    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getDefault   eta agerpen kopurua:   5    Agertzen da: 
+			pdf.js, pdf.worker.js, viewer.js, 
+Terminoa: getModuleExports   eta agerpen kopurua:   5    Agertzen da: 
+			pdf.js, pdf.worker.js, viewer.js, 
+Terminoa: flush   eta agerpen kopurua:   5    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getOperatorList   eta agerpen kopurua:   5    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: save   eta agerpen kopurua:   5    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: renderContinueCallback   eta agerpen kopurua:   5    Agertzen da: 
+			viewer.js, 
+Terminoa: warn   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: unreachable   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getLookupTableFactory   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: PasswordException   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: UnknownErrorException   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: InvalidPDFException   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: NotImplementedException   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: MissingDataException   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: XRefParseException   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: FormatError   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: removeNullCharacters   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isLittleEndian   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: Util   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: PageViewport   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isString   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, Neo4JClient.js, 
+Terminoa: isSpace   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: StatTimer   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: createBlob   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: createObjectURL   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: finalize   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: sendStreamRequest   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: sendStreamResponse   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: deleteStreamController   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defineProperty   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: tryGet   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setMeta   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: fastKey   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: returnThis   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getMethod   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getOwnPropertyDescriptor   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: SVGGraphics   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, 
+Terminoa: xmlHttpRequestResponseGet   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: Uint8ClampedArray   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: toOffset   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: allocate   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: speciesFromList   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: fromList   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: copyWithin   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: includes   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isTAIndex   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setter   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: addElement   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ArrayBuffer   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setInt8   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setUint8   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isArray   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isThenable   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: onUnhandled   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isUnhandled   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: onHandleUnhandled   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: OwnPromiseCapability   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: assign   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: UncaughtFrozenStore   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: findUncaughtFrozen   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: fixMethod   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setPrototypeOf   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: AcquireWritableStreamDefaultWriter   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsWritableStream   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsWritableStreamLocked   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamAbort   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriter   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriterCloseWithErrorPropagation   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriterRelease   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriterWrite   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultController   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerError   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultReader   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultController   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultControllerClose   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultControllerEnqueue   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultControllerError   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamBYOBRequest   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: respond   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamController   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultControllerBrandCheckException   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamSink   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamSource   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamDefaultController   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getResponseHeader   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.js, 
+Terminoa: convertToRgb   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readChunk   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Transform   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: charCodeOf   eta agerpen kopurua:   4    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setDocument   eta agerpen kopurua:   4    Agertzen da: 
+			viewer.js, 
+Terminoa: descapalo   eta agerpen kopurua:   4    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: log2   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: readUint16   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: compare   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: RenderingCancelledException   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, 
+Terminoa: pump   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFWorker   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, 
+Terminoa: sort   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: Call   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: PDFNodeStream   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, 
+Terminoa: getFullReader   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getRangeReader   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: cancelAllRequests   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: PDFFetchStream   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFNetworkStream   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.js, 
+Terminoa: Dict   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ColorSpace   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFDict   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: onSuccess   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: onFailure   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getData   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, viewer.js, 
+Terminoa: CCITTFaxDecoder   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Font   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: compileGlyphImpl   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Pattern   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createImageData   eta agerpen kopurua:   3    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: debounceScroll   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: configure   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: forceRendering   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: validateFileURL   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerOpenFileViaURL   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerFileInputChange   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: push   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: draw   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: focus   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: onResourceLoaded   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: once   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: layout   eta agerpen kopurua:   3    Agertzen da: 
+			viewer.js, 
+Terminoa: getObjectId   eta agerpen kopurua:   3    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: escapalo   eta agerpen kopurua:   3    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: debuggingg   eta agerpen kopurua:   3    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: applyBrowserPrefixesFor   eta agerpen kopurua:   3    Agertzen da: 
+			applyBrowserPrefixesFor.js, 
+Terminoa: webpackUniversalModuleDefinition   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setVerbosityLevel   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getVerbosityLevel   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: deprecated   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isSameOrigin   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isValidProtocol   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: createValidAbsoluteUrl   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: shadow   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: PasswordExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: UnknownErrorExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: InvalidPDFExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: MissingPDFExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: UnexpectedResponseExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: NotImplementedExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: MissingDataExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: XRefParseExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: FormatErrorClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: AbortExceptionClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: bytesToString   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: stringToBytes   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: arrayByteLength   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: arraysToBytes   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: string32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: readInt8   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: readUint32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: UtilClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: extendObj   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: PageViewportClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: stringToPDFString   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: stringToUTF8String   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: utf8StringToString   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isEmptyObj   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isBool   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isNum   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isArrayBuffer   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isNodeJS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: createPromiseCapability   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: StatTimerClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: rpad   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: createObjectURLClosure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: resolveCall   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: wrapReason   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: makeReasonSerializable   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: resolveOrReject   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: MessageHandler   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: sendWithPromise   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: sendWithStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: loadJpegStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: DOMCanvasFactory   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: DOMCMapReaderFactory   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: fetch   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: DOMSVGFactory   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: CustomStyle   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PromiseCapability   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getOwnPropertyNames   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: createDict   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setImmediate   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: clearImmediate   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: PDFDocumentLoadingTask   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFDataRangeTransport   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFDocumentProxy   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: getPageMode   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFPageProxy   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: complete   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: LoopbackPort   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: terminate   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: terminateEarly   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: onWorkerError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: sendTest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: WorkerTransport   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: updatePassword   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: transportPage   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: transportRender   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: transportObj   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: fontReady   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFObjects   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: RenderTask   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: InternalRenderTask   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: composeSMask   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: Metadata   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: AnnotationElementFactory   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: AnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: LinkAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: TextAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: WidgetAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: TextWidgetAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: CheckboxWidgetAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: RadioButtonWidgetAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: ChoiceWidgetAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PopupAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PopupElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: LineAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: SquareAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: CircleAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PolylineAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PolygonAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: HighlightAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: UnderlineAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: SquigglyAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: StrikeOutAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: StampAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: FileAttachmentAnnotationElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: AnnotationLayer   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: findPositiveMin   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: renderTextLayer   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: adler32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: convertImgDataToPng   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: SVGExtraState   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: checkTypedArrayCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setArrayOffset   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: Uint32ArrayView   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: createUint32ArrayProp   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ensureUint32ArrayViewProps   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: canvasPixelArrayBuffer   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: normalizeURLObject   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkObjectDefinePropertyCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: objectDefineProperty   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: objectDefinePropertySetter   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: objectDefinePropertyGetter   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkXMLHttpRequestResponseCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: xmlHttpRequestOverrideMimeType   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: xmlHttpRequestGetResponseType   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: xmlHttpRequestSetResponseType   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkWindowBtoaCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkWindowAtobCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkFunctionPrototypeBindCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkDatasetProperty   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkClassListProperty   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: changeList   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkWorkerConsoleCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: timeEnd   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkConsoleCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkOnClickCompatibility   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ignoreIfTargetDisabled   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isDisabled   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkOnBlobSupport   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkNavigatorLanguage   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkRangeRequests   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkHistoryManipulation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkSetPresenceInImageData   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkRequestAnimationFrame   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: installFakeAnimationFrameFunctions   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkCanvasSizeLimitation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkFullscreenSupport   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkCurrentScript   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkInputTypeNumberAssign   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkDocumentReadyState   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkChildNodeRemove   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkNumberIsNaN   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkNumberIsInteger   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkPromise   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkWeakMap   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: checkURLConstructor   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isRelativeScheme   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IDNAToASCII   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: percentEscape   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: percentEscapeQuery   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: JURL   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: toLocaleString   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: findIndex   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: indexOf   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: join   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: lastIndexOf   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: reduce   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: reduceRight   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: reverse   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: slice   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: packIEEE754   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: unpackIEEE754   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: unpackI32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: packI8   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: packI16   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: packI32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: packF64   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: packF32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: DataView   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getInt8   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getUint8   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getInt16   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getUint16   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getInt32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getUint32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getFloat32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getFloat64   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setInt16   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setUint16   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setInt32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setUint32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setFloat32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: setFloat64   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isNaN   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isInteger   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: race   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WeakMap   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getConstructor   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsPropertyKey   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: AssertionError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getWriter   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamAddWriteRequest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDealWithRejection   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamStartErroring   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamFinishErroring   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamFinishInFlightWrite   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamFinishInFlightWriteWithError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamFinishInFlightClose   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamFinishInFlightCloseWithError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamHasOperationMarkedInFlight   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamMarkCloseRequestInFlight   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamMarkFirstWriteRequestInFlight   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamRejectCloseAndClosedPromiseIfNeeded   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamUpdateBackpressure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsWritableStreamDefaultWriter   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriterAbort   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriterClose   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriterEnsureClosedPromiseRejected   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriterEnsureReadyPromiseRejected   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultWriterGetDesiredSize   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerClose   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerGetChunkSize   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerGetDesiredSize   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerWrite   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsWritableStreamDefaultController   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerAdvanceQueueIfNeeded   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerErrorIfNeeded   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerProcessClose   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerProcessWrite   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: WritableStreamDefaultControllerGetBackpressure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterBrandCheckException   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterLockException   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterClosedPromiseInitialize   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterClosedPromiseInitializeAsRejected   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterClosedPromiseInitializeAsResolved   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterClosedPromiseReject   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterClosedPromiseResetToRejected   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterClosedPromiseResolve   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterReadyPromiseInitialize   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterReadyPromiseInitializeAsRejected   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterReadyPromiseInitializeAsResolved   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterReadyPromiseReject   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterReadyPromiseReset   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterReadyPromiseResetToRejected   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultWriterReadyPromiseResolve   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: pipeThrough   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: pipeTo   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: pipeLoop   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: waitForWritesToFinish   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isOrBecomesErrored   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isOrBecomesClosed   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: shutdownWithAction   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: doTheRest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: shutdown   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: AcquireReadableStreamBYOBReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: AcquireReadableStreamDefaultReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsReadableStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsReadableStreamDisturbed   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsReadableStreamLocked   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamTee   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamAddReadIntoRequest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamAddReadRequest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamCancel   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamClose   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamFulfillReadIntoRequest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamFulfillReadRequest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamGetNumReadIntoRequests   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamGetNumReadRequests   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamHasBYOBReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamHasDefaultReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsReadableStreamBYOBReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsReadableStreamDefaultReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamReaderGenericInitialize   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamReaderGenericCancel   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamReaderGenericRelease   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamBYOBReaderRead   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultReaderRead   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsReadableStreamDefaultController   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultControllerCallPullIfNeeded   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultControllerShouldCallPull   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableStreamDefaultControllerErrorIfNeeded   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: respondWithNewView   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsReadableByteStreamController   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsReadableStreamBYOBRequest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerCallPullIfNeeded   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerClearPendingPullIntos   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerCommitPullIntoDescriptor   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerConvertPullIntoDescriptor   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerEnqueueChunkToQueue   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerFillPullIntoDescriptorFromQueue   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerFillHeadPullIntoDescriptor   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerHandleQueueDrain   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerInvalidateBYOBRequest   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerProcessPullIntoDescriptorsUsingQueue   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerPullInto   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerRespondInClosedState   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerRespondInReadableState   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerRespondInternal   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerShiftPendingPullInto   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerShouldCallPull   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerClose   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerEnqueue   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerGetDesiredSize   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerRespond   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ReadableByteStreamControllerRespondWithNewView   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: readerLockException   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultReaderBrandCheckException   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultReaderClosedPromiseInitialize   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultReaderClosedPromiseInitializeAsRejected   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultReaderClosedPromiseInitializeAsResolved   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultReaderClosedPromiseReject   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultReaderClosedPromiseResetToRejected   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: defaultReaderClosedPromiseResolve   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: byobReaderBrandCheckException   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: byobRequestBrandCheckException   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: byteStreamControllerBrandCheckException   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: ifIsObjectAndHasAPromiseIsHandledInternalSlotSetPromiseIsHandledToTrue   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamCloseReadable   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamEnqueueToReadable   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamCloseReadableInternal   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamErrorIfNeeded   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamErrorInternal   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamReadableReadyPromise   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamSetBackpressure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamDefaultTransform   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: TransformStreamTransform   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsTransformStreamDefaultController   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: IsTransformStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: getLoadTestFont   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: getNativeFontPromise   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: int32   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, pdf.worker.js, 
+Terminoa: isSyncFontLoadingSupported   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: FontFaceObject   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: CachedCanvases   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: drawOutline   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: CanvasExtraState   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: CanvasGraphics   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: createMeshCanvas   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: TilingPattern   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: XMLParserBase   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: skipWs   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: onResolveEntity   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: onCdata   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: onText   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: onBeginElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: onEndElement   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: onError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: SimpleDOMNode   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: SimpleXMLParser   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFDataTransportStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: BaseFullReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: BaseRangeReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFNodeStreamFullReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: handleResponse   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFNodeStreamRangeReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFNodeStreamFsFullReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFNodeStreamFsRangeReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFFetchStreamReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFFetchStreamRangeReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.js, 
+Terminoa: RefSet   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: RefSetCache   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Stream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StringStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DecodeStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StreamsSequenceStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: FlateStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PredictorStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpegStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpxStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DecryptStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Ascii85Stream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AsciiHexStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: RunLengthStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LZWStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NullStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AlternateCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PatternCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: IndexedCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DeviceGrayCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DeviceRgbCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DeviceCmykCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CalGrayCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CalRGBCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LabCS   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Parser   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Lexer   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ChunkedStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ChunkedStreamManager   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Catalog   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fetchDestination   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NameOrNumberTree   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NameTree   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NumberTree   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: FileSpec   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ObjectLoader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpxError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpxImage   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readBits   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TagTree   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: InclusionTree   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: BitModel   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: IrreversibleTransform   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ReversibleTransform   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ArithmeticDecoder   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ARCFourCipher   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Word64   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sigma   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sigmaPrime   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: littleSigma   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: littleSigmaPrime   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NullCipher   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AES128Cipher   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decryptBlock2   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AES256Cipher   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: compareByteArrays   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDF17   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDF20   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CipherTransform   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CipherTransformFactory   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PartialEvaluator   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: clone   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildPath   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: promiseBody   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TranslatedFont   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: OperatorList   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getIR   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StateManager   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TextState   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: EvalState   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: EvaluatorPreprocessor   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: QueueOptimizer   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFParser   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFHeader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFStrings   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFIndex   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFTopDict   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFPrivateDict   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFCharset   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFEncoding   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFFDSelect   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFOffsetTracker   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFCompiler   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFFunctionFactory   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptStack   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptEvaluator   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptCompiler   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: WorkerTask   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: finish   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ensureNotTerminated   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFWorkerStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseSuccess   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseFailure   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: flushChunks   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: BasePdfManager   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LocalPdfManager   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NetworkPdfManager   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFDocument   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpegError   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpegImage   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeDCFirst   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeACFirst   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CCITTFaxStream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Jbig2Stream   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Jbig2Error   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Jbig2Image   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: mapCidRange   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: mapBfRange   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: mapBfRangeToArray   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: mapOne   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getMap   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: IdentityCMap   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: processBinaryCMap   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: BinaryCMapReader   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Glyph   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ToUnicodeMap   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: amend   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: IdentityToUnicodeMap   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: OpenTypeFileBuilder   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fontItemDecodeLong   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fontItemDecode   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ErrorFont   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Type1Font   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFFont   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: moveTo   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: lineTo   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Type1CharString   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: executeCommand   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, viewer.js, 
+Terminoa: decrypt   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Type1Parser   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getB   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getTilingPatternIR   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptParser   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptToken   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptLexer   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFImage   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AnnotationFactory   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AnnotationBorderStyle   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setWidth   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, viewer.js, 
+Terminoa: WidgetAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TextWidgetAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ButtonWidgetAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ChoiceWidgetAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TextAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LinkAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PopupAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LineAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: SquareAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CircleAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PolylineAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PolygonAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: HighlightAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: UnderlineAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: SquigglyAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StrikeOutAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StampAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: FileAttachmentAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: translate   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: EventBus   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: dispatch   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: ProgressBar   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFRenderingQueue   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setViewer   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: continueRendering   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: initPassiveLoading   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setInitialView   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setRotation   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: createPrintService   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFLinkService   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: navigateTo   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: goToDestination   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: getDestinationHash   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: getAnchorUrl   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setHash   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: executeNamedAction   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: onFileAttachmentAnnotation   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: cachePageRef   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: SimpleLinkService   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFCursorTools   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: disableActiveTool   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFFindController   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: updateUIState   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFSidebar   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: removeNotification   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: OverlayManager   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PasswordPrompt   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFAttachmentViewer   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFDocumentProperties   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: freezeFieldData   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFFindBar   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: dispatchEvent   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFHistory   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: forward   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFOutlineViewer   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFPresentationMode   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFThumbnailViewer   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setPageLabels   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFThumbnailView   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setPdfPage   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: cancelRendering   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: finishRenderTask   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setPageLabel   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFViewer   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: BaseViewer   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: bindOnAfterAndBeforeDraw   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: createTextLayerBuilder   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: createAnnotationLayerBuilder   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: AnnotationLayerBuilder   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: DefaultAnnotationLayerFactory   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFPageView   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: cssTransform   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: finishPaintTask   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: onRenderContinue   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: showCanvas   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: ensureNotCancelled   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: TextLayerBuilder   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: DefaultTextLayerFactory   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: SecondaryToolbar   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setPageNumber   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: setPagesCount   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: Toolbar   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: ViewHistory   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: GenericPreferences   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: BasePreferences   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: DownloadManager   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: GenericL10n   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: getDirection   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: renderNextPage   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: stopPropagationIfNeeded   eta agerpen kopurua:   2    Agertzen da: 
+			viewer.js, 
+Terminoa: reqListener   eta agerpen kopurua:   2    Agertzen da: 
+			index.js, 
+Terminoa: doNothing   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: sleep   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: traverse   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: apiCallJSON   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: apiCall   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: commitNeo4J   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: escapify   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: commitNeo4JMultiple   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: cypherRDFNeo4J   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: initializeGraph   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: createIndex   eta agerpen kopurua:   2    Agertzen da: 
+			Neo4JClient.js, 
+Terminoa: getPackFileType   eta agerpen kopurua:   2    Agertzen da: 
+			pack.js, 
+Terminoa: createElement   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: CustomStyleClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: addLinkAttributes   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getFilenameFromUrl   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getDefaultSetting   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: isExternalLinkTargetSet   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: isValidUrl   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: validateRangeRequestCapabilities   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createResponseStatusError   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: validateResponseStatus   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: setPDFNetworkStreamClass   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getDocument   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFDocumentLoadingTaskClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: pdfDataRangeTransportClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFDocumentProxyClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFPageProxyClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: operatorListChanged   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: streamTextContent   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: cloneValue   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: addEventListener   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: removeEventListener   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFWorkerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getWorkerSrc   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: setupFakeWorkerGlobal   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createCDNWrapper   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: WorkerTransportClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportDoc   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportPasswordRequest   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportPasswordException   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportInvalidPDF   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportMissingPDF   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportUnexpectedResponse   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportUnknownError   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: registerFont   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportDocProgress   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportError   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportUnsupportedFeature   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: transportMetadata   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFObjectsClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: RenderTaskClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: InternalRenderTaskClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: UnsupportedManagerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: listen   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: WebGLUtilsClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: loadShader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createVertexShader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createFragmentShader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createProgram   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createTexture   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: generateGL   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: initSmaskGL   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: initFiguresGL   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: drawFigures   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getAll   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: renderTextLayerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: isAllWhitespace   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: appendText   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: expand   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: expandBounds   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: expandBoundsLTR   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: TextLayerRenderTask   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: convertImgDataToPngClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: crc32   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: writePngChunk   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: deflateSync   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: deflateSyncUncompressed   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: SVGExtraStateClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: SVGGraphicsClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: opListToTree   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: FontLoader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: fontLoaderInsertRule   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: fontLoaderClear   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: fontLoaderBind   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: fontLoaderPrepareFontLoadEvent   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: spliceString   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: isFontReady   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: FontFaceObjectClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: addContextCurrentTransform   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getCurrentTransform   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getCurrentTransformInverse   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: ctxSave   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: ctxRestore   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: ctxTranslate   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: ctxScale   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: ctxTransform   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: ctxSetTransform   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: ctxRotate   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: CachedCanvasesClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: compileType3Glyph   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: CanvasExtraStateClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: CanvasGraphicsClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: putBinaryImageData   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: putBinaryImageMask   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: copyCtxState   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: resetCtxToDefault   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: composeSMaskBackdrop   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: composeSMaskAlpha   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: composeSMaskLuminosity   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: genericComposeSMask   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: beginDrawing   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createCanvasGraphics   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createMeshCanvasClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: drawTriangle   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: drawFigure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getShadingPatternFromIR   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: TilingPatternClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: clipBbox   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: setFillAndStrokeStyleToContext   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: isWhitespace   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: isWhitespaceString   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: parseXml   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: onPi   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: onComment   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: onDoctype   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: hasChildNodes   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: parseFromString   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFDataTransportStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFDataTransportStreamReader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFDataTransportStreamRangeReader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createRequestOptions   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: createFetchOptions   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: NetworkManager   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: getArrayBuffer   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: supportsMozChunkedClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFNetworkStreamFullRequestReader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: PDFNetworkStreamRangeRequestReader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.js, 
+Terminoa: NameClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CmdClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DictClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: nonSerializableClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: RefClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: RefSetClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: RefSetCacheClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isEOF   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isName   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isCmd   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isDict   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isRef   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isRefsEqual   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isStream   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StringStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DecodeStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StreamsSequenceStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: streamSequenceStreamReadBlock   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: FlateStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: flateStreamGenerateHuffmanTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PredictorStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: predictorStreamReadBlockTiff   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: predictorStreamReadBlockPng   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpegStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpxStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DecryptStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Ascii85StreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AsciiHexStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: RunLengthStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LZWStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NullStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ColorSpaceClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: resizeRgbImage   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AlternateCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PatternCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: IndexedCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DeviceGrayCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DeviceRgbCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DeviceCmykCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CalGrayCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CalRGBCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: matrixProduct   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: convertToFlat   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: convertToD65   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sRGBTransferFunction   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: adjustToRange   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeL   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: compensateBlackPoint   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: normalizeWhitePointToFlat   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: normalizeWhitePointToD65   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LabCSClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getEncoding   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ParserClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: findDefaultInlineStreamEnd   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LexerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: toHexDigit   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LinearizationCreate   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getInt   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getHints   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ChunkedStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ChunkedStreamSubstream   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ChunkedStreamManagerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CatalogClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: catalogForEach   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: appendIfJavaScriptDict   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: pagesBeforeRef   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addDefaultProtocolToUrl   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: tryConvertUrlEncoding   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: XRefClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readToken   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: skipUntil   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: tryFetch   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NameOrNumberTreeClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NameTreeClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NumberTreeClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: FileSpecClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: pickPlatformItem   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: mayHaveChildren   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addChildren   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpxErrorClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpxImageClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: calculateComponentDimensions   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: calculateTileGrids   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getBlocksDimensions   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildPrecincts   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildCodeblocks   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createPacket   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LayerResolutionComponentPositionIterator   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ResolutionLayerComponentPositionIterator   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ResolutionPositionComponentLayerIterator   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PositionComponentResolutionLayerIterator   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ComponentPositionResolutionLayerIterator   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getPrecinctIndexIfExist   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getPrecinctSizesInImageScale   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildPackets   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseTilePackets   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: skipMarkerIfEqual   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: skipBytes   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: alignToByte   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readCodingpasses   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: copyCoefficients   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: transformTile   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: transformComponents   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: initializeTile   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TagTreeClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: InclusionTreeClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: BitModelClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TransformClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: transformCalculate   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: extend   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: IrreversibleTransformClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: irreversibleTransformFilter   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ReversibleTransformClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: reversibleTransformFilter   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ArithmeticDecoderClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ARCFourCipherClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: calculateMD5Closure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Word64Closure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: calculateSHA256Closure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: rotr   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: calculateSHA512Closure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: calculateSHA384Closure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NullCipherClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AES128CipherClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: expandKey128   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decrypt128   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: encrypt128   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AES256CipherClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: expandKey256   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decrypt256   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: encrypt256   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDF17Closure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDF20Closure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: concatArrays   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: calculatePDF20Hash   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CipherTransformClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: cipherTransformDecryptStream   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CipherTransformFactoryClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createEncryptionKey20   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: prepareKeyData   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeUserPassword   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildObjectKey   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildCipherConstructor   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: cipherTransformFactoryBuildCipherConstructorNone   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: cipherTransformFactoryBuildCipherConstructorV2   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: cipherTransformFactoryBuildCipherConstructorAESV2   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: cipherTransformFactoryBuildCipherConstructorAESV3   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildCipherCipherConstructor   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PartialEvaluatorClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NativeImageDecoder   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: canDecode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TimeSlotManager   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: normalizeBlendMode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: handleTilingType   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: errorFont   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: closePendingRestoreOPS   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getTextContent   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ensureTextContentItem   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: replaceWhitespace   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: runBidiTransform   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: handleSetFont   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildTextContentItem   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addFakeSpaces   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: flushTextContentItem   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: enqueueChunk   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TranslatedFontClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: loadType3Data   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: OperatorListClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getTransfers   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addOp   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addDependency   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addDependencies   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addOpList   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: StateManagerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: restore   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TextStateClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: EvalStateClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: EvaluatorPreprocessorClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: QueueOptimizerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addState   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: handlePaintSolidColorImageMask   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: foundInlineImageGroup   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: foundImageMaskGroup   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFParserClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseOperand   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseFloatOperand   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseCharStrings   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readSupplement   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFHeaderClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFStringsClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFIndexClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFDictClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFTopDictClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFPrivateDictClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFCharsetClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFEncodingClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFFDSelectClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFOffsetTrackerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFCompilerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: mapSpecialUnicodeValues   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getUnicodeForGlyph   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getUnicodeRangeFor   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isRTLRangeFor   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: reverseIfRtl   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createFromArray   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: toNumberArray   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFFunctionClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getSampleArray   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fromIR   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseArray   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructSampled   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: toMultiArray   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructSampledFromIR   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: interpolate   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructSampledFromIRResult   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructInterpolated   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructInterpolatedFromIR   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructInterpolatedFromIRResult   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructStiched   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructStichedFromIR   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructStichedFromIRResult   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructStichedFromIRClip   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructPostScript   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructPostScriptFromIR   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: constructPostScriptFromIRResult   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isPDFFunction   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptStackClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptEvaluatorClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptCompilerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AstNode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AstArgument   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AstLiteral   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AstBinaryOperation   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AstMin   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AstVariable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: AstVariableDefinition   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ExpressionBuilderVisitor   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: visitArgument   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: visitVariable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: visitLiteral   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: visitBinaryOperation   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: visitVariableDefinition   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: visitMin   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildAddOperation   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildMulOperation   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildSubOperation   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildMinOperation   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: WorkerTaskClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFWorkerStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFWorkerStreamReader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFWorkerStreamRangeReader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setup   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupTest   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphConfigure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupDoc   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createDocumentHandler   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: startWorkerTask   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: finishWorkerTask   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: loadDocument   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: onDocReady   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getPdfManager   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setupDoc   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: pdfManagerReady   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: loadFailure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetPage   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetPageIndex   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetDestinations   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetDestination   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetPageLabels   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetPageMode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetAttachments   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetJavaScript   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetOutline   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetMetadata   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetData   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetStats   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupGetAnnotations   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphSetupRenderPage   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphExtractText   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphCleanup   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphTerminate   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: wphReady   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: initializeFromPort   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isMessagePort   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: BasePdfManagerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: LocalPdfManagerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: NetworkPdfManagerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ensureHelper   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PageClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isAnnotationRenderable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createObjId   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: extractTextContent   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFDocumentClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createPage   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpegErrorClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: JpegImageClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildHuffmanTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getBlockBufferOffset   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeScan   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readBit   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeHuffman   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: receive   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: receiveAndExtend   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeBaseline   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeDCSuccessive   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeACSuccessive   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeMcu   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeBlock   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: quantizeAndInverse   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildComponentData   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: findNextFileMarker   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: peekUint16   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readDataBlock   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: prepareComponents   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getLinearizedBlockData   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: convertYccToRgb   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: convertYcckToRgb   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: convertYcckToCmyk   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: convertCmykToRgb   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CCITTFaxStreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readNextChar   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Jbig2StreamClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Jbig2ErrorClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Jbig2ImageClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ContextCache   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getContexts   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DecodingContext   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeInteger   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeIAID   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeBitmapTemplate0   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeBitmap   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeRefinement   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeSymbolDictionary   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeTextRegion   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodePatternDictionary   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeHalftoneRegion   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readSegmentHeader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readSegments   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readRegionSegmentInformation   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: processSegment   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: processSegments   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseJbig2   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseJbig2Chunks   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: SimpleSegmentVisitor   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: onPatternDictionary   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: onImmediateHalftoneRegion   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: onImmediateLosslessHalftoneRegion   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CMapClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addCodespaceRange   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readCharCode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: IdentityCMapClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: BinaryCMapReaderClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: hexToInt   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: hexToStr   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: addHex   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: incHex   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: BinaryCMapStream   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readByte   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readNumber   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readSigned   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readHex   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readHexNumber   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readHexSigned   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readString   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CMapFactoryClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: strToInt   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: expectString   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: expectInt   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseBfChar   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseBfRange   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseCidChar   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseCidRange   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseCodespaceRange   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseWMode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseCMapName   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseCMap   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: extendCMap   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createBuiltInCMap   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: adjustWidths   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: adjustToUnicode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getFontType   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: recoverGlyphName   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: GlyphClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ToUnicodeMapClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: IdentityToUnicodeMapClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: OpenTypeFileBuilderClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: writeInt16   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: writeInt32   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: writeData   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: FontClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: int16   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: writeSignedInt16   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: signedInt16   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: string16   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: safeString16   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isTrueTypeFile   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isOpenTypeFile   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isType1File   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildToFontChar   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isProblematicUnicodeLocation   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: adjustMapping   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getRanges   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fontGetRangesSort   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createCmapTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: validateOS2Table   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createOS2Table   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createPostTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createNameTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readTableEntry   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readOpenTypeHeader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readCmapTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sanitizeMetrics   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sanitizeGlyph   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sanitizeHead   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sanitizeGlyphLocations   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fontItemEncodeLong   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fontItemEncode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readPostScriptTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: readNameTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sanitizeTTProgram   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: checkInvalidFunctions   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: foldTTTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: sanitizeTTPrograms   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: hasGlyph   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getCharCodes   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createCharCode   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fontFieldsHmtx   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: ErrorFontClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: type1FontGlyphMapping   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Type1FontClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: findBlock   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getHeaderBlock   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getEexecBlock   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CFFFontClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: checkSeacSupport   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: checkChromeWindows   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: FontRendererFactoryClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getLong   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getUshort   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseCmap   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseCff   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: parseGlyfTable   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: lookupCmap   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: compileGlyf   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: quadraticCurveTo   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: compileCharString   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: bezierCurveTo   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: CompiledFont   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getPathJs   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: compileGlyph   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: hasBuiltPath   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: TrueTypeCompiled   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Type2Compiled   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Type1CharStringClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Type1ParserClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isHexDigit   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decryptAscii   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isSpecial   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PatternClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: RadialAxialClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: RadialAxial   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: MeshClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: MeshStreamReader   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeType4Shading   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeType5Shading   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getBClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildB   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: buildFigureFromPatch   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeType6Shading   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeType7Shading   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: updateBounds   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: packData   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Mesh   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: DummyClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: Dummy   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isOdd   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: isEven   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: findUnequal   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setValues   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: reverseValues   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: createBidiText   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: bidi   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptParserClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptTokenClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PostScriptLexerClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: PDFImageClosure   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: handleImageData   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeAndClamp   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: resizeImageMask   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: decodeBuffer   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getComponents   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fillOpacity   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: undoPreblend   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: fillGrayBuffer   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getImageBytes   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: getTransformMatrix   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setFlags   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: hasFlag   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setRectangle   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setColor   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setBorderStyle   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setAppearance   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: loadResources   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setStyle   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setDashArray   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setHorizontalCornerRadius   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: setVerticalCornerRadius   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: hasFieldFlag   eta agerpen kopurua:   1    Agertzen da: 
+			pdf.worker.js, 
+Terminoa: formatL10nValue   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getOutputScale   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: scrollIntoView   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: watchScroll   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: viewAreaElementScrolled   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: parseQueryString   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: binarySearchFirstItem   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: approximateFraction   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: roundToDivide   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getVisibleElements   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isElementBottomBelowViewTop   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: noContextMenuHandler   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isDataSchema   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getPDFFileNameFromURL   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: normalizeWheelEventDelta   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isValidRotation   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: cloneObj   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: waitOnEventOrTimeout   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: clamp   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: attachDOMEventsToEventBus   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getGlobalEventBus   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setThumbnailViewer   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isHighestPriority   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: renderHighestPriority   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getHighestPriority   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isViewFinished   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: renderView   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: updateFindControlState   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: reportTelemetry   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: createDownloadManager   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: createPreferences   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: createL10n   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: zoomIn   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: zoomOut   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setTitleUsingUrl   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setTitle   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: downloadByUrl   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: beforePrint   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: pdfViewSetupAfterPrint   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: rotatePages   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: requestPresentationMode   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: bindEvents   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: bindWindowEvents   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: unbindEvents   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: unbindWindowEvents   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: loadAndEnablePDFBug   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerInitialized   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerPageRendered   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerTextLayerRendered   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerPageMode   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerNamedAction   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerPresentationModeChanged   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerSidebarViewChanged   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerUpdateViewarea   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerResize   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerHashchange   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerChangeFileReaderOnload   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerPresentationMode   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerOpenFile   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerPrint   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerDownload   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerFirstPage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerLastPage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerNextPage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerPreviousPage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerZoomIn   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerZoomOut   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerPageNumberChanged   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerScaleChanged   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerRotateCw   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerRotateCcw   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerDocumentProperties   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerFind   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerFindFromUrlHash   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerScaleChanging   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerRotationChanging   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerPageChanging   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerWheel   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerClick   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerKeyDown   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: apiPageModeToSidebarView   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setHistory   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isValidExplicitDestination   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: switchTool   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: normalize   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isSubTerm   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: calcFindPhraseMatch   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: calcFindWordMatch   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: calcFindMatch   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: extractText   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: updatePage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: nextMatch   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: matchesReady   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: updateMatchPosition   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: nextPageMatch   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: advanceOffsetPage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: updateMatch   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: updateUIResultsCount   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getViewerConfiguration   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: webViewerLoad   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: GrabToPan   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isLeftMouseReleased   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: switchView   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: register   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: unregister   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: verify   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setUpdateCallback   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setFileSize   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: updateResultsCount   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getCurrentHash   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: parseCurrentHash   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: pushCurrentPosition   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isDestHashesEqual   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isDestArraysEqual   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isEntryEqual   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: toggleOutlineTree   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getThumbnail   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: scrollThumbnailIntoView   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: TempImageFactoryClosure   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getCanvas   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: destroyCanvas   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setImage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFPageViewBuffer   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isSameScale   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isPortraitOrientation   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getPageView   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: scrollPageIntoView   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: containsElement   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getPageTextContent   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setFindController   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getPagesOverview   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getPagePoint   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: paintOnCanvas   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: paintOnSvg   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setTextContentStream   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setTextContent   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: convertMatches   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: renderMatches   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: beginText   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: appendTextToDiv   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: updateMatches   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setPageScale   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: updateLoadingIndicatorState   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setMultiple   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getMultiple   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getDefaultPreferences   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: downloadUrl   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: downloadData   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getL10nResourceLinks   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getL10nDictionary   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getTranslatableChildren   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getL10nAttributes   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: fireL10nReadyEvent   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: xhrLoadText   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: parseResource   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: evalString   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: parseProperties   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: parseRawLines   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: nextEntry   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: loadImport   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: loadLocale   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: L10nResourceLink   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getPluralRules   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isIn   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: isBetween   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getL10nData   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: substIndexes   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: substArguments   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: translateElement   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getChildElementCount   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: translateFragment   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getText   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getLanguage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: setLanguage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: getReadyState   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: renderPage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: PDFPrintService   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: renderPages   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: useRenderedPage   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: performPrint   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: throwIfInactive   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: renderProgress   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
+Terminoa: ensureOverlay   eta agerpen kopurua:   1    Agertzen da: 
+			viewer.js, 
