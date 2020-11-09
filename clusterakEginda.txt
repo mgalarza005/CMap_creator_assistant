@@ -1,17 +1,14 @@
- - *constructor:* constructor 
- - *hash:* , back, check, find, hash, hide, keys, open, parse, update, values 
- - *render:* enqueue, entries, filter, getter, handler, listener, render, wrapper 
- - *notify:* destroy, lookup, notify, toggle 
- - *transform:* transform 
- - *invalid:* initialize, invalid 
- - *reset:* assert, create, empty, next, request, reset 
- - *resolve:* decode, reload, remove, resolve, resolved 
- - *constructor:* constructor 
- - *render:* create, enqueue, filter, find, getter, handler, listener, render, wrapper 
- - *transform:* transform 
- - *Annotation:* Annotation 
- - *back:* , back, check, hash, hide, keys, lookup, open, update, values 
- - *initialize:* initialize, invalid 
- - *reset:* assert, destroy, next, parse, request, reset 
- - *remove:* Promise, decode, empty, reload, remove, resolve, resolved, toggle 
- - *toString:* entries, notify, randomString, toString 
+ - *Create*: Categorize, Codebook, Create, Format, Hypothesis, Interface, Order, Purpose, Read, Source, Update 
+ - *URL*: DOI, HTML, JSON, Local, PDF, TXT, URL, URN 
+ - *AnnotationServer*: AnnotationServer 
+ - *Delete*: Autocomplete, Delete, DeleteAll, Neo4J, Remote, Selector, Target 
+ - *BrowserStorage*: BrowserStorage 
+ - *PreviousAssignments*: PreviousAssignments 
+ - *Assessing*: Assessing, Classifying, Commenting, Replying 
+ - *Import*: Export, Import, ImportExport, Typology 
+ - *TextSummary*: TextSummary 
+ - *Operation*: Hierarchy, Operation, Presentation 
+ - *SentimentAnalysis*: SentimentAnalysis 
+ - *SuggestedLiterature*: SuggestedLiterature 
+ - *Situated*: Outsourced, Situated, Unsituated 
+ - *AnnotatedResource*: AnnotatedResource 

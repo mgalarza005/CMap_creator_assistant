@@ -230,7 +230,7 @@ public class MainClass {
 
 			logger.info("Ending Variant Model mining process");
 
-			CodeMiner.idatziJSKlaseak();
+			CodeMiner.idatziFitxategiak();
 			
 			CodeMiner.agerpenTotalakKontatu();
 			//CodeMiner.idatziFitxategiBateanBigarrena();

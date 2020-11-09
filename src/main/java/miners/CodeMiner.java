@@ -40,7 +40,7 @@ public class CodeMiner {
 	private static String clusterTerms="";
 	private static String codeWithFunctions="--FUNTZIOAK--"+ "\n"+ "\n"+ "\n";
 	private static String kodea="--KODEA--"+ "\n"+ "\n"+ "\n";
-	
+
 	private static String MinedFiles="";
 
 	private static CodeFile cf;
@@ -121,9 +121,10 @@ public class CodeMiner {
 						"    Agertzen da: \n			";
 
 
-				for(int l=0; l<termTable.getTermTable().get(i).getWhereThisTermAppears().size(); l++) {
+				for(int l=0; l<termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1; l++) {
 					codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get(l) + ", ";
 				}
+				codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get(termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1);
 				codeWithVariables2 += "\n";
 
 			}
@@ -142,7 +143,7 @@ public class CodeMiner {
 		}catch (Exception e){
 			e.printStackTrace();
 		}
-		
+
 	}
 	public static void printTermTableForCluster() throws IOException {
 		Collections.sort(termTable.getTermTable(), new TermChainedComparator(new TermApparitionComparator()));
@@ -150,21 +151,24 @@ public class CodeMiner {
 		System.out.println("TermTable's term are going to be written for cluster in 'forCluster.txt' file \n");
 
 		for(int i=0; i<termTable.getTermTable().size(); i++ ) {
-
-			if(termTable.getTermTable().get(i).getapparitionCont()>10 && termTable.getTermTable().get(i).getUpperCaseCont()<2) {
+			//&& termTable.getTermTable().get(i).firsChartUpper()
+			//termTable.getTermTable().get(i).getUpperCaseCont()<2
+			if(termTable.getTermTable().get(i).getapparitionCont()>100  && termTable.getTermTable().get(i).firsChartUpper()) {
 				clusterTerms += termTable.getTermTable().get(i).getTermName() + " ";
 			}				
 		}
+		clusterTerms.trim();
+
 		FileWriter fw4 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/forCluster.txt");
 		try {
 
-			fw4.write(clusterTerms);
+			fw4.write(clusterTerms.trim());
 			fw4.close();
 		}catch (Exception e){
 			e.printStackTrace();
 		}
 
-		
+
 
 	}
 	private static void idatzitermTablekFitxategiBatean() throws IOException {
@@ -203,27 +207,27 @@ public class CodeMiner {
 		Process p=Runtime.getRuntime().exec(c);
 
 
-		
-        String s=null;
-        BufferedReader stdInput = new BufferedReader(new 
-                InputStreamReader(p.getInputStream()));
 
-        BufferedReader stdError = new BufferedReader(new 
-                InputStreamReader(p.getErrorStream()));
+		String s=null;
+		BufferedReader stdInput = new BufferedReader(new 
+				InputStreamReader(p.getInputStream()));
+
+		BufferedReader stdError = new BufferedReader(new 
+				InputStreamReader(p.getErrorStream()));
 
 		// read the output from the command
-        while ((s = stdInput.readLine()) != null) {
-            System.out.println(s);
-        }
+		while ((s = stdInput.readLine()) != null) {
+			System.out.println(s);
+		}
 
-	
+		/*
 
         // read any errors from the attempted command
         //System.out.println("Here is the standard error of the command (if any):\n");
         while ((s = stdError.readLine()) != null) {
             System.out.println(s);
         }
-
+		 */
 		System.out.println("Amaitu da, begiratu clusterakEginda.txt fitxategia");
 
 	}
@@ -243,7 +247,7 @@ public class CodeMiner {
 				String[] words = line.split(" ");
 
 				for(int i=0; i<words.length; i++) {
-					if ((words[i] != " ") && (!words[i].isEmpty()) && words[i].length()>3){
+					if ((words[i] != " ") && (!words[i].isEmpty()) && words[i].length()>2){
 						if(termTable.appears(words[i])){
 							termTable.sumApparition(words[i]);
 						}
@@ -265,8 +269,8 @@ public class CodeMiner {
 		cf = code;
 
 		MainClass.getLogger().info("Starting mining of " + cf.getFilename());
-		
-		MinedFiles += cf.getFilename() + "\n";
+
+		MinedFiles += "Fitxategia: "+ cf.getFilename() + "		Path-a: "+ cf.getPath() +"\n";
 
 		if (type.contentEquals("ps:pvsclxml")) {
 			// XML mode
@@ -282,11 +286,11 @@ public class CodeMiner {
 		}
 
 		MainClass.getLogger().info("Mining of " + cf.getFilename() + " ended.");
-		idatziJSKlaseak();
+		idatziFitxategiak();
 	}
 
-	public static void idatziJSKlaseak() throws IOException {
-		FileWriter fw3 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/jJSKlaseak.txt");
+	public static void idatziFitxategiak() throws IOException {
+		FileWriter fw3 = new FileWriter("/Users/MIKEL1/git/CMap_creator_assistant/CMap_creator_assistant/Fitxategiak.txt");
 		try {
 
 			fw3.write(javaScriptClass);
@@ -314,9 +318,9 @@ public class CodeMiner {
 				kodea+=line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
 
-/*
+
 				//Aldagaien izena lortzeko
-				
+				/*
 				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
 					String[] kk = line.split("var");
 					if(kk.length>1) {
@@ -338,45 +342,45 @@ public class CodeMiner {
 
 									}
 								}
-						//Bi aldagai baino gehiago aldi berean definitzen badira
-						}else if (!(termTable.itsStopWord(lerroarenBigarrenZatia[1]))){
-							for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
-								String[] emaitza = lerroarenBigarrenZatia[p].split(",");
-								if(emaitza[0].contains(";") && !emaitza[0].contains("_")) {
-									String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
-									if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
-										if(termTable.appears(emaitzaAux[0])){
-											termTable.sumApparition(emaitzaAux[0]);
-											termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
-											codeWithVariables += emaitza[0]+ "\n";
-											codeWithVariables += emaitzaAux[0]+ "\n";
-										}else {
-											Term a= new Term(emaitzaAux[0],1);
-											a.getWhereThisTermAppears().add(cf.getFilename());
-											termTable.getTermTable().add(a);
-											codeWithVariables += emaitzaAux[0]+ "\n";
+								//Bi aldagai baino gehiago aldi berean definitzen badira
+							}else if (!(termTable.itsStopWord(lerroarenBigarrenZatia[1]))){
+								for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
+									String[] emaitza = lerroarenBigarrenZatia[p].split(",");
+									if(emaitza[0].contains(";") && !emaitza[0].contains("_")) {
+										String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
+										if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
+											if(termTable.appears(emaitzaAux[0])){
+												termTable.sumApparition(emaitzaAux[0]);
+												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
+												codeWithVariables += emaitza[0]+ "\n";
+												codeWithVariables += emaitzaAux[0]+ "\n";
+											}else {
+												Term a= new Term(emaitzaAux[0],1);
+												a.getWhereThisTermAppears().add(cf.getFilename());
+												termTable.getTermTable().add(a);
+												codeWithVariables += emaitzaAux[0]+ "\n";
+											}
+										}
+
+
+									}else {
+										if(emaitza!=null) {
+											if(termTable.appears(emaitza[0])){
+												termTable.sumApparition(emaitza[0]);
+												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
+												codeWithVariables += emaitza[0]+ "\n";
+											}else {
+												Term a= new Term(emaitza[0],1);
+												a.getWhereThisTermAppears().add(cf.getFilename());
+												termTable.getTermTable().add(a);
+
+												codeWithVariables += emaitza[0]+ "\n";
+
+											}
 										}
 									}
-
-
-								}else {
-									if(emaitza!=null) {
-										if(termTable.appears(emaitza[0])){
-											termTable.sumApparition(emaitza[0]);
-											termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
-											codeWithVariables += emaitza[0]+ "\n";
-										}else {
-											Term a= new Term(emaitza[0],1);
-											a.getWhereThisTermAppears().add(cf.getFilename());
-											termTable.getTermTable().add(a);
-
-											codeWithVariables += emaitza[0]+ "\n";
-
-										}
-								}
-								}
-							}			
-						}
+								}			
+							}
 
 						}
 					}
@@ -403,45 +407,45 @@ public class CodeMiner {
 
 									}
 								}
-						//Bi aldagai baino gehiago aldi berean definitzen badira
-						}else if (!(termTable.itsStopWord(lerroarenBigarrenZatia[1]))){
-							for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
-								String[] emaitza = lerroarenBigarrenZatia[p].split(",");
-								if(emaitza[0].contains(";") && !emaitza[0].contains("_")) {
-									String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
-									if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
-										if(termTable.appears(emaitzaAux[0])){
-											termTable.sumApparition(emaitzaAux[0]);
-											termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
-											codeWithVariables += emaitza[0]+ "\n";
-											codeWithVariables += emaitzaAux[0]+ "\n";
-										}else {
-											Term a= new Term(emaitzaAux[0],1);
-											a.getWhereThisTermAppears().add(cf.getFilename());
-											termTable.getTermTable().add(a);
-											codeWithVariables += emaitzaAux[0]+ "\n";
+								//Bi aldagai baino gehiago aldi berean definitzen badira
+							}else if (!(termTable.itsStopWord(lerroarenBigarrenZatia[1]))){
+								for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
+									String[] emaitza = lerroarenBigarrenZatia[p].split(",");
+									if(emaitza[0].contains(";") && !emaitza[0].contains("_")) {
+										String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
+										if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
+											if(termTable.appears(emaitzaAux[0])){
+												termTable.sumApparition(emaitzaAux[0]);
+												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
+												codeWithVariables += emaitza[0]+ "\n";
+												codeWithVariables += emaitzaAux[0]+ "\n";
+											}else {
+												Term a= new Term(emaitzaAux[0],1);
+												a.getWhereThisTermAppears().add(cf.getFilename());
+												termTable.getTermTable().add(a);
+												codeWithVariables += emaitzaAux[0]+ "\n";
+											}
+										}
+
+
+									}else {
+										if(emaitza!=null) {
+											if(termTable.appears(emaitza[0])){
+												termTable.sumApparition(emaitza[0]);
+												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
+												codeWithVariables += emaitza[0]+ "\n";
+											}else {
+												Term a= new Term(emaitza[0],1);
+												a.getWhereThisTermAppears().add(cf.getFilename());
+												termTable.getTermTable().add(a);
+
+												codeWithVariables += emaitza[0]+ "\n";
+
+											}
 										}
 									}
-
-
-								}else {
-									if(emaitza!=null) {
-										if(termTable.appears(emaitza[0])){
-											termTable.sumApparition(emaitza[0]);
-											termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
-											codeWithVariables += emaitza[0]+ "\n";
-										}else {
-											Term a= new Term(emaitza[0],1);
-											a.getWhereThisTermAppears().add(cf.getFilename());
-											termTable.getTermTable().add(a);
-
-											codeWithVariables += emaitza[0]+ "\n";
-
-										}
-								}
-								}
-							}			
-						}
+								}			
+							}
 
 						}
 					}
@@ -468,53 +472,53 @@ public class CodeMiner {
 
 									}
 								}
-						//Bi aldagai baino gehiago aldi berean definitzen badira
-						}else if (!(termTable.itsStopWord(lerroarenBigarrenZatia[1]))){
-							for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
-								String[] emaitza = lerroarenBigarrenZatia[p].split(",");
-								if(emaitza[0].contains(";") && !emaitza[0].contains("_")) {
-									String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
-									if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
-										if(termTable.appears(emaitzaAux[0])){
-											termTable.sumApparition(emaitzaAux[0]);
-											termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
-											codeWithVariables += emaitza[0]+ "\n";
-											codeWithVariables += emaitzaAux[0]+ "\n";
-										}else {
-											Term a= new Term(emaitzaAux[0],1);
-											a.getWhereThisTermAppears().add(cf.getFilename());
-											termTable.getTermTable().add(a);
-											codeWithVariables += emaitzaAux[0]+ "\n";
+								//Bi aldagai baino gehiago aldi berean definitzen badira
+							}else if (!(termTable.itsStopWord(lerroarenBigarrenZatia[1]))){
+								for(int p=1; p<lerroarenBigarrenZatia.length; p++) {
+									String[] emaitza = lerroarenBigarrenZatia[p].split(",");
+									if(emaitza[0].contains(";") && !emaitza[0].contains("_")) {
+										String[] emaitzaAux = lerroarenBigarrenZatia[p].split(";");
+										if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
+											if(termTable.appears(emaitzaAux[0])){
+												termTable.sumApparition(emaitzaAux[0]);
+												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
+												codeWithVariables += emaitza[0]+ "\n";
+												codeWithVariables += emaitzaAux[0]+ "\n";
+											}else {
+												Term a= new Term(emaitzaAux[0],1);
+												a.getWhereThisTermAppears().add(cf.getFilename());
+												termTable.getTermTable().add(a);
+												codeWithVariables += emaitzaAux[0]+ "\n";
+											}
+										}
+
+
+									}else {
+										if(emaitza!=null) {
+											if(termTable.appears(emaitza[0])){
+												termTable.sumApparition(emaitza[0]);
+												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
+												codeWithVariables += emaitza[0]+ "\n";
+											}else {
+												Term a= new Term(emaitza[0],1);
+												a.getWhereThisTermAppears().add(cf.getFilename());
+												termTable.getTermTable().add(a);
+
+												codeWithVariables += emaitza[0]+ "\n";
+
+											}
 										}
 									}
-
-
-								}else {
-									if(emaitza!=null) {
-										if(termTable.appears(emaitza[0])){
-											termTable.sumApparition(emaitza[0]);
-											termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
-											codeWithVariables += emaitza[0]+ "\n";
-										}else {
-											Term a= new Term(emaitza[0],1);
-											a.getWhereThisTermAppears().add(cf.getFilename());
-											termTable.getTermTable().add(a);
-
-											codeWithVariables += emaitza[0]+ "\n";
-
-										}
-								}
-								}
-							}			
-						}
+								}			
+							}
 
 						}
 					}
 				}
-				 
-				*/
 
-				
+
+
+
 				//Funtzioen izena lortzeko
 				if ((line.contains("function") || line.contains(" function") || line.contains("function ")) && (!line.contains("'function'"))) {
 					String[] kk = line.split("function");
@@ -551,9 +555,8 @@ public class CodeMiner {
 							}
 						}
 					}
-
 				}
-				
+
 				// Klasek lortzeko 
 				if (line.contains("class")  && line.contains("{")) {
 					String[] kk = line.split("class");
@@ -568,7 +571,7 @@ public class CodeMiner {
 									termTable.sumApparition(emaitza);
 									termTable.addWhereThisTermAppears(emaitza, cf.getFilename());
 								}else {
-									Term a= new Term(emaitza,200);
+									Term a= new Term(emaitza,300);
 									a.getWhereThisTermAppears().add(cf.getFilename());
 									termTable.getTermTable().add(a);
 
@@ -578,6 +581,29 @@ public class CodeMiner {
 						}
 
 
+					}
+				}*/
+
+				//HTML file's terms
+				String[] span=null;
+				String[] resultWithNumber=null;
+				String[] result=null;
+				if (line.contains("<span ") && line.contains(".")) {
+					span= line.split(">");
+					resultWithNumber= span[span.length-1].split("<");
+					if(resultWithNumber[0].contains(" ")) {
+						result = resultWithNumber[0].split(" ");
+						if (result[0].length()<7 && !result[result.length-1].contains(".")) {
+							if(termTable.appears(result[result.length-1])){
+								termTable.sumApparition(result[result.length-1]);
+								termTable.addWhereThisTermAppears(result[result.length-1], cf.getFilename());
+							}else {
+								Term a= new Term(result[result.length-1],300);
+								a.getWhereThisTermAppears().add(cf.getFilename());
+								termTable.getTermTable().add(a);
+
+							}
+						}
 					}
 				}
 

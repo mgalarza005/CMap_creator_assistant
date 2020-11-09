@@ -1,187 +1,187 @@
-messages.json
-browserStorageSearch.html
-pdf.js
-pdf.worker.js
-viewer.css
-viewer.html
-viewer.js
-index.html
-index.js
-groupSelection.html
-sidebar.html
-tagWrapper.html
-toolset.html
-userFilterWrapper.html
-reviewCanvas.html
-filePermission.html
-options.html
-popup.html
-CreateAnnotation.js
-Assessing.js
-Body.js
-Classifying.js
-Commenting.js
-CommentingForm.js
-PreviousAssignments.js
-ReplyAnnotation.js
-SuggestingLiterature.js
-AnnotationList.js
-Canvas.js
-GoogleSheetGenerator.js
-MoodleComment.js
-MoodleReport.js
-ReadAnnotation.js
-Resume.js
-Screenshots.js
-TextSummary.js
-UserFilter.js
-Annotation.js
-AnnotationManagement.js
-DeleteAnnotation.js
-UpdateAnnotation.js
-BrowserStorage.js
-BrowserStorageClient.js
-BrowserStorageManager.js
-EmptyDatabase.json
-Hypothesis.js
-HypothesisClientManager.js
-Neo4JClient.js
-Neo4JClientManager.js
-AnnotationServer.js
-AnnotationServerManager.js
-CreateHighlighterTask.js
-Task.js
-AnnotationServerManager.js
-GoogleSheetsManager.js
-HypothesisManager.js
-MoodleBackgroundManager.js
-MoodleDownloadManager.js
-Neo4JManager.js
-TargetManager.js
-TaskManager.js
-Code.js
-Codebook.js
-Theme.js
-BuiltIn.js
-BuiltInCodebookScheme.json
-EmptyCodebook.js
-GSheetParser.js
-GSheetProvider.js
-GroupInitializer.js
-MoodleAugmentation.js
-MoodleGraderAugmentation.js
-MoodleGradingAugmentation.js
-MoodleViewPluginAssignSubmissionAugmentation.js
-MoodleProvider.js
-MoodleScraping.js
-NoCodebook.js
-NoCodebookScheme.json
-CreateCodebook.js
-DeleteCodebook.js
-DeleteGroup.js
-ExportCodebook.js
-ExportCodebookJSON.js
-ImportCodebook.js
-ImportCodebookJSON.js
-Buttons.js
-ReadCodebook.js
-RenameCodebook.js
-UpdateCodebook.js
-CodebookManager.js
-AnnotatedContentManager.js
-AnnotationBasedInitializer.js
-ContentScriptManager.js
-ModeManager.js
-RolesManager.js
-Sidebar.js
-Toolset.js
-reviewModel.js
-GoogleSheetClient.js
-GoogleSheetsClientManager.js
-GroupSelector.js
-AnnotationExporter.js
-AnnotationImporter.js
-APISimulation.js
-BackToWorkspace.js
-MoodleClient.js
-MoodleClientManager.js
-MoodleFunctions.js
-MoodleUtils.js
-Options.js
-Popup.js
-HTML.js
-PDF.js
-TXT.js
-TargetManager.js
-Alerts.js
-AnnotationUtils.js
-ChromeStorage.js
-ColorUtils.js
-CryptoUtils.js
-DOM.js
-DOMTextUtils.js
-DataUtils.js
-DateUtils.js
-FileUtils.js
-LanguageUtils.js
-PDFTextUtils.js
-RandomUtils.js
-SheetUtils.js
-URLUtils.js
-BrowserStorageSearch.js
-Config.js
-Events.js
-acmContentScript.js
-background.js
-contentScript.js
-googleSheetsContentScript.js
-hypothesisGroupContentScript.js
-moodleAssignmentAddContentScript.js
-moodleContentScript.js
-options.js
-popup.js
-scienceDirectContentScript.js
-springerContentScript.js
-browserStorageSearch.scss
-contentScript.scss
-exam.scss
-groupSelection.scss
-locationManager.scss
-options.scss
-pdfjs.scss
-review.scss
-reviewAssistant.scss
-reviewCanvas.scss
-sidebar.scss
-slrDataExtraction.scss
-tagWrapper.scss
-textAnnotator.scss
-toolset.scss
-userFilter.scss
-variables.scss
-manifest.json
-applyBrowserPrefixesFor.js
-args.js
-build.js
-chromereload.js
-clean.js
-content.js
-default.js
-fonts.js
-images.js
-locales.js
-manifest.js
-pack.js
-pages.js
-scripts.js
-styles.js
-test.js
-version.js
-.babelrc
-.editorconfig
-.eslintrc
-.gitignore
-dependencies.ps1
-dependencies.sh
-gulpfile.babel.js
-package.json
+Fitxategia: messages.json		Path-a: app/_locales/en
+Fitxategia: browserStorageSearch.html		Path-a: app/content/browserStorage
+Fitxategia: pdf.js		Path-a: app/content/pdfjs/build
+Fitxategia: pdf.worker.js		Path-a: app/content/pdfjs/build
+Fitxategia: viewer.css		Path-a: app/content/pdfjs/web
+Fitxategia: viewer.html		Path-a: app/content/pdfjs/web
+Fitxategia: viewer.js		Path-a: app/content/pdfjs/web
+Fitxategia: index.html		Path-a: app/content/plainTextFileViewer
+Fitxategia: index.js		Path-a: app/content/plainTextFileViewer
+Fitxategia: groupSelection.html		Path-a: app/pages/sidebar
+Fitxategia: sidebar.html		Path-a: app/pages/sidebar
+Fitxategia: tagWrapper.html		Path-a: app/pages/sidebar
+Fitxategia: toolset.html		Path-a: app/pages/sidebar
+Fitxategia: userFilterWrapper.html		Path-a: app/pages/sidebar
+Fitxategia: reviewCanvas.html		Path-a: app/pages/specific
+Fitxategia: filePermission.html		Path-a: app/pages
+Fitxategia: options.html		Path-a: app/pages
+Fitxategia: popup.html		Path-a: app/pages
+Fitxategia: CreateAnnotation.js		Path-a: app/scripts/annotationManagement/create
+Fitxategia: Assessing.js		Path-a: app/scripts/annotationManagement/purposes
+Fitxategia: Body.js		Path-a: app/scripts/annotationManagement/purposes
+Fitxategia: Classifying.js		Path-a: app/scripts/annotationManagement/purposes
+Fitxategia: Commenting.js		Path-a: app/scripts/annotationManagement/purposes
+Fitxategia: CommentingForm.js		Path-a: app/scripts/annotationManagement/purposes
+Fitxategia: PreviousAssignments.js		Path-a: app/scripts/annotationManagement/purposes
+Fitxategia: ReplyAnnotation.js		Path-a: app/scripts/annotationManagement/purposes
+Fitxategia: SuggestingLiterature.js		Path-a: app/scripts/annotationManagement/purposes
+Fitxategia: AnnotationList.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: Canvas.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: GoogleSheetGenerator.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: MoodleComment.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: MoodleReport.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: ReadAnnotation.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: Resume.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: Screenshots.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: TextSummary.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: UserFilter.js		Path-a: app/scripts/annotationManagement/read
+Fitxategia: Annotation.js		Path-a: app/scripts/annotationManagement
+Fitxategia: AnnotationManagement.js		Path-a: app/scripts/annotationManagement
+Fitxategia: DeleteAnnotation.js		Path-a: app/scripts/annotationManagement
+Fitxategia: UpdateAnnotation.js		Path-a: app/scripts/annotationManagement
+Fitxategia: BrowserStorage.js		Path-a: app/scripts/annotationServer/browserStorage
+Fitxategia: BrowserStorageClient.js		Path-a: app/scripts/annotationServer/browserStorage
+Fitxategia: BrowserStorageManager.js		Path-a: app/scripts/annotationServer/browserStorage
+Fitxategia: EmptyDatabase.json		Path-a: app/scripts/annotationServer/browserStorage
+Fitxategia: Hypothesis.js		Path-a: app/scripts/annotationServer/hypothesis
+Fitxategia: HypothesisClientManager.js		Path-a: app/scripts/annotationServer/hypothesis
+Fitxategia: Neo4JClient.js		Path-a: app/scripts/annotationServer/neo4j
+Fitxategia: Neo4JClientManager.js		Path-a: app/scripts/annotationServer/neo4j
+Fitxategia: AnnotationServer.js		Path-a: app/scripts/annotationServer
+Fitxategia: AnnotationServerManager.js		Path-a: app/scripts/annotationServer
+Fitxategia: CreateHighlighterTask.js		Path-a: app/scripts/background/tasks
+Fitxategia: Task.js		Path-a: app/scripts/background/tasks
+Fitxategia: AnnotationServerManager.js		Path-a: app/scripts/background
+Fitxategia: GoogleSheetsManager.js		Path-a: app/scripts/background
+Fitxategia: HypothesisManager.js		Path-a: app/scripts/background
+Fitxategia: MoodleBackgroundManager.js		Path-a: app/scripts/background
+Fitxategia: MoodleDownloadManager.js		Path-a: app/scripts/background
+Fitxategia: Neo4JManager.js		Path-a: app/scripts/background
+Fitxategia: TargetManager.js		Path-a: app/scripts/background
+Fitxategia: TaskManager.js		Path-a: app/scripts/background
+Fitxategia: Code.js		Path-a: app/scripts/codebook/model
+Fitxategia: Codebook.js		Path-a: app/scripts/codebook/model
+Fitxategia: Theme.js		Path-a: app/scripts/codebook/model
+Fitxategia: BuiltIn.js		Path-a: app/scripts/codebook/operations/create/builtIn
+Fitxategia: BuiltInCodebookScheme.json		Path-a: app/scripts/codebook/operations/create/builtIn
+Fitxategia: EmptyCodebook.js		Path-a: app/scripts/codebook/operations/create/emptyCodebook
+Fitxategia: GSheetParser.js		Path-a: app/scripts/codebook/operations/create/googleSheetsProvider
+Fitxategia: GSheetProvider.js		Path-a: app/scripts/codebook/operations/create/googleSheetsProvider
+Fitxategia: GroupInitializer.js		Path-a: app/scripts/codebook/operations/create/googleSheetsProvider
+Fitxategia: MoodleAugmentation.js		Path-a: app/scripts/codebook/operations/create/moodleProvider/augmentation
+Fitxategia: MoodleGraderAugmentation.js		Path-a: app/scripts/codebook/operations/create/moodleProvider/augmentation
+Fitxategia: MoodleGradingAugmentation.js		Path-a: app/scripts/codebook/operations/create/moodleProvider/augmentation
+Fitxategia: MoodleViewPluginAssignSubmissionAugmentation.js		Path-a: app/scripts/codebook/operations/create/moodleProvider/augmentation
+Fitxategia: MoodleProvider.js		Path-a: app/scripts/codebook/operations/create/moodleProvider
+Fitxategia: MoodleScraping.js		Path-a: app/scripts/codebook/operations/create/moodleProvider
+Fitxategia: NoCodebook.js		Path-a: app/scripts/codebook/operations/create/noCodebook
+Fitxategia: NoCodebookScheme.json		Path-a: app/scripts/codebook/operations/create/noCodebook
+Fitxategia: CreateCodebook.js		Path-a: app/scripts/codebook/operations/create
+Fitxategia: DeleteCodebook.js		Path-a: app/scripts/codebook/operations/delete
+Fitxategia: DeleteGroup.js		Path-a: app/scripts/codebook/operations/delete
+Fitxategia: ExportCodebook.js		Path-a: app/scripts/codebook/operations/export
+Fitxategia: ExportCodebookJSON.js		Path-a: app/scripts/codebook/operations/export
+Fitxategia: ImportCodebook.js		Path-a: app/scripts/codebook/operations/import
+Fitxategia: ImportCodebookJSON.js		Path-a: app/scripts/codebook/operations/import
+Fitxategia: Buttons.js		Path-a: app/scripts/codebook/operations/read
+Fitxategia: ReadCodebook.js		Path-a: app/scripts/codebook/operations/read
+Fitxategia: RenameCodebook.js		Path-a: app/scripts/codebook/operations/update
+Fitxategia: UpdateCodebook.js		Path-a: app/scripts/codebook/operations/update
+Fitxategia: CodebookManager.js		Path-a: app/scripts/codebook
+Fitxategia: AnnotatedContentManager.js		Path-a: app/scripts/contentScript
+Fitxategia: AnnotationBasedInitializer.js		Path-a: app/scripts/contentScript
+Fitxategia: ContentScriptManager.js		Path-a: app/scripts/contentScript
+Fitxategia: ModeManager.js		Path-a: app/scripts/contentScript
+Fitxategia: RolesManager.js		Path-a: app/scripts/contentScript
+Fitxategia: Sidebar.js		Path-a: app/scripts/contentScript
+Fitxategia: Toolset.js		Path-a: app/scripts/contentScript
+Fitxategia: reviewModel.js		Path-a: app/scripts/exporter
+Fitxategia: GoogleSheetClient.js		Path-a: app/scripts/googleSheets
+Fitxategia: GoogleSheetsClientManager.js		Path-a: app/scripts/googleSheets
+Fitxategia: GroupSelector.js		Path-a: app/scripts/groupManipulation
+Fitxategia: AnnotationExporter.js		Path-a: app/scripts/importExport
+Fitxategia: AnnotationImporter.js		Path-a: app/scripts/importExport
+Fitxategia: APISimulation.js		Path-a: app/scripts/moodle
+Fitxategia: BackToWorkspace.js		Path-a: app/scripts/moodle
+Fitxategia: MoodleClient.js		Path-a: app/scripts/moodle
+Fitxategia: MoodleClientManager.js		Path-a: app/scripts/moodle
+Fitxategia: MoodleFunctions.js		Path-a: app/scripts/moodle
+Fitxategia: MoodleUtils.js		Path-a: app/scripts/moodle
+Fitxategia: Options.js		Path-a: app/scripts/options
+Fitxategia: Popup.js		Path-a: app/scripts/popup
+Fitxategia: HTML.js		Path-a: app/scripts/target/formats
+Fitxategia: PDF.js		Path-a: app/scripts/target/formats
+Fitxategia: TXT.js		Path-a: app/scripts/target/formats
+Fitxategia: TargetManager.js		Path-a: app/scripts/target
+Fitxategia: Alerts.js		Path-a: app/scripts/utils
+Fitxategia: AnnotationUtils.js		Path-a: app/scripts/utils
+Fitxategia: ChromeStorage.js		Path-a: app/scripts/utils
+Fitxategia: ColorUtils.js		Path-a: app/scripts/utils
+Fitxategia: CryptoUtils.js		Path-a: app/scripts/utils
+Fitxategia: DOM.js		Path-a: app/scripts/utils
+Fitxategia: DOMTextUtils.js		Path-a: app/scripts/utils
+Fitxategia: DataUtils.js		Path-a: app/scripts/utils
+Fitxategia: DateUtils.js		Path-a: app/scripts/utils
+Fitxategia: FileUtils.js		Path-a: app/scripts/utils
+Fitxategia: LanguageUtils.js		Path-a: app/scripts/utils
+Fitxategia: PDFTextUtils.js		Path-a: app/scripts/utils
+Fitxategia: RandomUtils.js		Path-a: app/scripts/utils
+Fitxategia: SheetUtils.js		Path-a: app/scripts/utils
+Fitxategia: URLUtils.js		Path-a: app/scripts/utils
+Fitxategia: BrowserStorageSearch.js		Path-a: app/scripts
+Fitxategia: Config.js		Path-a: app/scripts
+Fitxategia: Events.js		Path-a: app/scripts
+Fitxategia: acmContentScript.js		Path-a: app/scripts
+Fitxategia: background.js		Path-a: app/scripts
+Fitxategia: contentScript.js		Path-a: app/scripts
+Fitxategia: googleSheetsContentScript.js		Path-a: app/scripts
+Fitxategia: hypothesisGroupContentScript.js		Path-a: app/scripts
+Fitxategia: moodleAssignmentAddContentScript.js		Path-a: app/scripts
+Fitxategia: moodleContentScript.js		Path-a: app/scripts
+Fitxategia: options.js		Path-a: app/scripts
+Fitxategia: popup.js		Path-a: app/scripts
+Fitxategia: scienceDirectContentScript.js		Path-a: app/scripts
+Fitxategia: springerContentScript.js		Path-a: app/scripts
+Fitxategia: browserStorageSearch.scss		Path-a: app/styles
+Fitxategia: contentScript.scss		Path-a: app/styles
+Fitxategia: exam.scss		Path-a: app/styles
+Fitxategia: groupSelection.scss		Path-a: app/styles
+Fitxategia: locationManager.scss		Path-a: app/styles
+Fitxategia: options.scss		Path-a: app/styles
+Fitxategia: pdfjs.scss		Path-a: app/styles
+Fitxategia: review.scss		Path-a: app/styles
+Fitxategia: reviewAssistant.scss		Path-a: app/styles
+Fitxategia: reviewCanvas.scss		Path-a: app/styles
+Fitxategia: sidebar.scss		Path-a: app/styles
+Fitxategia: slrDataExtraction.scss		Path-a: app/styles
+Fitxategia: tagWrapper.scss		Path-a: app/styles
+Fitxategia: textAnnotator.scss		Path-a: app/styles
+Fitxategia: toolset.scss		Path-a: app/styles
+Fitxategia: userFilter.scss		Path-a: app/styles
+Fitxategia: variables.scss		Path-a: app/styles
+Fitxategia: manifest.json		Path-a: app
+Fitxategia: applyBrowserPrefixesFor.js		Path-a: tasks/lib
+Fitxategia: args.js		Path-a: tasks/lib
+Fitxategia: build.js		Path-a: tasks
+Fitxategia: chromereload.js		Path-a: tasks
+Fitxategia: clean.js		Path-a: tasks
+Fitxategia: content.js		Path-a: tasks
+Fitxategia: default.js		Path-a: tasks
+Fitxategia: fonts.js		Path-a: tasks
+Fitxategia: images.js		Path-a: tasks
+Fitxategia: locales.js		Path-a: tasks
+Fitxategia: manifest.js		Path-a: tasks
+Fitxategia: pack.js		Path-a: tasks
+Fitxategia: pages.js		Path-a: tasks
+Fitxategia: scripts.js		Path-a: tasks
+Fitxategia: styles.js		Path-a: tasks
+Fitxategia: test.js		Path-a: tasks
+Fitxategia: version.js		Path-a: tasks
+Fitxategia: .babelrc		Path-a: 
+Fitxategia: .editorconfig		Path-a: 
+Fitxategia: .eslintrc		Path-a: 
+Fitxategia: .gitignore		Path-a: 
+Fitxategia: dependencies.ps1		Path-a: 
+Fitxategia: dependencies.sh		Path-a: 
+Fitxategia: gulpfile.babel.js		Path-a: 
+Fitxategia: package.json		Path-a: 

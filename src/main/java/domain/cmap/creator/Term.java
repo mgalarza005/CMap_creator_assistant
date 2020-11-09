@@ -89,5 +89,13 @@ public class Term {
 	}
 	
 	 */
+
+	public boolean firsChartUpper() {
+		char ch = this.name.charAt(0); 
+        if (ch >= 'A' && ch <= 'Z') 
+            return true;
+        else 
+        	return false;
+	}
 	
 }
