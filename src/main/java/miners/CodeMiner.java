@@ -115,18 +115,18 @@ public class CodeMiner {
 		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'termTable.txt' fitxategian idatziko dira");
 
 		for(int i=0; i<termTable.getTermTable().size(); i++ ) {
-			if(termTable.getTermTable().get(i).getapparitionCont()>0) {
+			if(termTable.getTermTable().get(i).getapparitionCont()>100) {
 				codeWithVariables2 += "Terminoa: "+ termTable.getTermTable().get(i).getTermName() + 
 						"   eta agerpen kopurua:   " + termTable.getTermTable().get(i).getapparitionCont() +
-						"    Agertzen da:		";
+						"    Agertzen da:		[";
 
 
-				for(int l=0; l<termTable.getTermTable().get(i).getWhereThisTermAppears().size(); l++) {
+				for(int l=0; l<termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1; l++) {
 					//codeWithVariables2 += "["+ termTable.getTermTable().get(i).getWhereThisTermAppears().get(l) + "; ";
-					codeWithVariables2 += "["+ termTable.getTermTable().get(i).getWhereThisTermAppears().get(l).getName() + "; " + termTable.getTermTable().get(i).getWhereThisTermAppears().get(l).getPath() + "]";
+					codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get(l).getName() + ": " + termTable.getTermTable().get(i).getWhereThisTermAppears().get(l).getPath() + ";";
 				}
 				//codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get(termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1)+ "; ";
-				//codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get((termTable.getTermTable().get(i).getWhereThisTermAppears().size())-1).getName()+ "; " + termTable.getTermTable().get(i).getWhereThisTermAppears().get(termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1).getPath() + "]";
+				codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get((termTable.getTermTable().get(i).getWhereThisTermAppears().size())-1).getName()+ ": " + termTable.getTermTable().get(i).getWhereThisTermAppears().get(termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1).getPath() + "]";
 				codeWithVariables2 += "\n";
 
 			}
@@ -320,9 +320,9 @@ public class CodeMiner {
 				kodea+=line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
 
-
-				//Aldagaien izena lortzeko
 				/*
+				//Aldagaien izena lortzeko
+				
 				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
 					String[] kk = line.split("var");
 					if(kk.length>1) {
@@ -336,10 +336,10 @@ public class CodeMiner {
 								if(emaitza!=null && !emaitza.contains(",") && !emaitza.contains("_") && !emaitza.contains("$")  && !termTable.itsStopWord(emaitza) && emaitza.length()>3) {
 									if(termTable.appears(emaitza)){
 										termTable.sumApparition(emaitza);
-										termTable.addWhereThisTermAppears(emaitza, cf.getFilename());
+										termTable.addWhereThisTermAppears(emaitza, cf.getFilename(), cf.getPath());
 									}else {
 										Term a= new Term(emaitza,1);
-										a.getWhereThisTermAppears().add(cf.getFilename());
+										a.addNewFile(cf.getFilename(), cf.getPath());
 										termTable.getTermTable().add(a);
 
 									}
@@ -353,12 +353,12 @@ public class CodeMiner {
 										if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
 											if(termTable.appears(emaitzaAux[0])){
 												termTable.sumApparition(emaitzaAux[0]);
-												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
+												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename(), cf.getPath());
 												codeWithVariables += emaitza[0]+ "\n";
 												codeWithVariables += emaitzaAux[0]+ "\n";
 											}else {
 												Term a= new Term(emaitzaAux[0],1);
-												a.getWhereThisTermAppears().add(cf.getFilename());
+												a.addNewFile(cf.getFilename(), cf.getPath());
 												termTable.getTermTable().add(a);
 												codeWithVariables += emaitzaAux[0]+ "\n";
 											}
@@ -369,11 +369,11 @@ public class CodeMiner {
 										if(emaitza!=null) {
 											if(termTable.appears(emaitza[0])){
 												termTable.sumApparition(emaitza[0]);
-												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
+												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename(), cf.getPath());
 												codeWithVariables += emaitza[0]+ "\n";
 											}else {
 												Term a= new Term(emaitza[0],1);
-												a.getWhereThisTermAppears().add(cf.getFilename());
+												a.addNewFile(cf.getFilename(), cf.getPath());
 												termTable.getTermTable().add(a);
 
 												codeWithVariables += emaitza[0]+ "\n";
@@ -401,10 +401,10 @@ public class CodeMiner {
 								if(emaitza!=null && !emaitza.contains(",") && !emaitza.contains("_")  && !emaitza.contains("$") && !termTable.itsStopWord(emaitza) && emaitza.length()>3) {
 									if(termTable.appears(emaitza)){
 										termTable.sumApparition(emaitza);
-										termTable.addWhereThisTermAppears(emaitza, cf.getFilename());
+										termTable.addWhereThisTermAppears(emaitza, cf.getFilename(), cf.getPath());
 									}else {
 										Term a= new Term(emaitza,1);
-										a.getWhereThisTermAppears().add(cf.getFilename());
+										a.addNewFile(cf.getFilename(), cf.getPath());
 										termTable.getTermTable().add(a);
 
 									}
@@ -418,12 +418,12 @@ public class CodeMiner {
 										if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
 											if(termTable.appears(emaitzaAux[0])){
 												termTable.sumApparition(emaitzaAux[0]);
-												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
+												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename(), cf.getPath());
 												codeWithVariables += emaitza[0]+ "\n";
 												codeWithVariables += emaitzaAux[0]+ "\n";
 											}else {
 												Term a= new Term(emaitzaAux[0],1);
-												a.getWhereThisTermAppears().add(cf.getFilename());
+												a.addNewFile(cf.getFilename(), cf.getPath());
 												termTable.getTermTable().add(a);
 												codeWithVariables += emaitzaAux[0]+ "\n";
 											}
@@ -434,11 +434,11 @@ public class CodeMiner {
 										if(emaitza!=null) {
 											if(termTable.appears(emaitza[0])){
 												termTable.sumApparition(emaitza[0]);
-												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
+												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename(), cf.getPath());
 												codeWithVariables += emaitza[0]+ "\n";
 											}else {
 												Term a= new Term(emaitza[0],1);
-												a.getWhereThisTermAppears().add(cf.getFilename());
+												a.addNewFile(cf.getFilename(), cf.getPath());
 												termTable.getTermTable().add(a);
 
 												codeWithVariables += emaitza[0]+ "\n";
@@ -466,10 +466,10 @@ public class CodeMiner {
 								if(emaitza!=null && !emaitza.contains(",") && !emaitza.contains("_")  && !emaitza.contains("$") && !termTable.itsStopWord(emaitza) && emaitza.length()>3) {
 									if(termTable.appears(emaitza)){
 										termTable.sumApparition(emaitza);
-										termTable.addWhereThisTermAppears(emaitza, cf.getFilename());
+										termTable.addWhereThisTermAppears(emaitza, cf.getFilename(), cf.getPath());
 									}else {
 										Term a= new Term(emaitza,1);
-										a.getWhereThisTermAppears().add(cf.getFilename());
+										a.addNewFile(cf.getFilename(), cf.getPath());
 										termTable.getTermTable().add(a);
 
 									}
@@ -483,12 +483,12 @@ public class CodeMiner {
 										if(emaitzaAux!=null && emaitzaAux[0].length()>3) {
 											if(termTable.appears(emaitzaAux[0])){
 												termTable.sumApparition(emaitzaAux[0]);
-												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename());
+												termTable.addWhereThisTermAppears(emaitzaAux[0], cf.getFilename(), cf.getPath());
 												codeWithVariables += emaitza[0]+ "\n";
 												codeWithVariables += emaitzaAux[0]+ "\n";
 											}else {
 												Term a= new Term(emaitzaAux[0],1);
-												a.getWhereThisTermAppears().add(cf.getFilename());
+												a.addNewFile(cf.getFilename(), cf.getPath());
 												termTable.getTermTable().add(a);
 												codeWithVariables += emaitzaAux[0]+ "\n";
 											}
@@ -499,11 +499,11 @@ public class CodeMiner {
 										if(emaitza!=null) {
 											if(termTable.appears(emaitza[0])){
 												termTable.sumApparition(emaitza[0]);
-												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename());
+												termTable.addWhereThisTermAppears(emaitza[0], cf.getFilename(), cf.getPath());
 												codeWithVariables += emaitza[0]+ "\n";
 											}else {
 												Term a= new Term(emaitza[0],1);
-												a.getWhereThisTermAppears().add(cf.getFilename());
+												a.addNewFile(cf.getFilename(), cf.getPath());
 												termTable.getTermTable().add(a);
 
 												codeWithVariables += emaitza[0]+ "\n";
@@ -539,13 +539,13 @@ public class CodeMiner {
 
 											if(termTable.appears(azkenEmaitza)){
 												termTable.sumApparition(azkenEmaitza);
-												termTable.addWhereThisTermAppears(azkenEmaitza, cf.getFilename());
+												termTable.addWhereThisTermAppears(azkenEmaitza, cf.getFilename(), cf.getPath());
 												codeWithVariables += azkenEmaitza+ "\n";
 												codeWithFunctions += azkenEmaitza+ "\n";	
 											}else {
 												Term a= new Term(azkenEmaitza,1);
 												//gehitu non dagoen terminoa
-												a.getWhereThisTermAppears().add(cf.getFilename());
+												a.addNewFile(cf.getFilename(), cf.getPath());
 												termTable.getTermTable().add(a);
 												codeWithVariables += azkenEmaitza+ "\n";
 												codeWithFunctions += azkenEmaitza+ "\n";	
@@ -571,10 +571,10 @@ public class CodeMiner {
 							if(emaitza!=null && !emaitza.contains(",") && !emaitza.contains(")") && !emaitza.contains("_")  && !termTable.itsStopWord(emaitza) && emaitza.length()>3) {
 								if(termTable.appears(emaitza)){
 									termTable.sumApparition(emaitza);
-									termTable.addWhereThisTermAppears(emaitza, cf.getFilename());
+									termTable.addWhereThisTermAppears(emaitza, cf.getFilename(), cf.getPath());
 								}else {
 									Term a= new Term(emaitza,300);
-									a.getWhereThisTermAppears().add(cf.getFilename());
+									a.addNewFile(cf.getFilename(), cf.getPath());
 									termTable.getTermTable().add(a);
 
 								}
@@ -584,8 +584,8 @@ public class CodeMiner {
 
 
 					}
-				}*/
-
+				}
+				*/
 				//HTML file's terms
 				String[] span=null;
 				String[] resultWithNumber=null;
