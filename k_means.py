@@ -24,7 +24,7 @@ for cluster_id in np.unique(affprop.labels_):
     exemplar = words[affprop.cluster_centers_indices_[cluster_id]]
     cluster = np.unique(words[np.nonzero(affprop.labels_==cluster_id)])
     cluster_str = ", ".join(cluster)
-    fitx.write(" - *%s*: %s \n" % (exemplar, cluster_str))
+    fitx.write("*%s*: %s \n" % (exemplar, cluster_str))
 
 fitx.close()
 

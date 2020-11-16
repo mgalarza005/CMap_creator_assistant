@@ -1,14 +1,14 @@
- - *Create*: Categorize, Codebook, Create, Format, Hypothesis, Interface, Order, Purpose, Read, Source, Update 
- - *URL*: DOI, HTML, JSON, Local, PDF, TXT, URL, URN 
- - *AnnotationServer*: AnnotationServer 
- - *Delete*: Autocomplete, Delete, DeleteAll, Neo4J, Remote, Selector, Target 
- - *BrowserStorage*: BrowserStorage 
- - *PreviousAssignments*: PreviousAssignments 
- - *Assessing*: Assessing, Classifying, Commenting, Replying 
- - *Import*: Export, Import, ImportExport, Typology 
- - *TextSummary*: TextSummary 
- - *Operation*: Hierarchy, Operation, Presentation 
- - *SentimentAnalysis*: SentimentAnalysis 
- - *SuggestedLiterature*: SuggestedLiterature 
- - *Situated*: Outsourced, Situated, Unsituated 
- - *AnnotatedResource*: AnnotatedResource 
+*Create*: Categorize, Codebook, Create, Format, Hypothesis, Interface, Order, Purpose, Read, Source, Update 
+*URL*: DOI, HTML, JSON, Local, PDF, TXT, URL, URN 
+*AnnotationServer*: AnnotationServer 
+*Delete*: Autocomplete, Delete, DeleteAll, Neo4J, Remote, Selector, Target 
+*BrowserStorage*: BrowserStorage 
+*PreviousAssignments*: PreviousAssignments 
+*Assessing*: Assessing, Classifying, Commenting, Replying 
+*Import*: Export, Import, ImportExport, Typology 
+*TextSummary*: TextSummary 
+*Operation*: Hierarchy, Operation, Presentation 
+*SentimentAnalysis*: SentimentAnalysis 
+*SuggestedLiterature*: SuggestedLiterature 
+*Situated*: Outsourced, Situated, Unsituated 
+*AnnotatedResource*: AnnotatedResource 

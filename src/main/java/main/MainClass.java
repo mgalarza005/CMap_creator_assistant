@@ -238,7 +238,7 @@ public class MainClass {
 			CodeMiner.printTermTable();
 			CodeMiner.printTermTableForCluster();
 			
-			CodeMiner.clusterraAplikatu();
+			//CodeMiner.clusterraAplikatu();
 			
 			
 			

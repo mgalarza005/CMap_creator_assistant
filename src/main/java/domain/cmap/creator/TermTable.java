@@ -3,6 +3,8 @@ package domain.cmap.creator;
 import java.util.Arrays;
 import java.util.List;
 
+import org.eclipse.jgit.api.AddNoteCommand;
+
 public class TermTable {
 	private List<Term> termT;
 	private static List<String> stopWords=Arrays.asList(new String[] {"break","case","catch","continue","default","delete","do","else","finally","for","function","if","in","instanceof","new","return","switch","this","trhow","try","typeof","var","void","while","with","abstract","boolean","byte",
@@ -67,13 +69,14 @@ public class TermTable {
 		}
 	}
 
-	public void addWhereThisTermAppears(String term, String file) {
+	public void addWhereThisTermAppears(String term, String name, String path) {
 		int i=0;
 		Boolean topatua=false;
 		while(i<this.termT.size() && topatua.booleanValue()==false) {
 			if(this.termT.get(i).getTermName().equals(term)) {
-				if( !this.termT.get(i).getWhereThisTermAppears().contains(file) ){
-					this.termT.get(i).getWhereThisTermAppears().add(file);
+				File f = new File(name, path);
+				if( !this.termT.get(i).getWhereThisTermAppears().contains(f) ){
+					this.termT.get(i).addNewFile(name, path);
 				}
 				
 				topatua=true;

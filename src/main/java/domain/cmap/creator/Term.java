@@ -7,14 +7,43 @@ public class Term {
 	
 	private String name;
 	private int apparitionCont;
-	private List<String> whereThisTermAppears=new ArrayList<String>();
+	private List<File> whereThisTermAppears=new ArrayList<File>();
 	
-	public List<String> getWhereThisTermAppears() {
-		return whereThisTermAppears;
+	public List<File> getWhereThisTermAppears() {
+		return this.whereThisTermAppears;
 	}
 
-	public void setWhereThisTermAppears(List<String> whereThisTermAppears) {
+	public void setWhereThisTermAppears(List<File> whereThisTermAppears) {
 		this.whereThisTermAppears = whereThisTermAppears;
+	}
+	
+	public void addNewFile(String name, String path) {
+		if(!contains(name)) {
+			File f = new File(name, path);
+			this.whereThisTermAppears.add(f);
+		}
+		
+		
+	}
+	public boolean contains(String name) {
+		if(sameName(name)) {
+			return true;
+				
+		}else {
+			return false;
+		}
+		
+	}	
+	private boolean sameName(String name2) {
+		int i =0;
+		while (i<this.whereThisTermAppears.size()) {
+			if(this.whereThisTermAppears.get(i).getName().equals(name2)) {
+				return true;
+			}else {
+				i++;
+			}
+		}
+		return false;
 	}
 
 	public Term(String termName, int apparitionCont) {
@@ -24,7 +53,6 @@ public class Term {
 		
 		
 	}
-	
 	
 	
 	public String getTermName() {

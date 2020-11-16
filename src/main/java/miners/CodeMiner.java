@@ -118,13 +118,15 @@ public class CodeMiner {
 			if(termTable.getTermTable().get(i).getapparitionCont()>0) {
 				codeWithVariables2 += "Terminoa: "+ termTable.getTermTable().get(i).getTermName() + 
 						"   eta agerpen kopurua:   " + termTable.getTermTable().get(i).getapparitionCont() +
-						"    Agertzen da: \n			";
+						"    Agertzen da:		";
 
 
-				for(int l=0; l<termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1; l++) {
-					codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get(l) + ", ";
+				for(int l=0; l<termTable.getTermTable().get(i).getWhereThisTermAppears().size(); l++) {
+					//codeWithVariables2 += "["+ termTable.getTermTable().get(i).getWhereThisTermAppears().get(l) + "; ";
+					codeWithVariables2 += "["+ termTable.getTermTable().get(i).getWhereThisTermAppears().get(l).getName() + "; " + termTable.getTermTable().get(i).getWhereThisTermAppears().get(l).getPath() + "]";
 				}
-				codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get(termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1);
+				//codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get(termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1)+ "; ";
+				//codeWithVariables2 += termTable.getTermTable().get(i).getWhereThisTermAppears().get((termTable.getTermTable().get(i).getWhereThisTermAppears().size())-1).getName()+ "; " + termTable.getTermTable().get(i).getWhereThisTermAppears().get(termTable.getTermTable().get(i).getWhereThisTermAppears().size()-1).getPath() + "]";
 				codeWithVariables2 += "\n";
 
 			}
@@ -184,7 +186,7 @@ public class CodeMiner {
 
 
 	public static void inprimatutermTablerenInfo() {
-		System.out.println("Termino kopurua (termTable.size()): " +termTable.getTermTable().size());
+		System.out.println("Termino kopurua (termTable.size()): " +termTable.getTermTable().size() + ")");
 
 	}
 	public static void clusterraAplikatu() throws IOException {
@@ -211,10 +213,10 @@ public class CodeMiner {
 		String s=null;
 		BufferedReader stdInput = new BufferedReader(new 
 				InputStreamReader(p.getInputStream()));
-
+/*
 		BufferedReader stdError = new BufferedReader(new 
 				InputStreamReader(p.getErrorStream()));
-
+*/
 		// read the output from the command
 		while ((s = stdInput.readLine()) != null) {
 			System.out.println(s);
@@ -596,10 +598,11 @@ public class CodeMiner {
 						if (result[0].length()<7 && !result[result.length-1].contains(".")) {
 							if(termTable.appears(result[result.length-1])){
 								termTable.sumApparition(result[result.length-1]);
-								termTable.addWhereThisTermAppears(result[result.length-1], cf.getFilename());
+								termTable.addWhereThisTermAppears(result[result.length-1], cf.getFilename(), cf.getPath());
 							}else {
 								Term a= new Term(result[result.length-1],300);
-								a.getWhereThisTermAppears().add(cf.getFilename());
+								a.addNewFile(cf.getFilename(), cf.getPath());
+								//a.addNewFile(cf.getFilename(),cf.getPath());
 								termTable.getTermTable().add(a);
 
 							}
