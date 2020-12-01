@@ -16,15 +16,17 @@ public class TermChainedComparator implements Comparator<Term>{
     }
     
 	@Override
-	public int compare(Term o1, Term o2) {
+	public int compare(Term t1, Term t2) {
 		// TODO Auto-generated method stub
 		for (Comparator<Term> comparator : listComparators) {
-            int result = comparator.compare(o1, o2);
+            int result = comparator.compare(t1, t2);
             if (result != 0) {
                 return result;
             }
         }
 		return 0;
 	}
+	
+
 
 }

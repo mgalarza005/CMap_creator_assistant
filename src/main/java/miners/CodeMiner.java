@@ -3,6 +3,8 @@ package miners;
 import java.io.BufferedReader;
 
 import java.io.ByteArrayInputStream;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -52,7 +54,7 @@ public class CodeMiner {
 	private static String vpString = "";
 
 	private static TermTable termTable = new TermTable(new ArrayList<Term>());
-
+	private static String path="C:\\Users\\MIKEL1\\git\\WacLine\\docs";
 
 	//private static ArrayList<Aldagaia> aldagaiT= new ArrayList<Aldagaia>();
 
@@ -233,6 +235,17 @@ public class CodeMiner {
 		System.out.println("Amaitu da, begiratu clusterDone.txt fitxategia");
 
 	}
+	private static boolean containsFM() {
+		File directoryPath = new File(path);
+		File filesList[] = directoryPath.listFiles();
+		String fm = "featureModel";
+		for(File file : filesList) {
+			if(file.getAbsolutePath().contains(fm)) {
+				return true;
+			}
+		}
+		return false;
+	}
 
 	public static void countApparitions() {
 
@@ -263,6 +276,51 @@ public class CodeMiner {
 			e.printStackTrace();
 		}
 
+	}
+	public static void mineDocumentation() throws IOException {
+		if(containsFM()) {
+			File directoryPath = new File(path + "\\featureModel");
+			
+			File filesList[] = directoryPath.listFiles();
+			BufferedReader bf;
+			for(File file : filesList) {
+
+				bf = new BufferedReader(new FileReader(file.getAbsoluteFile()));
+	    	  	String line;
+		  		while ((line = bf.readLine()) != null) {
+		  			kodea += line + "\n";
+		  			
+		  			String[] span=null;
+					String[] resultWithNumber=null;
+					String[] result=null;
+					if (line.contains("<span ") && line.contains(".")) {
+						span= line.split(">");
+						resultWithNumber= span[span.length-1].split("<");
+						if(resultWithNumber[0].contains(" ")) {
+							result = resultWithNumber[0].split(" ");
+							if (result[0].length()<7 && !result[result.length-1].contains(".")) {
+								System.out.println(result[result.length-1] + "," + file.getName() + "," + file.getPath());
+								String[] pa = file.getPath().split("\\\\git\\\\");
+								if(termTable.appears(result[result.length-1])){
+									termTable.sumApparition(result[result.length-1]);
+									termTable.addPath(result[result.length-1], file.getName() , pa[1]);
+								}else {
+									Term a= new Term(result[result.length-1],10);
+									a.addNewFile(file.getName() ,  pa[1]);
+									termTable.getTermTable().add(a);
+
+								}
+							}
+						}
+					}
+		  		}
+		  		
+		  		
+		  		bf.close();
+				System.out.println(" ");
+			}	
+
+		}
 	}
 
 
@@ -320,7 +378,7 @@ public class CodeMiner {
 				kodea+=line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
 
-				
+				/*
 				//Aldagaien izena lortzeko
 				
 				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
@@ -558,7 +616,7 @@ public class CodeMiner {
 							}
 						}
 					}
-				}
+				}*/
 
 				// Class terms
 				if (line.contains("class")  && line.contains("{")) {
@@ -586,6 +644,7 @@ public class CodeMiner {
 
 					}
 				}
+				/*
 				
 				//HTML file's terms
 				String[] span=null;
@@ -608,7 +667,7 @@ public class CodeMiner {
 							}
 						}
 					}
-				}
+				}*/
 
 
 

@@ -6,9 +6,9 @@ import domain.cmap.creator.Term;
 public class TermApparitionComparator implements Comparator<Term> {
 
 	@Override
-	public int compare(Term a1, Term a2) {
+	public int compare(Term t1, Term t2) {
 		
-		return a2.getapparitionCont() - a1.getapparitionCont();
+		return t2.getapparitionCont() - t1.getapparitionCont();
 	}
 
 }

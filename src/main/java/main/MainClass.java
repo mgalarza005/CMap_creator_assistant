@@ -233,6 +233,7 @@ public class MainClass {
 			CodeMiner.idatziFitxategiak();
 			
 			CodeMiner.countApparitions();
+			CodeMiner.mineDocumentation();
 			//CodeMiner.idatziFitxategiBateanBigarrena();
 			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
 			CodeMiner.printTermTable();
