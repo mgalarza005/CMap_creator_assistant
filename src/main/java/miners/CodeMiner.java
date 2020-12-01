@@ -155,8 +155,7 @@ public class CodeMiner {
 		System.out.println("TermTable's term are going to be written for cluster in 'forCluster.txt' file \n");
 
 		for(int i=0; i<termTable.getTermTable().size(); i++ ) {
-			//&& termTable.getTermTable().get(i).firsChartUpper()
-			//termTable.getTermTable().get(i).getUpperCaseCont()<2
+			
 			if(termTable.getTermTable().get(i).getapparitionCont()>10  && termTable.getTermTable().get(i).firsChartUpper()) {
 				clusterTerms += termTable.getTermTable().get(i).getTermName() + " ";
 			}				
@@ -299,8 +298,9 @@ public class CodeMiner {
 						if(resultWithNumber[0].contains(" ")) {
 							result = resultWithNumber[0].split(" ");
 							if (result[0].length()<7 && !result[result.length-1].contains(".")) {
-								System.out.println(result[result.length-1] + "," + file.getName() + "," + file.getPath());
-								String[] pa = file.getPath().split("\\\\git\\\\");
+								String paux= file.getPath().replaceAll("\\\\", "/");
+								paux = paux.replace("/"+file.getName(),"");
+								String[] pa = paux.split("/git/");
 								if(termTable.appears(result[result.length-1])){
 									termTable.sumApparition(result[result.length-1]);
 									termTable.addPath(result[result.length-1], file.getName() , pa[1]);
@@ -630,7 +630,7 @@ public class CodeMiner {
 							if(result!=null && !result.contains(",") && !result.contains(")") && !result.contains("_")  && !termTable.itsStopWord(result) && result.length()>3) {
 								if(termTable.appears(result)){
 									termTable.sumApparition(result);
-									termTable.addPath(result, cf.getFilename(), cf.getPath());
+									termTable.addPath(result, cf.getFilename(), "WacLine/input/"+cf.getPath());
 								}else {
 									Term t= new Term(result,10);
 									t.addNewFile(cf.getFilename(), cf.getPath());
