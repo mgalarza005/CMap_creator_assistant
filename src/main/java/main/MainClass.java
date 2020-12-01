@@ -232,13 +232,13 @@ public class MainClass {
 
 			CodeMiner.idatziFitxategiak();
 			
-			CodeMiner.agerpenTotalakKontatu();
+			CodeMiner.countApparitions();
 			//CodeMiner.idatziFitxategiBateanBigarrena();
 			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
 			CodeMiner.printTermTable();
 			CodeMiner.printTermTableForCluster();
 			
-			//CodeMiner.clusterraAplikatu();
+			CodeMiner.clusterTerms();
 			
 			
 			
