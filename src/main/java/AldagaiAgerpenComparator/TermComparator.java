@@ -6,12 +6,12 @@ import java.util.List;
 
 import domain.cmap.creator.Term;
 
-public class TermChainedComparator implements Comparator<Term>{
+public class TermComparator implements Comparator<Term>{
 
     private List<Comparator<Term>> listComparators;
 	
     @SafeVarargs
-    public TermChainedComparator(Comparator<Term>... comparators) {
+    public TermComparator(Comparator<Term>... comparators) {
         this.listComparators = Arrays.asList(comparators);
     }
     

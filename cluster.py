@@ -17,7 +17,7 @@ lev_similarity = -1*np.array([[distance.levenshtein(w1,w2) for w1 in words] for 
 affprop = sklearn.cluster.AffinityPropagation(affinity="precomputed", damping=0.75)
 affprop.fit(lev_similarity)
 
-fitx = open("C:\\Users\\MIKEL1\\git\\CMap_creator_assistant\\CMap_creator_assistant\\clusterDone.txt", 'w')
+fitx = open("C:\\Users\\MIKEL1\\git\\CMap_creator_assistant\\CMap_creator_assistant\\clusterakEginda.txt", 'w')
 
 
 for cluster_id in np.unique(affprop.labels_):

@@ -27,7 +27,7 @@ import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 
 import AldagaiAgerpenComparator.TermApparitionComparator;
-import AldagaiAgerpenComparator.TermChainedComparator;
+import AldagaiAgerpenComparator.TermComparator;
 import main.MainClass;
 import utils.FeatureSizeUtil;
 import utils.GenericUtils;
@@ -56,7 +56,7 @@ public class CodeMiner {
 	private static TermTable termTable = new TermTable(new ArrayList<Term>());
 	private static String path="C:\\Users\\MIKEL1\\git\\WacLine\\docs";
 
-	//private static ArrayList<Aldagaia> aldagaiT= new ArrayList<Aldagaia>();
+
 
 	/* REGEX */
 	private final static String INSIDE_BRACKETS = "\\((\\w+|\\w+\\(.*\\)|[\\s\\'\\.\\,\\:\\-\\>\\=\\<])+\\)";
@@ -112,7 +112,7 @@ public class CodeMiner {
 	}
 
 	public static void printTermTable() throws IOException {
-		Collections.sort(termTable.getTermTable(), new TermChainedComparator(new TermApparitionComparator()));
+		Collections.sort(termTable.getTermTable(), new TermComparator(new TermApparitionComparator()));
 
 		System.out.println("AldagaiTauleko terminoak eta haien agerpen kopurua 'termTable.txt' fitxategian idatziko dira");
 
@@ -150,13 +150,15 @@ public class CodeMiner {
 
 	}
 	public static void printTermTableForCluster() throws IOException {
-		Collections.sort(termTable.getTermTable(), new TermChainedComparator(new TermApparitionComparator()));
+		Collections.sort(termTable.getTermTable(), new TermComparator(new TermApparitionComparator()));
 
 		System.out.println("TermTable's term are going to be written for cluster in 'forCluster.txt' file \n");
 
 		for(int i=0; i<termTable.getTermTable().size(); i++ ) {
 			
-			if(termTable.getTermTable().get(i).getapparitionCont()>10  && termTable.getTermTable().get(i).firsChartUpper()) {
+			//if(termTable.getTermTable().get(i).getapparitionCont()>10  && termTable.getTermTable().get(i).firsChartUpper()) {
+			if(termTable.getTermTable().get(i).getapparitionCont()>10) {
+
 				clusterTerms += termTable.getTermTable().get(i).getTermName() + " ";
 			}				
 		}
@@ -378,9 +380,9 @@ public class CodeMiner {
 				kodea+=line + "\n";
 				cf.setContent(cf.getContent().concat(line+"\n"));
 
-				/*
-				//Aldagaien izena lortzeko
 				
+				//Aldagaien izena lortzeko
+				/*
 				if (line.contains("var") || line.contains(" var") || line.contains("var ")) {
 					String[] kk = line.split("var");
 					if(kk.length>1) {
@@ -577,7 +579,7 @@ public class CodeMiner {
 					}
 				}
 
-
+/*
 
 
 				//Funtzioen izena lortzeko
@@ -616,8 +618,8 @@ public class CodeMiner {
 							}
 						}
 					}
-				}*/
-
+				}
+*/
 				// Class terms
 				if (line.contains("class")  && line.contains("{")) {
 					String[] clss = line.split("class");
@@ -632,7 +634,7 @@ public class CodeMiner {
 									termTable.sumApparition(result);
 									termTable.addPath(result, cf.getFilename(), "WacLine/input/"+cf.getPath());
 								}else {
-									Term t= new Term(result,10);
+									Term t= new Term(result,1);
 									t.addNewFile(cf.getFilename(), cf.getPath());
 									termTable.getTermTable().add(t);
 
@@ -644,32 +646,7 @@ public class CodeMiner {
 
 					}
 				}
-				/*
-				
-				//HTML file's terms
-				String[] span=null;
-				String[] resultWithNumber=null;
-				String[] result=null;
-				if (line.contains("<span ") && line.contains(".")) {
-					span= line.split(">");
-					resultWithNumber= span[span.length-1].split("<");
-					if(resultWithNumber[0].contains(" ")) {
-						result = resultWithNumber[0].split(" ");
-						if (result[0].length()<7 && !result[result.length-1].contains(".")) {
-							if(termTable.appears(result[result.length-1])){
-								termTable.sumApparition(result[result.length-1]);
-								termTable.addPath(result[result.length-1], cf.getFilename(), cf.getPath());
-							}else {
-								Term a= new Term(result[result.length-1],10);
-								a.addNewFile(cf.getFilename(), cf.getPath());
-								termTable.getTermTable().add(a);
-
-							}
-						}
-					}
-				}*/
-
-
+			
 
 				if (checkVPString) {
 					checkVPString = false;
