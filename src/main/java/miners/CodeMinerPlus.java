@@ -34,7 +34,7 @@ import utils.GenericUtils;
 import utils.Pair;
 import utils.PositionalXMLReader;
 
-public class CodeMiner {
+public class CodeMinerPlus {
 	//create an print writer for writing to a file
 	private static String javaScriptClass="--JAVASCRIPT CLASSES--"+ "\n"+ "\n"+ "\n";
 	private static String codeWithVariables="--ALDAGAI--" + "\n"+ "\n"+ "\n";

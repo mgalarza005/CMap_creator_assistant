@@ -244,7 +244,7 @@ public class FamilyModelMiner {
 											spl, parentCodeElement, name);
 
 									if(isVPFile(name))
-										CodeMiner.extractVPsFromFile((CodeFile) ce, childElem.getAttribute("cm:type"),spl);
+										CodeMinerPlus.extractVPsFromFile((CodeFile) ce, childElem.getAttribute("cm:type"),spl);
 
 								} else if (childElem.getAttribute("cm:class").contentEquals("ps:component")) {
 									// 3.2: Element is a Directory
@@ -315,7 +315,7 @@ public class FamilyModelMiner {
 							if (scr.getNodeType() == Node.ELEMENT_NODE) {
 								Element scrElem = (Element) scr;
 								// Save it for later
-								ArrayList<Feature> fs = CodeMiner.extractVPsFromStatement(scrElem.getTextContent(),spl);
+								ArrayList<Feature> fs = CodeMinerPlus.extractVPsFromStatement(scrElem.getTextContent(),spl);
 								VPDependency vpd = new VPDependency(nowElement.getAttribute("cm:id"),
 										scrElem.getTextContent(), fs);
 								DepResolver.addVPDep(vpd);

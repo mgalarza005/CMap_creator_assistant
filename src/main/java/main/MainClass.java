@@ -230,16 +230,16 @@ public class MainClass {
 
 			logger.info("Ending Variant Model mining process");
 
-			CodeMiner.idatziFitxategiak();
+			CodeMinerPlus.idatziFitxategiak();
 			
-			CodeMiner.countApparitions();
-			CodeMiner.mineDocumentation();
+			CodeMinerPlus.countApparitions();
+			CodeMinerPlus.mineDocumentation();
 			//CodeMiner.idatziFitxategiBateanBigarrena();
 			System.out.println("ALDAGAIEN TAULA INPRIMATUKO DA");
-			CodeMiner.printTermTable();
-			CodeMiner.printTermTableForCluster();
+			CodeMinerPlus.printTermTable();
+			CodeMinerPlus.printTermTableForCluster();
 			
-			CodeMiner.clusterTerms();
+			CodeMinerPlus.clusterTerms();
 			
 			
 			
