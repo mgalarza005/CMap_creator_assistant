@@ -1,7 +1,7 @@
 package database;
 
 import domain.*;
-import main.MainClass;
+
 
 public class VariantModelDB {
 	

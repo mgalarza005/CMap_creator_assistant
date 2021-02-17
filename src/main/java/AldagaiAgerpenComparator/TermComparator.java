@@ -26,7 +26,4 @@ public class TermComparator implements Comparator<Term>{
         }
 		return 0;
 	}
-	
-
-
 }

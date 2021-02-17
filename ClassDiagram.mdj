@@ -1736,7 +1736,6 @@
 								"reference": {
 									"$ref": "AAAAAAF19KEgAMuawxU="
 								},
-								"aggregation": "composite",
 								"multiplicity": "*"
 							}
 						}
@@ -4952,7 +4951,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF19OWN7tOo9KE="
 							},
-							"name": "Role7"
+							"name": "Role7",
+							"type": ""
 						}
 					]
 				}

@@ -51,10 +51,10 @@ public class FeatureCodeMiner {
     private static final int MINING_TYPE = 3;
 
     // CMap configuration (for MINING_TYPE == 2 OR 3)
-    private static final String CMAPS_FOLDER = "/cmaps";
-    private static final String[] CMAPS = {
-            SPL_LOCAL_GIT_REPO + CMAPS_FOLDER + "/WebAnnotation.cxl"
-    };
+//    private static final String CMAPS_FOLDER = "/cmaps";
+//    private static final String[] CMAPS = {
+//            SPL_LOCAL_GIT_REPO + CMAPS_FOLDER + "/WebAnnotation.cxl"
+//    };
 
     /*
      * IMPLEMENTATION
@@ -94,6 +94,7 @@ public class FeatureCodeMiner {
     //  [2] Partial SPL mining only for CMap connections (without SPL inserts)
     //  [3] Whole SPL mining and CMap connections
     public static void main(String[] args) {
+
 
         logger.setLevel(Level.INFO);
 
@@ -203,7 +204,7 @@ public class FeatureCodeMiner {
 
             logger.info("Ending Variant Model mining process");
             List<List<Feature>> listsOfFeatures = (List<List<Feature>>) spl.getFeatureModels().stream().map(x -> x.getFeatures()).collect(Collectors.toList());
-            List<Feature> features =
+            //List<Feature> features =
                     listsOfFeatures.stream()
                             .flatMap(List::stream)
                             .collect(Collectors.toList());

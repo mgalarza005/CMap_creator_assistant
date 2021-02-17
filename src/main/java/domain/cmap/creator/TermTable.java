@@ -1,9 +1,9 @@
 package domain.cmap.creator;
 
 import java.util.Arrays;
+
 import java.util.List;
 
-import org.eclipse.jgit.api.AddNoteCommand;
 
 public class TermTable {
 	private List<Term> termList;

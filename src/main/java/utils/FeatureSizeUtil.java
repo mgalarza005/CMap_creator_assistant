@@ -2,11 +2,9 @@ package utils;
 
 import java.util.HashMap;
 import java.util.Map;
-
 import domain.Feature;
 import domain.FeatureModel;
 import domain.SPL;
-import main.MainClass;
 
 public class FeatureSizeUtil {
 

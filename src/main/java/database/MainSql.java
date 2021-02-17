@@ -1,11 +1,10 @@
 package database;
 
 import java.io.PrintWriter;
+
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-
 import domain.SPL;
-import main.MainClass;
 
 public class MainSql {
 	
